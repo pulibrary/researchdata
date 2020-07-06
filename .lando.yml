@@ -1,0 +1,6 @@
+name: research-data
+recipe: drupal9
+config:
+  via: nginx
+  webroot: .
+  database: postgres
