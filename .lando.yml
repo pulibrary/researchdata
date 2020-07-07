@@ -4,3 +4,7 @@ config:
   via: nginx
   webroot: .
   database: postgres
+services:
+  appserver:
+    build:
+      - composer install
