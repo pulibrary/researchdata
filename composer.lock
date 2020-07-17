@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "86ce6c146f8970019e2f294171edf20a",
+    "content-hash": "f2d3d9cc1130930bfdbe46d0b24f48cc",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -60,16 +60,16 @@
         },
         {
             "name": "chi-teck/drupal-code-generator",
-            "version": "1.32.0",
+            "version": "1.32.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chi-teck/drupal-code-generator.git",
-                "reference": "0e045f7a7e747af3d8f603156bf4d73be5768246"
+                "reference": "8abba7131ed4c89c1e8fc6dca0d05a4b6d0b2749"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/0e045f7a7e747af3d8f603156bf4d73be5768246",
-                "reference": "0e045f7a7e747af3d8f603156bf4d73be5768246",
+                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/8abba7131ed4c89c1e8fc6dca0d05a4b6d0b2749",
+                "reference": "8abba7131ed4c89c1e8fc6dca0d05a4b6d0b2749",
                 "shasum": ""
             },
             "require": {
@@ -101,7 +101,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal code generator",
-            "time": "2020-04-16T06:45:06+00:00"
+            "time": "2020-07-15T06:08:04+00:00"
         },
         {
             "name": "composer/installers",
@@ -963,56 +963,6 @@
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
-            "name": "cubear/finder",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/CU-CommunityApps/CD-finder.git",
-                "reference": "e223034b27767535d2ca4c0a99a31a8321585e0d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/CU-CommunityApps/CD-finder/zipball/e223034b27767535d2ca4c0a99a31a8321585e0d",
-                "reference": "e223034b27767535d2ca4c0a99a31a8321585e0d",
-                "shasum": ""
-            },
-            "require": {
-                "drupal/paragraphs": "^1.3",
-                "drupal/smtp": "^1.0"
-            },
-            "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Rich Marisa (richmarisa)",
-                    "email": "rjm2@cornell.edu",
-                    "homepage": "https://wildgoosechase.net",
-                    "role": "Author"
-                },
-                {
-                    "name": "Nazrin Tingstrom",
-                    "email": "nazrin.tingstrom@cornell.edu",
-                    "role": "Co-maintainer"
-                },
-                {
-                    "name": "Kevin McGuire",
-                    "email": "kpm75@cornell.edu",
-                    "role": "Designer"
-                },
-                {
-                    "name": "Anthony Adinolfi",
-                    "email": "ama39@cornell.edu",
-                    "role": "Designer"
-                }
-            ],
-            "description": "Finder is a Drupal 8 module to help users find services which meet their criteria",
-            "homepage": "https://it.cornell.edu/custom-web",
-            "time": "2019-01-29T21:31:11+00:00"
-        },
-        {
             "name": "dflydev/dot-access-data",
             "version": "v1.1.0",
             "source": {
@@ -1329,16 +1279,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.0.1",
+            "version": "9.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "1cd5f38665c789df215b0f145798b44bd88fdab2"
+                "reference": "ea6e0cef3240dc8e48f797698226467de121e9c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/1cd5f38665c789df215b0f145798b44bd88fdab2",
-                "reference": "1cd5f38665c789df215b0f145798b44bd88fdab2",
+                "url": "https://api.github.com/repos/drupal/core/zipball/ea6e0cef3240dc8e48f797698226467de121e9c9",
+                "reference": "ea6e0cef3240dc8e48f797698226467de121e9c9",
                 "shasum": ""
             },
             "require": {
@@ -1564,22 +1514,16 @@
                     "lib/Drupal/Core/Site/Settings.php"
                 ]
             },
-            "scripts": {
-                "pre-autoload-dump": [
-                    "Drupal\\Core\\Composer\\Composer::preAutoloadDump"
-                ],
-                "post-autoload-dump": [
-                    "Drupal\\Core\\Composer\\Composer::ensureHtaccess"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "description": "Drupal is an open source content management platform powering millions of websites and applications."
+            "description": "Drupal is an open source content management platform powering millions of websites and applications.",
+            "time": "2020-07-08T18:31:41+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.0.1",
+            "version": "9.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -1613,6 +1557,7 @@
                     "Drupal\\Composer\\Plugin\\Scaffold\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -1620,11 +1565,12 @@
             "homepage": "https://www.drupal.org/project/drupal",
             "keywords": [
                 "drupal"
-            ]
+            ],
+            "time": "2020-05-29T11:32:13+00:00"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.0.1",
+            "version": "9.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -1649,6 +1595,7 @@
                     "Drupal\\Composer\\Plugin\\ProjectMessage\\": "."
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -1656,20 +1603,21 @@
             "homepage": "https://www.drupal.org/project/drupal",
             "keywords": [
                 "drupal"
-            ]
+            ],
+            "time": "2020-05-04T10:06:27+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.0.1",
+            "version": "9.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "032550bef2acd2c356a47e98065ce11969facd69"
+                "reference": "c39d02c45dbc26088a2ff004b52fd3aedf2620fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/032550bef2acd2c356a47e98065ce11969facd69",
-                "reference": "032550bef2acd2c356a47e98065ce11969facd69",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/c39d02c45dbc26088a2ff004b52fd3aedf2620fe",
+                "reference": "c39d02c45dbc26088a2ff004b52fd3aedf2620fe",
                 "shasum": ""
             },
             "require": {
@@ -1678,7 +1626,7 @@
                 "doctrine/annotations": "1.10.3",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.1",
-                "drupal/core": "9.0.1",
+                "drupal/core": "9.0.2",
                 "egulias/email-validator": "2.1.17",
                 "guzzlehttp/guzzle": "6.5.4",
                 "guzzlehttp/promises": "v1.3.1",
@@ -1733,23 +1681,25 @@
                 "webflo/drupal-core-strict": "*"
             },
             "type": "metapackage",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "description": "Locked core dependencies; require this project INSTEAD OF drupal/core."
+            "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
+            "time": "2020-07-08T18:31:41+00:00"
         },
         {
             "name": "drupal/core-vendor-hardening",
-            "version": "9.0.1",
+            "version": "9.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-vendor-hardening.git",
-                "reference": "2d384e7d01bcba7706baa65ed155f652a7f29e31"
+                "reference": "b56de9c495619d0adc2d3d40129ba5b898990f0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-vendor-hardening/zipball/2d384e7d01bcba7706baa65ed155f652a7f29e31",
-                "reference": "2d384e7d01bcba7706baa65ed155f652a7f29e31",
+                "url": "https://api.github.com/repos/drupal/core-vendor-hardening/zipball/b56de9c495619d0adc2d3d40129ba5b898990f0f",
+                "reference": "b56de9c495619d0adc2d3d40129ba5b898990f0f",
                 "shasum": ""
             },
             "require": {
@@ -1765,6 +1715,7 @@
                     "Drupal\\Composer\\Plugin\\VendorHardening\\": "."
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -1772,7 +1723,8 @@
             "homepage": "https://www.drupal.org/project/drupal",
             "keywords": [
                 "drupal"
-            ]
+            ],
+            "time": "2020-06-29T11:55:00+00:00"
         },
         {
             "name": "drupal/entity_reference_revisions",
@@ -3179,16 +3131,16 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.1.6",
+            "version": "v6.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3"
+                "reference": "2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3",
-                "reference": "c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0",
+                "reference": "2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0",
                 "shasum": ""
             },
             "require": {
@@ -3243,7 +3195,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-05-27T12:24:03+00:00"
+            "time": "2020-07-14T18:50:27+00:00"
         },
         {
             "name": "psr/container",
@@ -3514,6 +3466,58 @@
                 "shell"
             ],
             "time": "2020-05-03T19:32:03+00:00"
+        },
+        {
+            "name": "pulibrary/finder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pulibrary/CD-finder.git",
+                "reference": "f3b436006ad97fe705d379d9a1ae4e58d496fa04"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pulibrary/CD-finder/zipball/f3b436006ad97fe705d379d9a1ae4e58d496fa04",
+                "reference": "f3b436006ad97fe705d379d9a1ae4e58d496fa04",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/paragraphs": "^1.3",
+                "drupal/smtp": "^1.0"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Rich Marisa (richmarisa)",
+                    "email": "rjm2@cornell.edu",
+                    "homepage": "https://wildgoosechase.net",
+                    "role": "Author"
+                },
+                {
+                    "name": "Nazrin Tingstrom",
+                    "email": "nazrin.tingstrom@cornell.edu",
+                    "role": "Co-maintainer"
+                },
+                {
+                    "name": "Kevin McGuire",
+                    "email": "kpm75@cornell.edu",
+                    "role": "Designer"
+                },
+                {
+                    "name": "Anthony Adinolfi",
+                    "email": "ama39@cornell.edu",
+                    "role": "Designer"
+                }
+            ],
+            "description": "Finder is a Drupal 8 module to help users find services which meet their criteria",
+            "homepage": "https://it.cornell.edu/custom-web",
+            "support": {
+                "source": "https://github.com/pulibrary/CD-finder/tree/master"
+            },
+            "time": "2020-07-17T13:54:40+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -5988,20 +5992,20 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "9dc4f203e36f2b486149058bade43c851dd97451"
+                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/9dc4f203e36f2b486149058bade43c851dd97451",
-                "reference": "9dc4f203e36f2b486149058bade43c851dd97451",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0",
+                "php": "^5.3.3 || ^7.0 || ^8.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
@@ -6033,7 +6037,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-06-16T10:16:42+00:00"
+            "time": "2020-07-08T17:02:28+00:00"
         },
         {
             "name": "webmozart/path-util",
@@ -6086,7 +6090,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "cubear/finder": 20
+        "pulibrary/finder": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
