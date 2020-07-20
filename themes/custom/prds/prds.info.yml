@@ -1,0 +1,16 @@
+name: prds
+type: theme
+description: 'Theme for Princeton Research Data Service'
+core_version_requirement: ^9
+base theme: classy
+libraries:
+  - prds/global-styling
+  - prds/global-scripts
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  sidebar: Sidebar
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content: Content
+  footer: Footer
