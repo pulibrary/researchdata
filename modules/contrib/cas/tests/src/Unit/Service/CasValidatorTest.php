@@ -13,7 +13,7 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Middleware;
 use Drupal\cas\Service\CasHelper;
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * CasValidator unit tests.
@@ -56,7 +56,7 @@ class CasValidatorTest extends UnitTestCase {
    *
    * @param string $event_name
    *   Name of event fired.
-   * @param \Symfony\Component\EventDispatcher\Event $event
+   * @param \Symfony\Contracts\EventDispatcher\Event $event
    *   Event fired.
    */
   public function dispatchEvent($event_name, Event $event) {

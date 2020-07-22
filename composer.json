@@ -20,6 +20,7 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.6",
         "drupal/cas": "^1.7",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
@@ -67,6 +68,11 @@
             "themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
+        },
+        "patches": {
+            "drupal/cas": {
+                "Drupal 9 compatibility": "https://www.drupal.org/files/issues/2020-06-08/3149982-11.patch"     
+            }
         },
         "drupal-core-project-message": {
             "include-keys": [

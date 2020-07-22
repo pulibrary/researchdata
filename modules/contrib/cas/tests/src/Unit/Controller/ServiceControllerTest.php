@@ -15,7 +15,7 @@ use Drupal\Core\Utility\Token;
 use Drupal\externalauth\ExternalAuthInterface;
 use Drupal\Tests\UnitTestCase;
 use Prophecy\Argument;
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
