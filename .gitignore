@@ -42,6 +42,10 @@ sites/simpletest
 drush/sites/research-data.site.yml
 drush/drush.yml
 
+# Ignore data files
+*.sql*
+*.tar*
+
 # Ignore SimpleTest multi-site environment.
 # simpletest
 /example.gitignore

@@ -2,25 +2,31 @@
 Drupal site for Princeton Research Data Service
 
 ## Local Development
+
+   **Note: depends on Lando 3.0.7 or higher https://github.com/lando/lando/releases**
 1. `git clone git@github.com:pulibrary/research-data.git`
 1. `cp sites/default/default.settings.php sites/default/settings.php`
 1. Add the following to `sites/defaults/settings.php`
-```
-if (file_exists($app_root . '/sites/settings.local.php')) {
-  include $app_root . '/sites/settings.local.php';
-}
+    ```
+    if (file_exists($app_root . '/sites/settings.local.php')) {
+      include $app_root . '/sites/settings.local.php';
+    }
 
-$databases['default']['default'] = array (
-  'database' => 'drupal9',
-  'username' => 'postgres',
-  'password' => '',
-  'prefix' => '',
-  'host' => 'database',
-  'port' => '5432',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
-  'driver' => 'pgsql',
-);
-```
+    $databases['default']['default'] = array (
+      'database' => 'drupal9',
+      'username' => 'postgres',
+      'password' => '',
+      'prefix' => '',
+      'host' => 'database',
+      'port' => '5432',
+      'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
+      'driver' => 'pgsql',
+    );
+    $settings['config_sync_directory'] = 'sites/default/files/config_<Hash Salt>';
+
+    $settings['hash_salt'] = '<Hash Salt>'
+
+    ```
 1. `mkdir .ssh` # excluded from version control
 1. `cp $HOME/.ssh/id_rsa .ssh/.`
 1. `cp $HOME/.ssh/id_rsa.pub .ssh/.` // key should be registered in princeton_ansible deploy role
@@ -30,11 +36,11 @@ $databases['default']['default'] = array (
 1. `lando drush @research-data.prod sql-dump --structure-tables-list='watchdog,sessions,cas_data_login,history,captcha_sessions,cache,cache_*' --result-file=/tmp/dump.sql; scp pulsys@prds-staging1:/tmp/dump.sql .`
 1. `lando db-import dump.sql`
 1. `lando drush rsync @research-data.prod:%files @research-data.local:%files`
-1. Create a `drush/drush.yml` file with the following:
-  ```
-  options:
-    uri: https://research-data.lndo.site
-  ```
+1. Create a `drush/drush.yml`  file with the following:
+   ```
+   options:
+     uri: https://research-data.lndo.site
+   ```
 1. `lando drush uli --name=your-netid`
 
 ### PRDS theme
