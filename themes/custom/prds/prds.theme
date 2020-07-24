@@ -1,0 +1,5 @@
+<?php
+
+function prds_preprocess_page(&$variables) {
+
+}

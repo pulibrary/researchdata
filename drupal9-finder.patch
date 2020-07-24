@@ -1,0 +1,26 @@
+diff --git a/finder.info.yml b/finder.info.yml
+index 91601b2..e688afa 100644
+--- a/finder.info.yml
++++ b/finder.info.yml
+@@ -3,7 +3,7 @@ description: Creates a page showing the Resource Finder.
+ package: Custom
+ 
+ type: module
+-core: 8.x
++core_version_requirement: 9.x
+ dependencies:
+   - paragraphs:paragraphs
+ libraries:
+diff --git a/src/Controller/FinderController.php b/src/Controller/FinderController.php
+index d0c37ca..20e8062 100644
+--- a/src/Controller/FinderController.php
++++ b/src/Controller/FinderController.php
+@@ -177,7 +177,7 @@ class FinderController extends ControllerBase {
+                     }
+                     
+ 
+-                    $field_config = \Drupal::entityManager()->getStorage('field_config')->load("paragraph" . '.' . "service_paragraphs" . '.' . $machine_name)->toArray();
++                    $field_config = \Drupal::entityTypeManager()->getStorage('field_config')->load("paragraph" . '.' . "service_paragraphs" . '.' . $machine_name)->toArray();
+ 
+                     $field_data["label"] = $field_config["label"];
+                     $field_data["weight"] = $pdcontent[$machine_name]["weight"];
