@@ -14,5 +14,8 @@
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2"
+  },
+  "devDependencies": {
+    "del": "^5.1.0"
   }
 }

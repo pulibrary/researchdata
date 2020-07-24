@@ -38,6 +38,9 @@ sites/simpletest
 # Ignore paths that contain user-generated content.
 # */files
 # */private
+.ssh/*
+drush/sites/research-data.site.yml
+drush/drush.yml
 
 # Ignore SimpleTest multi-site environment.
 # simpletest
