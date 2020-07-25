@@ -3,7 +3,7 @@
 #     dump-dir: /tmp
 #     files: sites/default/files
 #   root: /app
-#   uri: 'http://research-data.lndo.site'
+#   uri: 'http://researchdata.lndo.site'
 
 # prod:
 #   host: # add value

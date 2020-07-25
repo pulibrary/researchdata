@@ -2,7 +2,7 @@
 lock "~> 3.14.1"
 
 set :application, "researchdata"
-set :repo_url, "git@github.com:pulibrary/research-data.git"
+set :repo_url, "git@github.com:pulibrary/researchdata.git"
 
 set :keep_releases, 5
 
