@@ -39,7 +39,7 @@ sites/simpletest
 # */files
 # */private
 .ssh/*
-drush/sites/research-data.site.yml
+drush/sites/researchdata.site.yml
 drush/drush.yml
 
 # Ignore data files
