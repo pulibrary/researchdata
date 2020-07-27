@@ -1,0 +1,20 @@
+uuid: 972487ed-f82c-41d4-92de-d9314ab9e291
+langcode: en
+status: true
+dependencies:
+  theme:
+    - prds
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: prds_local_actions
+theme: prds
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

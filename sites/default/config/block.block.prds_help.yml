@@ -1,0 +1,22 @@
+uuid: f9709239-909f-4a6a-8286-ee9bb036ab8f
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - prds
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: prds_help
+theme: prds
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

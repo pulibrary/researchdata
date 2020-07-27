@@ -291,6 +291,7 @@ $databases = [];
  * @endcode
  */
 $settings['hash_salt'] = '';
+$settings['config_sync_directory'] = 'sites/default/config';
 
 /**
  * Deployment identifier.

@@ -22,7 +22,6 @@ Drupal site for Princeton Research Data Service
       'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
       'driver' => 'pgsql',
     );
-    $settings['config_sync_directory'] = 'sites/default/files/config_<Hash Salt>';
 
     $settings['hash_salt'] = '<Hash Salt>'
 
@@ -42,6 +41,72 @@ Drupal site for Princeton Research Data Service
      uri: https://researchdata.lndo.site
    ```
 1. `lando drush uli --name=your-netid`
+
+### Configuration Syncing
+
+Each time you pull from master it is a good idea to check the status of your site.  To check and see if you need to get changes run
+```
+lando drush config:status
+```
+If everything is up to date you will see
+```
+[notice] No differences between DB and sync directory.
+```
+
+If there are changes you need to import you will see something like **(note: Only in sync dir in the State)**
+```
+ ---------------------------------------------------- ------------------ 
+  Name                                                 State             
+ ---------------------------------------------------- ------------------ 
+  core.entity_form_display.node.a_z_resource.default   Only in sync dir  
+```
+
+If there are changes you need to export you will see something like **(note: Only in DB in the State)**
+```
+---------------------------------------------------- ------------ 
+  Name                                                 State       
+ ---------------------------------------------------- ------------ 
+  core.entity_form_display.node.a_z_resource.default   Only in DB  
+```
+
+#### Importing Configuration
+Most of the time you will want to import the entire configuration.  The only time this would not be the case is if you have some states that are `Only in DB` and some the are `Only in sync dir` (You made changes and another developer have made changes).  To import the entire configuration run `lando drush config:import` or `lando drush config:import -y`.  If you run without the -y you will see a list of the changes being made before they get applied like below:
+```
++------------+----------------------------------------------------+-----------+
+| Collection | Config                                             | Operation |
++------------+----------------------------------------------------+-----------+
+|            | field.storage.node.field_resource_link             | Create    |
+|            | node.type.a_z_resource                             | Create    |
+|            | field.field.node.a_z_resource.field_resource_link  | Create    |
+```
+
+If you have both exports and imports see the section below.
+
+#### Exporting Configuration
+Most of the time you will want to export the entire configuration.  The only time this would not be the case is if you have some states that are `Only in DB` and some the are `Only in sync dir` (You made changes and another developer have made changes).  To export the entire configuration run `lando drush config:export` or `lando drush config:export -y`.  If you run without the -y you will see a list of the changes being made before they get applied like below:
+```
+ [notice] Differences of the active config to the export directory:
++------------+----------------------------------------------------+-----------+
+| Collection | Config                                             | Operation |
++------------+----------------------------------------------------+-----------+
+|            | field.storage.node.field_resource_link             | Create    |
+|            | node.type.a_z_resource                             | Create    |
+|            | field.field.node.a_z_resource.
++------------+----------------------------------------------------+-----------+
+
+
+ The .yml files in your export directory (sites/default/config) will be deleted and replaced with the active config. (yes/no) [yes]:
+ > yes
+
+ [success] Configuration successfully exported to sites/default/config.
+ ```
+
+If you have both exports and imports see the section below.
+
+### Both Exporting and Importing Configuration
+You made changes and another developer have made changes, and now the configuration must be merged.
+
+**TODO**
 
 ### PRDS theme
 If you are using Chrome, go into the Network tab in devtools and select "Disable cache"

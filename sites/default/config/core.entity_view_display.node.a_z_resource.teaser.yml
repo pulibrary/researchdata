@@ -1,0 +1,32 @@
+uuid: 85971e9b-2b76-4da7-ba91-9c5eedd305ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.a_z_resource.body
+    - field.field.node.a_z_resource.field_resource_link
+    - node.type.a_z_resource
+  module:
+    - text
+    - user
+id: node.a_z_resource.teaser
+targetEntityType: node
+bundle: a_z_resource
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_resource_link: true

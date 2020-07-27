@@ -1,0 +1,12 @@
+title: 'Data Storage Finder'
+subtitle: 'Evaluate options for data storage at Princeton'
+question_header: "Answer these questions to help identify data storage services that are suitable for your needs. Checking these boxes will change the list of available services.\r\nIf you are uncertain how to answer, leave the question blank to maximize your resulting options."
+service_header: 'Select data storage services you would like to compare.'
+chart_header: 'Compare services that match your selected criteria.'
+email_form_header: 'Would you like more help, and/or to email your results to yourself?'
+email_address: ''
+email_name: ''
+email_body: ''
+main_header: ''
+button_select_all: 'Select All'
+button_clear_selections: 'Clear Selections'

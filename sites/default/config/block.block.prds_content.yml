@@ -1,0 +1,22 @@
+uuid: 0974213e-04b5-4f76-8559-4c7cd4294fdd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - prds
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: prds_content
+theme: prds
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
