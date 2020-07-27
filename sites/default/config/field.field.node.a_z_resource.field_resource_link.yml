@@ -1,0 +1,23 @@
+uuid: ca78777c-142c-4b89-b63b-d5508f235a1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_link
+    - node.type.a_z_resource
+  module:
+    - link
+id: node.a_z_resource.field_resource_link
+field_name: field_resource_link
+entity_type: node
+bundle: a_z_resource
+label: 'Resource Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

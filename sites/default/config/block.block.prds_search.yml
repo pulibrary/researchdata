@@ -1,0 +1,28 @@
+uuid: 4876277b-2e2a-418b-a342-b431b0f87697
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - prds
+_core:
+  default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
+id: prds_search
+theme: prds
+region: header
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: '0'
+  page_id: node_search
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
