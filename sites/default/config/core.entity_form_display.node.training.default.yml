@@ -1,20 +1,25 @@
-uuid: b3796312-59a3-4112-9ca2-06a980b0b4ab
+uuid: 83a051ea-5a0e-4a07-8e1c-55e113fa7ded
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.a_z_resource.body
-    - field.field.node.a_z_resource.field_resource_category
-    - field.field.node.a_z_resource.field_resource_link
-    - node.type.a_z_resource
+    - field.field.node.training.body
+    - field.field.node.training.field_date_and_time
+    - field.field.node.training.field_description
+    - field.field.node.training.field_libcal_url
+    - field.field.node.training.field_location
+    - field.field.node.training.field_recording
+    - field.field.node.training.field_support_materials
+    - node.type.training
   module:
     - content_moderation
+    - file
     - link
     - path
     - text
-id: node.a_z_resource.default
+id: node.training.default
 targetEntityType: node
-bundle: a_z_resource
+bundle: training
 mode: default
 content:
   body:
@@ -33,23 +38,50 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_resource_category:
-    weight: 123
+  field_date_and_time:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
+  field_description:
+    weight: 124
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: text_textarea
     region: content
-  field_resource_link:
-    weight: 122
+  field_libcal_url:
+    weight: 125
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_location:
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_recording:
+    weight: 126
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_support_materials:
+    weight: 127
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   moderation_state:
     type: moderation_state_default

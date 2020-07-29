@@ -1,0 +1,27 @@
+uuid: 0e0c5014-c5ed-4496-8f60-d73d89614130
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_support_materials
+    - node.type.training
+  module:
+    - file
+id: node.training.field_support_materials
+field_name: field_support_materials
+entity_type: node
+bundle: training
+label: 'Support Materials'
+description: 'Materials about the WorkShop, Event or Program that would advertise the training, or maintain a record of the training for future researchers.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf html'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

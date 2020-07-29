@@ -1,0 +1,8 @@
+uuid: 2c104a51-0e11-477b-a721-854d62f0562e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Knowledge Category'
+vid: knowledge_category
+description: ''
+weight: 0

@@ -1,26 +1,24 @@
-uuid: 8523fa4c-4bf4-4719-84bd-ae6c9e08fe58
+uuid: f11cc741-f46d-4fb8-81d0-279872acdd7c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.article
+    - field.storage.node.field_images
+    - node.type.knowledge_base
   module:
     - image
-_core:
-  default_config_hash: tgJzhA7Swh4M_gWU5FwFe5lPxPj5rebpMbvhpdNrERs
-id: node.article.field_image
-field_name: field_image
+id: node.knowledge_base.field_images
+field_name: field_images
 entity_type: node
-bundle: article
-label: Image
+bundle: knowledge_base
+label: Images
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_directory: knowledge_images
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
   max_resolution: ''

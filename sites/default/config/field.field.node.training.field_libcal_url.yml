@@ -1,0 +1,28 @@
+uuid: 060e0453-984e-411b-b61e-de0f68420771
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_libcal_url
+    - node.type.training
+  module:
+    - link
+id: node.training.field_libcal_url
+field_name: field_libcal_url
+entity_type: node
+bundle: training
+label: 'LibCal URL'
+description: 'URL in LibCal that allows the user to save their space at the Workshop, Event, or Program.'
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://libcal.princeton.edu/'
+    title: 'Sign up'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

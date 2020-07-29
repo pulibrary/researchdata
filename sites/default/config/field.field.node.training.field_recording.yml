@@ -1,0 +1,23 @@
+uuid: 0e267a1a-802a-4cdd-b782-e2183d869009
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recording
+    - node.type.training
+  module:
+    - link
+id: node.training.field_recording
+field_name: field_recording
+entity_type: node
+bundle: training
+label: Recording
+description: 'Link to a recording of the Workshop, Event, or Program'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

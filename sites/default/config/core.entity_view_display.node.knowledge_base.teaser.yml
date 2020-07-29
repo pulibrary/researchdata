@@ -1,19 +1,19 @@
-uuid: 85971e9b-2b76-4da7-ba91-9c5eedd305ba
+uuid: 614e2c5f-5c8a-449c-8906-de9180224d0f
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.a_z_resource.body
-    - field.field.node.a_z_resource.field_resource_category
-    - field.field.node.a_z_resource.field_resource_link
-    - node.type.a_z_resource
+    - field.field.node.knowledge_base.body
+    - field.field.node.knowledge_base.field_category
+    - field.field.node.knowledge_base.field_images
+    - node.type.knowledge_base
   module:
     - text
     - user
-id: node.a_z_resource.teaser
+id: node.knowledge_base.teaser
 targetEntityType: node
-bundle: a_z_resource
+bundle: knowledge_base
 mode: teaser
 content:
   body:
@@ -30,5 +30,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_resource_category: true
-  field_resource_link: true
+  field_category: true
+  field_images: true

@@ -1,0 +1,19 @@
+uuid: c87a4235-78fb-4ce6-9c0a-8b608aeb8b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.training
+id: node.training.field_location
+field_name: field_location
+entity_type: node
+bundle: training
+label: Location
+description: 'Location of Workshop, Event, or Program.  This could be a physical location or an online location.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

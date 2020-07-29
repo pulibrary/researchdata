@@ -1,18 +1,16 @@
-uuid: e515e88d-d639-4a36-b269-60ee39ba8f05
+uuid: 25651e80-42d0-44d1-8522-59e8e5b48d9e
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.article
+    - node.type.knowledge_base
   module:
     - text
-_core:
-  default_config_hash: IjZnOLWk1Pjq3WRg2pLSA1ERh7Po7izCq_p6UztZr2c
-id: node.article.body
+id: node.knowledge_base.body
 field_name: body
 entity_type: node
-bundle: article
+bundle: knowledge_base
 label: Body
 description: ''
 required: true
