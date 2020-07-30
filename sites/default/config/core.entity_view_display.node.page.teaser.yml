@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_basic_image
+    - field.field.node.page.field_staff_photo
     - node.type.page
   module:
     - text
@@ -35,3 +36,4 @@ content:
     region: content
 hidden:
   field_basic_image: true
+  field_staff_photo: true
