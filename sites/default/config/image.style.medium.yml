@@ -1,17 +1,20 @@
-uuid: 97aa18a1-a7e7-4c7f-a2e2-dccab4dbf0bd
+uuid: 3ff2e092-d5c0-4801-83e0-1acc4b43c295
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - responsive_image
 _core:
-  default_config_hash: Y9NmnZHQq20ASSyTNA6JnwtWrJJiSajOehGDtmUFdM0
+  default_config_hash: xW1ApqbWjK7oCBCl8jVHA42u2MekQDq4gry3xfZzdWY
 name: medium
-label: 'Medium (220×220)'
+label: 'Medium 1300x1300'
 effects:
-  bddf0d06-42f9-4c75-a700-a33cafa25ea0:
-    uuid: bddf0d06-42f9-4c75-a700-a33cafa25ea0
+  04caae9a-fa3e-4ea6-ae09-9c26aec7d308:
+    uuid: 04caae9a-fa3e-4ea6-ae09-9c26aec7d308
     id: image_scale
-    weight: 0
+    weight: 1
     data:
-      width: 220
-      height: 220
+      width: 1300
+      height: 1300
       upscale: false

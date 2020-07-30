@@ -1,0 +1,27 @@
+prds.mobile:
+  label: mobile
+  mediaQuery: '(min-width: 0px)'
+  weight: 0
+  multipliers:
+    - 1x
+
+prds.small:
+  label: small
+  mediaQuery: '(min-width: 325px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+prds.medium:
+  label: medium
+  mediaQuery: '(min-width: 650px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+prds.large:
+  label: large
+  mediaQuery: '(min-width: 1300px)'
+  weight: 2
+  multipliers:
+    - 1x

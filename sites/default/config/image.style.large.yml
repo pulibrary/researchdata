@@ -1,17 +1,20 @@
-uuid: 33f210e8-0f3f-4b42-bd18-64114cae39aa
+uuid: d44ab130-6a96-4efb-af5c-e2996a888550
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - responsive_image
 _core:
-  default_config_hash: J2n0RpFzS0-bgSyxjs6rSdgxB1rb-bTAgqywNx_964M
+  default_config_hash: M-7xzqSFQjuAiL0BP9rHC3DbUi2HnaoD538wlFWsoc4
 name: large
-label: 'Large (480×480)'
+label: 'Large 2600x2600'
 effects:
-  ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d:
-    uuid: ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d
+  9b311dd1-0351-45a1-9500-cd069e4670cb:
+    uuid: 9b311dd1-0351-45a1-9500-cd069e4670cb
     id: image_scale
-    weight: 0
+    weight: 3
     data:
-      width: 480
-      height: 480
+      width: 2600
+      height: 2600
       upscale: false

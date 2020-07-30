@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_basic_image
+    - field.field.node.page.field_staff_photo
     - image.style.thumbnail
     - node.type.page
     - workflows.workflow.editorial
@@ -38,6 +39,14 @@ content:
     third_party_settings: {  }
   field_basic_image:
     weight: 121
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_staff_photo:
+    weight: 122
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

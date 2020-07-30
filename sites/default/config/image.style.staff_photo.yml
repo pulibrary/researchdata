@@ -1,0 +1,15 @@
+uuid: 344af41c-e04b-4eec-9805-f6d410f71c15
+langcode: en
+status: true
+dependencies: {  }
+name: staff_photo
+label: 'Staff Photo (150x200)'
+effects:
+  833aa41d-5afc-4669-a79c-9e67ff2a444c:
+    uuid: 833aa41d-5afc-4669-a79c-9e67ff2a444c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 200
+      anchor: center-center

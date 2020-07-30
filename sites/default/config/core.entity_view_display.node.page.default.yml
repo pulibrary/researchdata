@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_basic_image
+    - field.field.node.page.field_staff_photo
     - node.type.page
+    - responsive_image.styles.staff_photo
   module:
-    - image
+    - responsive_image
     - text
     - user
 _core:
@@ -20,25 +22,36 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 100
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   content_moderation_control:
-    weight: -20
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_basic_image:
-    weight: 102
+    type: responsive_image
+    weight: 4
+    region: content
     label: above
     settings:
-      image_style: ''
+      responsive_image_style: basic_image
       image_link: ''
     third_party_settings: {  }
-    type: image
+  field_staff_photo:
+    weight: 3
+    label: above
+    settings:
+      responsive_image_style: staff_photo
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
     region: content
   links:
-    weight: 101
+    weight: 2
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

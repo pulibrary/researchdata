@@ -9,12 +9,12 @@ dependencies:
     - field.field.node.article.field_date
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.large
     - node.type.article
+    - responsive_image.styles.news_image
   module:
     - comment
     - datetime
-    - image
+    - responsive_image
     - text
     - user
 _core:
@@ -26,14 +26,14 @@ mode: default
 content:
   body:
     type: text_default
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
     label: hidden
   comment:
     type: comment_default
-    weight: 110
+    weight: 4
     region: content
     label: above
     settings:
@@ -41,12 +41,12 @@ content:
       pager_id: 0
     third_party_settings: {  }
   content_moderation_control:
-    weight: -20
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_date:
-    weight: 111
+    weight: 5
     label: above
     settings:
       format_type: medium
@@ -55,24 +55,24 @@ content:
     type: datetime_default
     region: content
   field_image:
-    type: image
-    weight: -1
+    type: responsive_image
+    weight: 6
     region: content
+    label: above
     settings:
-      image_style: large
+      responsive_image_style: news_image
       image_link: ''
     third_party_settings: {  }
-    label: hidden
   field_tags:
     type: entity_reference_label
-    weight: 10
+    weight: 2
     region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
   links:
-    weight: 100
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
