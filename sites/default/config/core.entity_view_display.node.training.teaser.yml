@@ -1,0 +1,42 @@
+uuid: 924a842a-7e10-4f74-813d-c3f1d87347f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.training.body
+    - field.field.node.training.field_date_and_time
+    - field.field.node.training.field_description
+    - field.field.node.training.field_libcal_url
+    - field.field.node.training.field_location
+    - field.field.node.training.field_recording
+    - field.field.node.training.field_support_materials
+    - node.type.training
+  module:
+    - text
+    - user
+id: node.training.teaser
+targetEntityType: node
+bundle: training
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_date_and_time: true
+  field_description: true
+  field_libcal_url: true
+  field_location: true
+  field_recording: true
+  field_support_materials: true

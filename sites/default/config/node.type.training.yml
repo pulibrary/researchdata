@@ -1,4 +1,4 @@
-uuid: 059fe04d-5b6c-44d6-8722-ca2527235368
+uuid: 72ecfeb3-fa09-4d2d-a048-e5ca7daf5415
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'A Z Resource'
-type: a_z_resource
-description: 'Content for the A to Z resource page'
+name: Training
+type: training
+description: 'Any Workshop, Event, or Program '
 help: ''
 new_revision: true
 preview_mode: 1

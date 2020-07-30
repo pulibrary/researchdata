@@ -106,7 +106,27 @@ If you have both exports and imports see the section below.
 ### Both Exporting and Importing Configuration
 You made changes and another developer have made changes, and now the configuration must be merged.
 
-**TODO**
+We will use git to combine the two configurations.  
+1. Check to make sure everything is committed in git with `git status`.  Commit any untracked changes.
+1. Export you local changes on top of the existing git changes.
+   ```
+   lando drush config:export
+   ```
+1. restore the lost changes tracked by git
+   ```
+   git reset HEAD .
+   git checkout .
+   ```
+1. Import the changes both tracked and untracked
+   ```
+   lando drush config:import
+   ```
+1. Check your config status
+   ```
+   lando drush config:status
+   ```
+1. Commit your changes to git with a branch and a PR.
+
 
 ### PRDS theme
 If you are using Chrome, go into the Network tab in devtools and select "Disable cache"

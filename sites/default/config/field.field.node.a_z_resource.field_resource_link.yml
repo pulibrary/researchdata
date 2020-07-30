@@ -13,7 +13,7 @@ entity_type: node
 bundle: a_z_resource
 label: 'Resource Link'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

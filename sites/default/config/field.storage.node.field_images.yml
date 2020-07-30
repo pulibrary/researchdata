@@ -1,4 +1,4 @@
-uuid: 4459a0ff-30ad-427e-841f-5ee1af8b1da8
+uuid: febb5d30-24bc-4e81-aec3-b0b1b7e5afc7
 langcode: en
 status: true
 dependencies:
@@ -6,10 +6,8 @@ dependencies:
     - file
     - image
     - node
-_core:
-  default_config_hash: SkXIPKZYiIMMtnBmfnxk58RYfbZ8cHSw5NZPY_JByME
-id: node.field_image
-field_name: field_image
+id: node.field_images
+field_name: field_images
 entity_type: node
 type: image
 settings:
@@ -25,10 +23,8 @@ settings:
   display_default: false
 module: image
 locked: false
-cardinality: 3
+cardinality: -1
 translatable: true
-indexes:
-  target_id:
-    - target_id
+indexes: {  }
 persist_with_no_fields: false
 custom_storage: false
