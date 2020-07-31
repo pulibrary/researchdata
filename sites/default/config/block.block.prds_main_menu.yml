@@ -12,7 +12,7 @@ _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
 id: prds_main_menu
 theme: prds
-region: primary_menu
+region: navigation
 weight: 0
 provider: null
 plugin: 'system_menu_block:main'

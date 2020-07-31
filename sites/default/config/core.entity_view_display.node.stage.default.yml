@@ -1,0 +1,28 @@
+uuid: f508c161-41fe-4e2d-b194-bd4296ad4e3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.stage.body
+    - node.type.stage
+  module:
+    - text
+    - user
+id: node.stage.default
+targetEntityType: node
+bundle: stage
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

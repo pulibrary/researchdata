@@ -1,0 +1,23 @@
+uuid: 35224492-4830-4f85-90fa-1f598ffe1af4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.stage
+  module:
+    - text
+id: node.stage.body
+field_name: body
+entity_type: node
+bundle: stage
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

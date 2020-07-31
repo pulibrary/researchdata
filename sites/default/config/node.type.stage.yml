@@ -1,0 +1,17 @@
+uuid: cdb0f5f7-64b5-4532-b2a6-e43e50a52aa6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Stage
+type: stage
+description: 'Stage of the Research Process'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -2,15 +2,29 @@ name: prds
 type: theme
 description: 'Theme for Princeton Research Data Service'
 core_version_requirement: ^9
-base theme: classy
+base theme: bootstrap
+# base theme: classy
 libraries:
   - prds/global-styling
   - prds/global-scripts
 regions:
-  header: Header
-  primary_menu: 'Primary menu'
-  sidebar: Sidebar
-  highlighted: Highlighted
-  breadcrumb: Breadcrumb
-  content: Content
-  footer: Footer
+  # header: Header
+  # primary_menu: 'Primary menu'
+  # sidebar: Sidebar
+  # highlighted: Highlighted
+  # breadcrumb: Breadcrumb
+  # content: Content
+  # footer: Footer
+  primary_header: 'Banner'
+  search: 'Search'
+  navigation: 'Primary menu'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Header'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
