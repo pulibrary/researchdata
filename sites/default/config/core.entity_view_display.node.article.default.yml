@@ -9,14 +9,112 @@ dependencies:
     - field.field.node.article.field_date
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
+    - field.field.node.article.layout_builder__layout
     - node.type.article
-    - responsive_image.styles.news_image
   module:
     - comment
-    - datetime
-    - responsive_image
-    - text
+    - layout_builder
+    - layout_discovery
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Banner
+        components:
+          ead4a6c0-67c8-42fd-8e9b-040826a2a02d:
+            uuid: ead4a6c0-67c8-42fd-8e9b-040826a2a02d
+            region: content
+            configuration:
+              id: 'field_block:node:article:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          0c605a85-cd4b-4b35-8a03-ffb055a0b08f:
+            uuid: 0c605a85-cd4b-4b35-8a03-ffb055a0b08f
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_image'
+              label: 'Featured Image'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: responsive_image
+                settings:
+                  responsive_image_style: news_image
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Content
+        components:
+          b89887ad-a6b7-4b2e-b34b-6a29dfd90c2e:
+            uuid: b89887ad-a6b7-4b2e-b34b-6a29dfd90c2e
+            region: content
+            configuration:
+              id: 'field_block:node:article:body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          14ebc10f-70b3-4d31-891f-efd7747adf95:
+            uuid: 14ebc10f-70b3-4d31-891f-efd7747adf95
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_tags'
+              label: Tags
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 4
+        third_party_settings: {  }
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
 id: node.article.default
@@ -24,13 +122,6 @@ targetEntityType: node
 bundle: article
 mode: default
 content:
-  body:
-    type: text_default
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-    label: hidden
   comment:
     type: comment_default
     weight: 4
@@ -45,24 +136,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_date:
-    weight: 5
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_image:
-    type: responsive_image
-    weight: 6
-    region: content
-    label: above
-    settings:
-      responsive_image_style: news_image
-      image_link: ''
-    third_party_settings: {  }
   field_tags:
     type: entity_reference_label
     weight: 2
@@ -76,4 +149,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  body: true
+  field_date: true
+  field_image: true
+  layout_builder__layout: true

@@ -1,0 +1,10 @@
+uuid: 0cf5c452-f045-4d96-aae0-c7badc74c21d
+langcode: en
+status: true
+dependencies: {  }
+id: news_image
+label: 'News Image & Content'
+icon_uuid: null
+icon_default: null
+description: 'An Image and content describing the image'
+behavior_plugins: {  }

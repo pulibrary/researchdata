@@ -1,0 +1,37 @@
+uuid: 1c2bfdfd-1281-48d5-8041-b4b5662813b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.staff_photo
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.staff_photo
+  module:
+    - layout_builder
+    - responsive_image
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
+id: media.image.staff_photo
+targetEntityType: media
+bundle: image
+mode: staff_photo
+content:
+  field_media_image:
+    label: visually_hidden
+    settings:
+      responsive_image_style: staff_photo
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

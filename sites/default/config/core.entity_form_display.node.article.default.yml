@@ -8,13 +8,12 @@ dependencies:
     - field.field.node.article.field_date
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
+    - field.field.node.article.layout_builder__layout
     - image.style.thumbnail
     - node.type.article
     - workflows.workflow.editorial
   module:
-    - comment
     - content_moderation
-    - datetime
     - image
     - path
     - text
@@ -27,7 +26,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 1
+    weight: 3
     region: content
     settings:
       rows: 9
@@ -35,27 +34,15 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_date:
-    weight: 121
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_image:
     type: image_image
-    weight: 4
+    weight: 2
     region: content
     settings:
       progress_indicator: throbber
@@ -63,7 +50,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -83,25 +70,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 15
-    region: content
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 120
-    region: content
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 16
     region: content
     third_party_settings: {  }
   title:
@@ -122,4 +95,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  comment: true
+  field_date: true
+  layout_builder__layout: true
+  promote: true
+  sticky: true

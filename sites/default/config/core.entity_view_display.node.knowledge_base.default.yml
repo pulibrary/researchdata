@@ -5,11 +5,8 @@ dependencies:
   config:
     - field.field.node.knowledge_base.body
     - field.field.node.knowledge_base.field_category
-    - field.field.node.knowledge_base.field_images
     - node.type.knowledge_base
-    - responsive_image.styles.news_image
   module:
-    - responsive_image
     - text
     - user
 id: node.knowledge_base.default
@@ -32,15 +29,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_images:
-    type: responsive_image
-    weight: 1
-    region: content
-    label: above
-    settings:
-      responsive_image_style: news_image
-      image_link: ''
-    third_party_settings: {  }
   links:
     weight: 0
     region: content

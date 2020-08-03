@@ -5,12 +5,9 @@ dependencies:
   config:
     - field.field.node.knowledge_base.body
     - field.field.node.knowledge_base.field_category
-    - field.field.node.knowledge_base.field_images
-    - image.style.thumbnail
     - node.type.knowledge_base
   module:
     - content_moderation
-    - image
     - path
     - text
 id: node.knowledge_base.default
@@ -43,14 +40,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-    region: content
-  field_images:
-    weight: 122
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   moderation_state:
     type: moderation_state_default

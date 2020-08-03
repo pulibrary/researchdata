@@ -1,0 +1,79 @@
+uuid: d3082f0d-ca8a-41ae-95fe-6757214b65f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_image.field_new_content
+    - field.field.paragraph.news_image.field_news_image
+    - paragraphs.paragraphs_type.news_image
+    - responsive_image.styles.news_image
+  module:
+    - layout_builder
+    - layout_discovery
+    - responsive_image
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'News Image Top Over Content'
+        components:
+          f52eed00-27e4-43fc-b6c3-5bf442adfce2:
+            uuid: f52eed00-27e4-43fc-b6c3-5bf442adfce2
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:news_image:field_new_content'
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          b1c6e797-15ea-483c-bbd9-548e1c671dc1:
+            uuid: b1c6e797-15ea-483c-bbd9-548e1c671dc1
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:news_image:field_news_image'
+              formatter:
+                label: hidden
+                settings:
+                  responsive_image_style: news_image
+                  image_link: ''
+                third_party_settings: {  }
+                type: responsive_image
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+id: paragraph.news_image.default
+targetEntityType: paragraph
+bundle: news_image
+mode: default
+content:
+  field_new_content:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_news_image:
+    weight: 1
+    label: hidden
+    settings:
+      responsive_image_style: news_image
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+hidden: {  }

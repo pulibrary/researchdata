@@ -1,0 +1,23 @@
+uuid: 21f146e6-9813-4196-abe1-a317a3adb82a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.landing_page
+  module:
+    - text
+id: node.landing_page.body
+field_name: body
+entity_type: node
+bundle: landing_page
+label: 'About Us'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.knowledge_base.body
     - field.field.node.knowledge_base.field_category
-    - field.field.node.knowledge_base.field_images
     - node.type.knowledge_base
   module:
     - text
@@ -31,4 +30,3 @@ content:
     region: content
 hidden:
   field_category: true
-  field_images: true

@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.training.body
     - field.field.node.training.field_date_and_time
     - field.field.node.training.field_description
-    - field.field.node.training.field_libcal_url
     - field.field.node.training.field_location
     - field.field.node.training.field_recording
     - field.field.node.training.field_support_materials

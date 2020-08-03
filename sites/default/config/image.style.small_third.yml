@@ -1,0 +1,15 @@
+uuid: 75bbb20b-57aa-49c0-9019-3bb8a8be7449
+langcode: en
+status: true
+dependencies: {  }
+name: small_third
+label: 'Small Third (225x225)'
+effects:
+  96d96269-f25c-4e36-92ff-f43861099d0c:
+    uuid: 96d96269-f25c-4e36-92ff-f43861099d0c
+    id: image_scale
+    weight: 1
+    data:
+      width: 225
+      height: 225
+      upscale: false
