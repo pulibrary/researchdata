@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - image.style.large
-    - image.style.medium
+    - image.style.medium2
     - image.style.mobile
     - image.style.small
   theme:
@@ -21,7 +21,7 @@ image_style_mappings:
     breakpoint_id: prds.medium
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: medium
+    image_mapping: medium2
   -
     breakpoint_id: prds.small
     multiplier: 1x
