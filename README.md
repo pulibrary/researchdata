@@ -38,7 +38,7 @@ Drupal site for Princeton Research Data Service
 1. Create a `drush/drush.yml`  file with the following:
    ```
    options:
-     uri: https://researchdata.lndo.site
+     uri: http://researchdata.lndo.site
    ```
 1. `lando drush uli --name=your-netid`
 
