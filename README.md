@@ -112,6 +112,16 @@ We will use git to combine the two configurations.
    ```
    lando drush config:export
    ```
+1. Double check you do not want keep any of the changes
+   ```
+   git status
+   git diff <modified file>
+   ```
+   for any file you want to keep the changes in
+   ```
+   git add <modified file>
+   ```
+   commit those changes so they do not get loast with either a `git commit` or `git commit --amend`
 1. restore the lost changes tracked by git
    ```
    git reset HEAD .
