@@ -1,0 +1,15 @@
+uuid: a481c8c6-9533-4a62-8a32-e300238899ad
+langcode: en
+status: true
+dependencies: {  }
+name: large_third
+label: 'Large Third (875x875)'
+effects:
+  f0238eab-6c66-486b-96aa-0f90e02aece2:
+    uuid: f0238eab-6c66-486b-96aa-0f90e02aece2
+    id: image_scale
+    weight: 1
+    data:
+      width: 875
+      height: 875
+      upscale: false

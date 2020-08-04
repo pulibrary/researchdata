@@ -5,8 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
-    - field.field.node.page.field_basic_image
-    - field.field.node.page.field_staff_photo
+    - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
     - text
@@ -35,5 +34,4 @@ content:
     weight: 101
     region: content
 hidden:
-  field_basic_image: true
-  field_staff_photo: true
+  layout_builder__layout: true

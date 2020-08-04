@@ -1,0 +1,21 @@
+uuid: 97f281a5-e7d8-4606-ad6b-406da8c91f37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_new_content
+    - paragraphs.paragraphs_type.news_image
+  module:
+    - text
+id: paragraph.news_image.field_new_content
+field_name: field_new_content
+entity_type: paragraph
+bundle: news_image
+label: 'New Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

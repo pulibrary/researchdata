@@ -1,0 +1,10 @@
+uuid: 200fce30-d82e-4eb0-b696-b26a9a306840
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.staff_photo
+label: 'Staff Photo'
+targetEntityType: media
+cache: true

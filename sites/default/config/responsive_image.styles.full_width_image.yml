@@ -1,0 +1,36 @@
+uuid: b1339560-51e8-47b6-8ebb-0def6bd46160
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large
+    - image.style.medium2
+    - image.style.mobile
+    - image.style.small
+  theme:
+    - prds
+id: full_width_image
+label: 'Full Width Image'
+image_style_mappings:
+  -
+    breakpoint_id: prds.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: large
+  -
+    breakpoint_id: prds.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: medium2
+  -
+    breakpoint_id: prds.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: small
+  -
+    breakpoint_id: prds.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: mobile
+breakpoint_group: prds
+fallback_image_style: mobile

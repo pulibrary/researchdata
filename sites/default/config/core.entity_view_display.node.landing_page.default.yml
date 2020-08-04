@@ -1,0 +1,222 @@
+uuid: dbcd53c7-039f-4cfb-8c39-d1f9a677f68b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_department_image
+    - node.type.landing_page
+    - responsive_image.styles.basic_image
+    - views.view.news
+  module:
+    - layout_builder
+    - layout_discovery
+    - responsive_image
+    - search
+    - text
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: Banner
+          column_widths: 50-50
+        components:
+          c2e2201f-580a-453a-8f46-cf001bddeb61:
+            uuid: c2e2201f-580a-453a-8f46-cf001bddeb61
+            region: first
+            configuration:
+              id: 'field_block:node:landing_page:body'
+              label: 'About Us'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          caeded6e-34e7-4dcd-aeae-d97b00cb92c8:
+            uuid: caeded6e-34e7-4dcd-aeae-d97b00cb92c8
+            region: second
+            configuration:
+              id: 'field_block:node:landing_page:field_department_image'
+              label: 'Department Image'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: responsive_image
+                settings:
+                  responsive_image_style: basic_image
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Search
+        components:
+          acd8144b-e731-409a-b350-350d9a2276fc:
+            uuid: acd8144b-e731-409a-b350-350d9a2276fc
+            region: content
+            configuration:
+              id: search_form_block
+              label: 'Search form'
+              provider: search
+              label_display: visible
+              page_id: ''
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: 'News Events and Resources'
+          column_widths: 33-34-33
+        components:
+          55a294ba-b5af-4fc9-8094-fa73f54cf31a:
+            uuid: 55a294ba-b5af-4fc9-8094-fa73f54cf31a
+            region: first
+            configuration:
+              id: 'views_block:news-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          09f3ef4f-9cee-4448-917a-8c361f7f3167:
+            uuid: 09f3ef4f-9cee-4448-917a-8c361f7f3167
+            region: second
+            configuration:
+              id: 'views_block:news-block_1'
+              label: 'Place Holder for Events'
+              provider: views
+              label_display: visible
+              views_label: 'Place Holder for Events'
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          8793437b-1015-4ce9-a4be-3c44fd08ef83:
+            uuid: 8793437b-1015-4ce9-a4be-3c44fd08ef83
+            region: third
+            configuration:
+              id: 'views_block:news-block_1'
+              label: 'Place Holder for Resources'
+              provider: views
+              label_display: visible
+              views_label: 'Place Holder for Resources'
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_fourcol_section
+        layout_settings:
+          label: ''
+        components:
+          cd8d2e78-dead-4f61-9b38-cbf7bcbf73b8:
+            uuid: cd8d2e78-dead-4f61-9b38-cbf7bcbf73b8
+            region: first
+            configuration:
+              id: 'inline_block:basic'
+              label: Planning
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 1
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          db52d333-ea5b-48c6-a9a8-2fa24463edc5:
+            uuid: db52d333-ea5b-48c6-a9a8-2fa24463edc5
+            region: second
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Data Acquisition'
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 2
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          fff9c4f1-97f5-41f4-80e3-51699fe658e7:
+            uuid: fff9c4f1-97f5-41f4-80e3-51699fe658e7
+            region: third
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Publish & Preservation'
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 3
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          287d9e80-8b56-44a4-b961-865efc65a78b:
+            uuid: 287d9e80-8b56-44a4-b961-865efc65a78b
+            region: fourth
+            configuration:
+              id: 'inline_block:basic'
+              label: Analysys
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 4
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_department_image:
+    weight: 102
+    label: above
+    settings:
+      responsive_image_style: basic_image
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

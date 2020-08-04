@@ -1,0 +1,15 @@
+uuid: e680e906-3896-4e33-9bfc-01505d6a1ae9
+langcode: en
+status: true
+dependencies: {  }
+name: medium_third
+label: 'Medium Third (425x425)'
+effects:
+  7c498bbb-64f9-4105-bfc0-0f2ce59def03:
+    uuid: 7c498bbb-64f9-4105-bfc0-0f2ce59def03
+    id: image_scale
+    weight: 1
+    data:
+      width: 425
+      height: 425
+      upscale: false
