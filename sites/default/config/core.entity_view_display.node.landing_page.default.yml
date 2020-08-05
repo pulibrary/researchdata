@@ -8,7 +8,9 @@ dependencies:
     - field.field.node.landing_page.field_department_image
     - node.type.landing_page
     - responsive_image.styles.basic_image
+    - views.view.events_home
     - views.view.news
+    - views.view.resources_home
   module:
     - layout_builder
     - layout_discovery
@@ -104,32 +106,32 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-          09f3ef4f-9cee-4448-917a-8c361f7f3167:
-            uuid: 09f3ef4f-9cee-4448-917a-8c361f7f3167
+          74cfeb47-c7a7-424a-bdcc-e26047bba18d:
+            uuid: 74cfeb47-c7a7-424a-bdcc-e26047bba18d
             region: second
             configuration:
-              id: 'views_block:news-block_1'
-              label: 'Place Holder for Events'
+              id: 'views_block:events_home-block_1'
+              label: ''
               provider: views
               label_display: visible
-              views_label: 'Place Holder for Events'
+              views_label: ''
               items_per_page: none
               context_mapping: {  }
             additional: {  }
-            weight: 0
-          8793437b-1015-4ce9-a4be-3c44fd08ef83:
-            uuid: 8793437b-1015-4ce9-a4be-3c44fd08ef83
+            weight: 1
+          e4b7148d-e739-4a83-96ca-0472db15a297:
+            uuid: e4b7148d-e739-4a83-96ca-0472db15a297
             region: third
             configuration:
-              id: 'views_block:news-block_1'
-              label: 'Place Holder for Resources'
+              id: 'views_block:resources_home-block_1'
+              label: Resources
               provider: views
               label_display: visible
-              views_label: 'Place Holder for Resources'
+              views_label: Resources
               items_per_page: none
               context_mapping: {  }
             additional: {  }
-            weight: 0
+            weight: 1
         third_party_settings: {  }
       -
         layout_id: layout_fourcol_section
