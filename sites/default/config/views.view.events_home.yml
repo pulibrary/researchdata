@@ -1,17 +1,15 @@
-uuid: 39900afc-6eba-4dab-a8b0-b53f450702df
+uuid: c86dc1b0-1bb1-4a1c-9a70-c21cf92d9c89
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - image.style.mobile
-    - node.type.article
+    - field.storage.node.field_date_and_time
+    - node.type.training
   module:
-    - image
     - node
     - user
-id: news
-label: News
+id: events_home
+label: 'Training (Home)'
 module: views
 description: ''
 tag: ''
@@ -55,14 +53,7 @@ display:
           items_per_page: 5
           offset: 0
       style:
-        type: html_list
-        options:
-          row_class: ''
-          default_row_class: true
-          uses_fields: false
-          type: ul
-          wrapper_class: item-list
-          class: ''
+        type: default
       row:
         type: fields
         options:
@@ -114,7 +105,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -134,10 +125,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        field_date_and_time:
+          id: field_date_and_time
+          table: node__field_date_and_time
+          field: field_date_and_time
           relationship: none
           group_type: group
           admin_label: ''
@@ -182,12 +173,13 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
+          click_sort_column: value
+          type: timestamp
           settings:
-            image_style: mobile
-            image_link: content
-          group_column: ''
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -217,7 +209,7 @@ display:
           table: node_field_data
           field: type
           value:
-            article: article
+            training: training
           entity_type: node
           entity_field: type
           plugin_id: bundle
@@ -240,7 +232,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: News
+      title: Training
       header: {  }
       footer: {  }
       empty: {  }
@@ -255,15 +247,14 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_date_and_time'
   block_1:
     display_plugin: block
     id: block_1
-    display_title: 'News Block (Home Page)'
+    display_title: Block
     position: 1
     display_options:
       display_extenders: {  }
-      display_description: 'New Block for home page'
     cache_metadata:
       max-age: -1
       contexts:
@@ -272,4 +263,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_date_and_time'
