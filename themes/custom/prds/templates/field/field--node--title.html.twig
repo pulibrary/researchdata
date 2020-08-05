@@ -19,16 +19,7 @@
  * @see field.html.twig
  */
 #}
-{%
-  set classes = [
-    'field',
-    'field--name-' ~ field_name|clean_class,
-    'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display,
-  ]
-%}
-<h1{{ attributes.addClass(classes) }}>
+
   {%- for item in items -%}
     {{ item.content }}
   {%- endfor -%}
-</h1>

@@ -2,7 +2,7 @@ global-styling:
   version: 1.x
   css:
     theme:
-      '//fonts.googleapis.com/css2?family=Mukta&display=swap': { type: external, minified: true }
+      '//fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Open+Sans&display=swap': { type: external, minified: true }
       css/prds.css: {}
 global-scripts:
   version: 1.x

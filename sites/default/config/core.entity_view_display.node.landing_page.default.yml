@@ -13,9 +13,7 @@ dependencies:
     - views.view.resources_home
   module:
     - layout_builder
-    - layout_discovery
     - responsive_image
-    - search
     - text
     - user
     - views
@@ -39,7 +37,7 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
+                label: hidden
                 type: text_default
                 settings: {  }
                 third_party_settings: {  }
@@ -57,7 +55,7 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
+                label: hidden
                 type: responsive_image
                 settings:
                   responsive_image_style: basic_image
@@ -66,24 +64,6 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: Search
-        components:
-          acd8144b-e731-409a-b350-350d9a2276fc:
-            uuid: acd8144b-e731-409a-b350-350d9a2276fc
-            region: content
-            configuration:
-              id: search_form_block
-              label: 'Search form'
-              provider: search
-              label_display: visible
-              page_id: ''
-              context_mapping: {  }
             additional: {  }
             weight: 0
         third_party_settings: {  }
@@ -105,7 +85,7 @@ third_party_settings:
               items_per_page: none
               context_mapping: {  }
             additional: {  }
-            weight: 0
+            weight: 2
           74cfeb47-c7a7-424a-bdcc-e26047bba18d:
             uuid: 74cfeb47-c7a7-424a-bdcc-e26047bba18d
             region: second
@@ -168,10 +148,10 @@ third_party_settings:
             weight: 0
           fff9c4f1-97f5-41f4-80e3-51699fe658e7:
             uuid: fff9c4f1-97f5-41f4-80e3-51699fe658e7
-            region: third
+            region: fourth
             configuration:
               id: 'inline_block:basic'
-              label: 'Publish & Preservation'
+              label: 'Publishing & Preservation'
               provider: layout_builder
               label_display: visible
               view_mode: full
@@ -182,10 +162,10 @@ third_party_settings:
             weight: 0
           287d9e80-8b56-44a4-b961-865efc65a78b:
             uuid: 287d9e80-8b56-44a4-b961-865efc65a78b
-            region: fourth
+            region: third
             configuration:
               id: 'inline_block:basic'
-              label: Analysys
+              label: Analysis
               provider: layout_builder
               label_display: visible
               view_mode: full

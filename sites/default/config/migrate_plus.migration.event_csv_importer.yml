@@ -11,7 +11,7 @@ migration_group: null
 label: 'Import Event CSV feed'
 source:
   plugin: csv
-  path: /app/lc_events_20200805030806.csv
+  path: /home/deploy/researchdata_past_events.csv
   delimiter: ','
   enclosure: '"'
   header_offset: 0

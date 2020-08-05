@@ -1,18 +1,51 @@
 .region-header {
-  background: white;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 15%, rgba(0,212,255,0) 100%), url("/themes/custom/prds/images/header-bg.svg") no-repeat center right; 
-  background-size: contain;
-  min-height: 125px;
+  box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+  border-bottom: 1px solid #d4dadf;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 
   padding: 0 2rem;
+  position: relative;
+  z-index: 9;
+
+  .block-system-branding-block {
+    position: relative;
+    
+    &::after {
+      top: 50%;
+      right: 0;
+      height: 40px;
+      content: " ";
+      position: absolute;
+      transform: translateY(-50%);
+      border-left: 1px solid #E6ECF1;
+    }
+  }
+
+  .block-search {
+    position: relative;
+    padding: 0 2rem;
+
+    &::before {
+      top: 50%;
+      left: 0;
+      height: 40px;
+      content: " ";
+      position: absolute;
+      transform: translateY(-50%);
+      border-right: 1px solid #E6ECF1;
+    }
+  }
+}
+
+.site-logo {
+  display: block;
 }
 
 .site-logo img {
-  min-width: 325px;
+  width: 275px;
 }
 
 .site-name {

@@ -1,0 +1,31 @@
+.training--item {
+  list-style-type: none;
+  margin-left: 0;
+  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  background: #fff;
+  line-height: 1.4;
+  font-family: sans-serif;
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+}
+
+.training-date {
+  height: 100%;
+  padding: 1rem;
+  color: $primary-color;
+  font-weight: bold;
+}
+
+.training-title {
+  flex-basis: 75%;
+  padding: 1rem;
+  margin: 0;
+  line-height: 1;
+
+  a {
+    text-decoration: none;
+    color: #1a1a1a;
+  }
+}

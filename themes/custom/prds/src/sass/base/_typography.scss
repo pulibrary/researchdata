@@ -1,0 +1,152 @@
+$base-font-size: 16px;
+$base-font-family: 'Open Sans';
+
+$paragraph-margin: 20px;
+$paragraph-size: 1.1rem;
+$paragraph-line-height: 1.5;
+$paragraph-color: #1a1a1a;
+
+$header-margin: $paragraph-margin * 1.2;
+$header-color: $primary-color;
+$header-line-height: 1.25;
+$header-size: 2.5rem;
+$header-font-family: 'Mukta';
+
+$blockquote-margin: $paragraph-margin * 1.5;
+$blockquote-size: 1.425rem;
+$blockquote-line-height: 1.5;
+$blockquote-color: #505050;
+
+$link-color: rgba(39,97,163, 1);
+
+$hr-margin: 30px;
+
+$border-color: #f5f5f2;
+
+*, html, body {
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: $header-margin * 1.5;
+  color: $header-color;
+  line-height: $header-line-height;
+  font-weight: 700;
+  font-family: $header-font-family;
+
+  &:first-child {
+      margin-top: 0;
+  }
+}
+
+h1 {
+  font-size: $header-size;
+  margin-bottom: $header-margin;
+}
+
+h2 {
+  font-size: $header-size / 1.3;
+  margin-bottom: $header-margin / 1.3;
+}
+
+h3 {
+  font-size: $header-size / 1.5;
+  margin-bottom: $header-margin / 1.5;
+}
+
+h4 {
+  font-size: $header-size / 1.7;
+  margin-bottom: $header-margin / 1.7;
+}
+
+h5 {
+  font-size: $header-size / 1.8;
+  margin-bottom: $header-margin / 1.8;
+}
+
+h6 {
+  font-size: $header-size / 2;
+  margin-bottom: $header-margin / 2;
+}
+
+p {
+  margin-bottom: $paragraph-margin;
+  font-size: $paragraph-size;
+  line-height: $paragraph-line-height;
+  color: $paragraph-color;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100ch;
+
+  &:last-of-type {
+      margin-bottom: 0;
+  }
+}
+
+a {
+  color: $link-color;
+  transition: all 0.2s ease;
+
+  &:hover {
+      color: darken($link-color, 20%);
+  }
+}
+
+ul,
+ol {
+    margin: $paragraph-margin 0 0 20px;
+
+    li {
+        margin-top: 10px;
+        line-height: $paragraph-line-height;
+        color: $paragraph-color;
+    }
+
+    ul,
+    ol {
+        margin-top: 0;
+    }
+}
+
+ul {
+
+    li {
+        list-style: disc;
+    }
+
+    ul {
+
+        li {
+            list-style: circle;
+        }
+    }
+}
+
+ol {
+
+    li {
+        list-style: decimal;
+    }
+}
+
+hr {
+  height: 1px;
+  margin: $hr-margin 0;
+  border: none;
+  background-color: $border-color;
+}
+
+blockquote {
+  margin: $blockquote-margin 0;
+  font-size: $blockquote-size;
+  line-height: $blockquote-line-height;
+  color: $blockquote-color;
+  text-align: center;
+  font-style: italic;
+}

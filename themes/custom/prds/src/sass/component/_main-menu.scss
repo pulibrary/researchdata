@@ -1,110 +1,28 @@
-.region-primary-menu {
-  background: #E6E7E8;
-
-  $menu-items:5;
-  $menu-items_width:(100/$menu-items)*1%;
-
-  .menu--main {
-    font-family: "Mukta", sans-serif;
-    font-size: 18px;
-    text-transform: uppercase;
-
-    &:hover,
-    &:focus {
-      .menu-item:last-child {
-        &:before,&:after {
-          opacity:1;
+.menu--main {
+  display: block;
+  
+  .menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 1rem;
+    margin: 0;
+    height: 100%;
+  
+    .menu-item {
+      list-style-type: none;
+  
+      a {
+        padding: 2.3rem 1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        border-bottom: 3px solid transparent;
+  
+        &.is-active {
+          border-color: $link-color;
         }
       }
     }
   }
-  .menu {
-    position: relative;
-    display:flex;
-    align-items:center;
-    background:#E6E7E8;
-  }
-  .menu-item {
-    flex:0 0 auto;
-    line-height: 2;
-    width:$menu-items_width;
-    text-align: center;
-    
-    &.menu-item--active-trail {
-      .nav_link {
-        color:#0064ae;
-      }
-    }
-    
-    &:last-child {
-      &:before,&:after {
-        content:'';
-        position: absolute;
-        z-index: 0;
-        // transition:left .6s ease;
-        opacity:1;
-      }
-      &:before {
-        bottom: 0;
-        left: 0;
-        width: $menu-items_width;
-        height: 3px;
-        background: #0064ae;
-      
-      }
-    }
-  }
-
-  .menu-item a {
-    position: relative;
-    z-index: 5;
-    display: block;
-    padding: 5px;
-    color:#000000;
-    text-decoration: none;
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      color:#0064ae;
-    }
-  }
-
-  @for $i from 1 through $menu-items {
-    .menu-item:nth-child(#{$i}).menu-item--active-trail ~ .menu-item:last-child:before {
-      left:($menu-items_width*$i) - $menu-items_width;
-  }
-    .menu-item:nth-child(#{$i}).menu-item--active-trail ~ .menu-item:last-child:after {
-      left:($menu-items_width*$i + $menu-items_width/2) - $menu-items_width;
-  }
-  }
-  .menu-item:last-child.menu-item--active-trail:before {
-    left:(100% - $menu-items_width)
-  }
-  .menu-item:last-child.menu-item--active-trail:after {
-    left:(100% - $menu-items_width)
-  }
-
-  @for $i from 1 through $menu-items {
-    .menu-item:nth-child(#{$i}):hover ~ .menu-item:last-child:before,
-    .menu-item:nth-child(#{$i}):focus ~ .menu-item:last-child:before {
-      left:($menu-items_width*$i) - $menu-items_width !important;
-  }
-    .menu-item:nth-child(#{$i}):hover ~ .menu-item:last-child:after,
-    .menu-item:nth-child(#{$i}):focus ~ .menu-item:last-child:after {
-      left:($menu-items_width*$i + $menu-items_width/2 ) - $menu-items_width !important;
-  }
-  }
-
-
-
-  .menu-item:last-child:hover:before,
-  .menu-item:last-child:focus:before {
-    left:(100% - $menu-items_width) !important;
-  }
-  .menu-item:last-child:hover:after,
-  .menu-item:last-child:focus:after {
-    left:(100% - $menu-items_width  + $menu-items_width/2) !important;
-  }
-
 }
-

@@ -1,6 +1,6 @@
 uuid: 6def479d-496b-4592-8473-8a7996501b87
 langcode: en
-status: false
+status: true
 dependencies:
   theme:
     - prds

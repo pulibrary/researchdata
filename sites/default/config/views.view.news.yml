@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.body
     - field.storage.node.field_image
     - image.style.mobile
     - node.type.article
   module:
     - image
     - node
+    - text
     - user
 id: news
 label: News
@@ -52,16 +54,16 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 5
+          items_per_page: 3
           offset: 0
       style:
         type: html_list
         options:
-          row_class: ''
+          grouping: {  }
+          row_class: news--item
           default_row_class: true
-          uses_fields: false
           type: ul
-          wrapper_class: item-list
+          wrapper_class: ''
           class: ''
       row:
         type: fields
@@ -71,6 +73,70 @@ display:
           separator: ''
           hide_empty: false
       fields:
+        field_image:
+          id: field_image
+          table: node__field_image
+          field: field_image
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: news-image
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: mobile
+            image_link: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -79,7 +145,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -134,18 +200,18 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        body:
+          id: body
+          table: node__body
+          field: body
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<div class="news-copy"><h3>{{ title }}</h3>{{ body }}</div>'
             make_link: false
             path: ''
             absolute: false
@@ -177,17 +243,16 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
+          click_sort_column: value
+          type: text_trimmed
           settings:
-            image_style: mobile
-            image_link: content
-          group_column: ''
+            trim_length: 100
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -255,6 +320,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_image'
   block_1:
     display_plugin: block
@@ -272,4 +338,5 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_image'
