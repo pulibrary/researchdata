@@ -53,10 +53,10 @@ process:
   field_description/value: summary
   field_description/format:
     plugin: default_value
-    default_value: "basic_html"
+    default_value: basic_html
   field_location: location
   field_date_and_time:
-    - 
+    -
       plugin: concat
       source:
         - date
@@ -65,7 +65,7 @@ process:
     -
       plugin: format_date
       from_format: 'Y-m-d H:i:s'
-      from_timezone: 'America/New_York'
+      from_timezone: America/New_York
       to_format: U
   status:
     plugin: default_value
