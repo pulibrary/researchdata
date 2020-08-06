@@ -83,6 +83,7 @@ namespace :drupal do
   task :composer_install do
     on roles(:app) do |host|
       execute "cd #{release_path} && composer install --no-dev"
+      execute :sudo, "/bin/chown -R nginx /home/deploy/.drush/cache"
       info "ran composer install"
     end
   end
@@ -228,6 +229,7 @@ namespace :drupal do
     task :upload_and_import do
       on release_roles :drupal_primary do
         upload! ENV["SQL_DIR"] + ENV["SQL_FILE"], '/tmp/'+ENV["SQL_FILE"]
+        execute "mkdir /home/deploy/.drush/cache/factory; true"
         within release_path do
             execute "sudo -u nginx #{release_path}/vendor/bin/drush sql-cli < /tmp/"+ENV["SQL_FILE"]
         end
