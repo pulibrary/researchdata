@@ -68,6 +68,12 @@ third_party_settings:
             weight: 0
         third_party_settings: {  }
       -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Search
+        components: {  }
+        third_party_settings: {  }
+      -
         layout_id: layout_threecol_section
         layout_settings:
           label: 'News Events and Resources'
@@ -201,4 +207,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  search_api_excerpt: true

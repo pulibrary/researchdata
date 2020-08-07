@@ -50,7 +50,10 @@ module:
   quickedit: 0
   rdf: 0
   responsive_image: 0
-  search: 0
+  search_api: 0
+  search_api_autocomplete: 0
+  search_api_db: 0
+  search_api_db_defaults: 0
   shortcut: 0
   system: 0
   taxonomy: 0
