@@ -298,7 +298,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: Training
+      title: 'Past Trainings'
       header: {  }
       footer: {  }
       empty: {  }
