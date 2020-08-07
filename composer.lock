@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4388fc53ce93046c3ce09d0df926ffb4",
+    "content-hash": "544be0911bbe0ea92dbe0bc18f4ed0bd",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2210,6 +2210,57 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/feeds",
                 "issues": "https://www.drupal.org/project/issues/feeds"
+            }
+        },
+        {
+            "name": "drupal/health_check",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/health_check.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/health_check-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "9397e3d3b5dc5d3b10af54544761204ef89dfefc"
+            },
+            "require": {
+                "drupal/core": "~8.0 || >= 8.2.0",
+                "php": "~5.5|~7.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1572358384",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marko Korhonen (back-2-95)",
+                    "homepage": "https://www.drupal.org/u/back-2-95",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "bfr",
+                    "homepage": "https://www.drupal.org/user/369262"
+                }
+            ],
+            "description": "Simple end point for load balancers to check Drupal site health.",
+            "homepage": "https://drupal.org/project/health_check",
+            "support": {
+                "source": "https://cgit.drupalcode.org/health_check",
+                "issues": "https://drupal.org/project/issues/health_check"
             }
         },
         {
