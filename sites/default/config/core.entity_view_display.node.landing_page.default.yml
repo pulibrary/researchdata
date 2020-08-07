@@ -118,6 +118,19 @@ third_party_settings:
               items_per_page: none
               context_mapping: {  }
             additional: {  }
+            weight: 1
+          0a5fdd71-9e77-46de-be43-70450936121d:
+            uuid: 0a5fdd71-9e77-46de-be43-70450936121d
+            region: second
+            configuration:
+              id: 'views_block:events_home-block_2'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
             weight: 0
         third_party_settings: {  }
       -

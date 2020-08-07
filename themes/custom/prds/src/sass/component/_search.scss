@@ -11,10 +11,22 @@
     height: 100%;
     align-items: center;
   }
-  
-  .form-search,
-  .form-type-search {
+
+  .form--inline {
+    display: flex;
+    align-items: center;
     height: 100%;
+  }
+
+  .form-item {
+    height: 100%;
+  }
+  
+  .form-text,
+  .form-type-search,
+  .form-autocomplete.ui-autocomplete-loading {
+    height: 100%;
+    background-image: none;
   }
   
   .form-search {

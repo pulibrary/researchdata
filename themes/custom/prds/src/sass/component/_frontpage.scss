@@ -16,7 +16,7 @@
 }
 
 .path-frontpage .block-field-blocknodelanding-pagebody {
-  padding: 3rem 7rem;
+  padding: 3rem 115px;
 
   button {
     background-color: $primary-color;
@@ -31,7 +31,7 @@
 }
 
 .path-frontpage .block-field-blocknodelanding-pagefield-department-image {
-  padding: 3rem 10rem;
+  padding: 3rem 115px;
 
 }
 
@@ -44,12 +44,15 @@
 
 .path-frontpage .layout--threecol-section {
   background-color: #f5f5f2;
+  padding: 2rem 115px;
 }
 
-.path-frontpage .layout--threecol-section .layout__region--first,
-.path-frontpage .layout--threecol-section .layout__region--second,
+.path-frontpage .layout--threecol-section .layout__region--first {
+  padding-right: 3rem;
+}
+
 .path-frontpage .layout--threecol-section .layout__region--third {
-  padding: 2rem;
+  padding-left: 3rem;
 }
 
 .path-frontpage .layout--fourcol-section {

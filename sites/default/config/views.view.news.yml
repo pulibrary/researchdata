@@ -57,21 +57,18 @@ display:
           items_per_page: 3
           offset: 0
       style:
-        type: html_list
+        type: default
         options:
           grouping: {  }
           row_class: news--item
           default_row_class: true
-          type: ul
-          wrapper_class: ''
-          class: ''
       row:
         type: fields
         options:
           default_field_elements: false
           inline: {  }
           separator: ''
-          hide_empty: false
+          hide_empty: true
       fields:
         field_image:
           id: field_image
