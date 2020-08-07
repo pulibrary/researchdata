@@ -4,16 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.training.body
-    - field.field.node.training.field_date_and_time
     - field.field.node.training.field_description
     - field.field.node.training.field_libcal_url
     - field.field.node.training.field_location
     - field.field.node.training.field_recording
     - field.field.node.training.field_support_materials
+    - field.field.node.training.field_training_date_and_time
     - node.type.training
   module:
     - content_moderation
-    - datetime
+    - datetime_range
     - file
     - link
     - path
@@ -39,12 +39,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_date_and_time:
-    weight: 122
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_timestamp
-    region: content
   field_description:
     weight: 124
     settings:
@@ -83,6 +77,12 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_training_date_and_time:
+    weight: 128
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
     region: content
   moderation_state:
     type: moderation_state_default

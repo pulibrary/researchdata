@@ -13,6 +13,7 @@ dependencies:
     - views.view.resources_home
   module:
     - layout_builder
+    - layout_discovery
     - responsive_image
     - text
     - user
@@ -92,19 +93,6 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 2
-          74cfeb47-c7a7-424a-bdcc-e26047bba18d:
-            uuid: 74cfeb47-c7a7-424a-bdcc-e26047bba18d
-            region: second
-            configuration:
-              id: 'views_block:events_home-block_1'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: 1
           e4b7148d-e739-4a83-96ca-0472db15a297:
             uuid: e4b7148d-e739-4a83-96ca-0472db15a297
             region: third
@@ -118,6 +106,19 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 1
+          b3b3646a-f2e8-4d28-aec6-6d65de898a79:
+            uuid: b3b3646a-f2e8-4d28-aec6-6d65de898a79
+            region: second
+            configuration:
+              id: 'views_block:events_home-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_fourcol_section

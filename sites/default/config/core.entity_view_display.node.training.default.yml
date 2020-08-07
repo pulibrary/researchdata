@@ -4,15 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.training.body
-    - field.field.node.training.field_date_and_time
     - field.field.node.training.field_description
     - field.field.node.training.field_libcal_url
     - field.field.node.training.field_location
     - field.field.node.training.field_recording
     - field.field.node.training.field_support_materials
+    - field.field.node.training.field_training_date_and_time
     - node.type.training
   module:
-    - datetime
+    - datetime_range
     - file
     - link
     - text
@@ -28,16 +28,6 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_date_and_time:
-    weight: 102
-    label: above
-    settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
-    third_party_settings: {  }
-    type: timestamp
     region: content
   field_description:
     weight: 104
@@ -85,6 +75,16 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
+    region: content
+  field_training_date_and_time:
+    weight: 108
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
     region: content
   links:
     weight: 100

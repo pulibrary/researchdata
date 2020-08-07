@@ -1,0 +1,21 @@
+uuid: df7c3e1b-64db-4c7a-af85-1f2ee6753139
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training_date_and_time
+    - node.type.training
+  module:
+    - datetime_range
+id: node.training.field_training_date_and_time
+field_name: field_training_date_and_time
+entity_type: node
+bundle: training
+label: 'Training Date and Time'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange
