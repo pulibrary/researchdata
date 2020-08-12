@@ -11,7 +11,7 @@ id: node.a_z_resource.body
 field_name: body
 entity_type: node
 bundle: a_z_resource
-label: Body
+label: Description
 description: ''
 required: true
 translatable: true

@@ -31,7 +31,7 @@ source:
       label: Description
     -
       name: date
-      label: 'Date"'
+      label: Date
     -
       name: start
       label: 'Start Time'
@@ -46,16 +46,16 @@ source:
       label: Teardown
     -
       name: location
-      label: 'Location"'
+      label: Location
     -
       name: Library
       label: Library
     -
       name: event_organizer
-      label: 'Event Organizer"'
+      label: 'Event Organizer'
     -
       name: presenter
-      label: 'Presenter"'
+      label: Presenter
     -
       name: audiences
       label: Audiences
@@ -97,13 +97,11 @@ source:
       label: 'Confirmed Attendance'
 process:
   title: title
-  field_description/value: summary
-  field_description/format:
+  body/value: summary
+  body/format:
     plugin: default_value
     default_value: basic_html
-  field_libcal_url:
-    plugin: default_value
-    default_value: ''
+  field_libcal_url: event_id
   field_location: location
   field_training_date_and_time/value:
     -

@@ -54,8 +54,8 @@ source:
 process:
   title: title
   field_libcal_url: link
-  field_description/value: summary
-  field_description/format:
+  body/value: summary
+  body/format:
     plugin: default_value
     default_value: basic_html
   field_location: location

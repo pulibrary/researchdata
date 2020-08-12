@@ -4,12 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
-    - field.field.node.landing_page.field_department_image
-    - image.style.thumbnail
+    - field.field.node.landing_page.field_billboard_image
     - node.type.landing_page
   module:
     - content_moderation
-    - image
+    - media_library
     - path
     - text
 id: node.landing_page.default
@@ -33,13 +32,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_department_image:
-    weight: 122
+  field_billboard_image:
+    type: media_library_widget
+    weight: 123
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
     region: content
   moderation_state:
     type: moderation_state_default

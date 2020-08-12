@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: center;
 
-  padding: 0 2rem;
+  padding: 0 3rem;
   position: relative;
   z-index: 9;
 
@@ -27,16 +27,17 @@
   .views-exposed-form {
     position: relative;
     padding: 0 2rem;
+    margin-left: auto;
 
-    &::before {
-      top: 50%;
-      left: 0;
-      height: 40px;
-      content: " ";
-      position: absolute;
-      transform: translateY(-50%);
-      border-right: 1px solid #E6ECF1;
-    }
+    // &::before {
+    //   top: 50%;
+    //   left: 0;
+    //   height: 40px;
+    //   content: " ";
+    //   position: absolute;
+    //   transform: translateY(-50%);
+    //   border-right: 1px solid #E6ECF1;
+    // }
   }
 }
 
@@ -46,6 +47,7 @@
 
 .site-logo img {
   width: 275px;
+  margin-right: 1rem;
 }
 
 .site-name {

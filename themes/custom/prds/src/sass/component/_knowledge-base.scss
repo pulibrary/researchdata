@@ -1,0 +1,98 @@
+.page-node-type-knowledge-base .layout-content {
+  padding: 0;
+}
+
+.menu--knowledge-base-menu {
+  padding: 2rem 0 2rem 110px;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+    list-style-image: none;
+  }
+
+  .menu-item a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    font-family: "Mukta";
+    color: #1a1a1a;
+
+    &.is-active {
+      background: white;
+      border: 1px solid #e6ecf1;
+      border-right: 0;
+    }
+  }
+
+  .menu-item--collapsed {
+    list-style-image: none;
+  }
+
+  .menu-item--expanded {
+    ul {
+      margin-left: 1rem;
+    }
+
+    ul a {
+      font-weight: 400;
+    }
+
+    .menu-item {
+      padding: 0;
+    }
+  }
+}
+
+.page-node-type-knowledge-base .layout__region--first {
+  background: #f6f6f6;
+}
+
+.page-node-type-knowledge-base .layout__region--second {
+  padding: 2rem 110px;
+}
+
+.kb-title {
+  font-size: 24px;
+}
+
+.page-node-type-knowledge-base {
+  h1 {
+    font-size: $header-size / 1.3;
+    margin-bottom: $header-margin / 1.3;
+  }
+  
+  h2 {
+    font-size: $header-size / 1.5;
+    margin-bottom: $header-margin / 1.5;
+  }
+  
+  h3 {
+    font-size: $header-size / 1.7;
+    margin-bottom: $header-margin / 1.7;
+  }
+  
+  h4 {
+    font-size: $header-size / 1.8;
+    margin-bottom: $header-margin / 1.8;
+  }
+  
+  h5 {
+    font-size: $header-size / 2;
+    margin-bottom: $header-margin / 2;
+  }
+}
+
+.page-node-type-knowledge-base .field--name-body {
+  ul {
+    margin: 0 0 2rem 4rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+}

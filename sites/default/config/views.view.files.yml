@@ -114,7 +114,7 @@ display:
               empty_column: false
               responsive: priority-low
             status:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
@@ -135,8 +135,8 @@ display:
               empty_column: false
               responsive: ''
             count:
-              sortable: false
-              default_sort_order: asc
+              sortable: true
+              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false

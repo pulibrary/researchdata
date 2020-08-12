@@ -11,7 +11,7 @@ id: node.a_z_resource.field_resource_link
 field_name: field_resource_link
 entity_type: node
 bundle: a_z_resource
-label: 'Resource Link'
+label: Link
 description: ''
 required: true
 translatable: false
@@ -19,5 +19,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   link_type: 17
-  title: 2
+  title: 0
 field_type: link

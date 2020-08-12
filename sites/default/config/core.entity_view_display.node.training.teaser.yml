@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.training.body
-    - field.field.node.training.field_description
     - field.field.node.training.field_libcal_url
     - field.field.node.training.field_location
     - field.field.node.training.field_recording
@@ -34,7 +33,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_description: true
   field_libcal_url: true
   field_location: true
   field_recording: true

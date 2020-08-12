@@ -11,7 +11,7 @@ id: node.training.field_training_date_and_time
 field_name: field_training_date_and_time
 entity_type: node
 bundle: training
-label: 'Training Date and Time'
+label: 'Date and Time'
 description: ''
 required: true
 translatable: false

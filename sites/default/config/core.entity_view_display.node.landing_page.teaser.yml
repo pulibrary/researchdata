@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
-    - field.field.node.landing_page.field_department_image
+    - field.field.node.landing_page.field_billboard_image
     - node.type.landing_page
   module:
     - text
@@ -29,4 +29,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_department_image: true
+  field_billboard_image: true
+  search_api_excerpt: true

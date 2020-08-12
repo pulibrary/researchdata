@@ -33,6 +33,19 @@
   }
 }
 
+.layout-builder-form button {
+  border: 3px solid #1a1a1a;
+  border-bottom: 0;
+  color: #1a1a1a;
+  font-weight: bold;
+  padding: 1rem;
+
+  &:hover,
+  &:focus {
+    background-color: #ebeae4;
+  }
+}
+
 .toolbar-menu a {
   font-weight: 400;
   color: initial;

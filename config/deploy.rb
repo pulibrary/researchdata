@@ -83,7 +83,7 @@ namespace :drupal do
   task :composer_install do
     on roles(:app) do |host|
       execute "cd #{release_path} && composer install --no-dev"
-      execute :sudo, "/bin/chown -R nginx /home/deploy/.drush/cache"
+      execute :sudo, "/bin/chown -R nginx /home/deploy/.drush/cache; true"
       info "ran composer install"
     end
   end
@@ -101,7 +101,7 @@ namespace :drupal do
   task :cache_clear do
       on release_roles :drupal_primary do
         within release_path do
-            execute "sudo -u nginx #{release_path}/vendor/bin/drush cache-rebuild"
+            execute "sudo -u nginx #{release_path}/vendor/bin/drush cache-rebuild; true"
             info "cleared the drupal cache"
         end
       end

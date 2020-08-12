@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.training.body
-    - field.field.node.training.field_description
     - field.field.node.training.field_libcal_url
     - field.field.node.training.field_location
     - field.field.node.training.field_recording
@@ -28,13 +27,6 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_description:
-    weight: 104
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
     region: content
   field_libcal_url:
     weight: 105

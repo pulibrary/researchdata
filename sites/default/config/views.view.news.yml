@@ -4,11 +4,9 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
-    - field.storage.node.field_image
-    - image.style.mobile
+    - field.storage.node.field_news_image
     - node.type.article
   module:
-    - image
     - node
     - text
     - user
@@ -54,7 +52,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 3
+          items_per_page: 1
           offset: 0
       style:
         type: default
@@ -70,10 +68,10 @@ display:
           separator: ''
           hide_empty: true
       fields:
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        field_news_image:
+          id: field_news_image
+          table: node__field_news_image
+          field: field_news_image
           relationship: none
           group_type: group
           admin_label: ''
@@ -112,18 +110,17 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: news-image
-          element_default_classes: false
+          element_wrapper_class: ''
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: entity_reference_entity_view
           settings:
-            image_style: mobile
-            image_link: ''
-          group_column: ''
+            view_mode: third_width
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -171,7 +168,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: h3
-          element_class: ''
+          element_class: news-copy
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -248,7 +245,7 @@ display:
           click_sort_column: value
           type: text_trimmed
           settings:
-            trim_length: 100
+            trim_length: 280
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -302,9 +299,20 @@ display:
           expose:
             label: ''
           granularity: second
-      title: News
+      title: 'Recent News'
       header: {  }
-      footer: {  }
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: 'View all news'
+          plugin_id: text_custom
       empty: {  }
       relationships: {  }
       arguments: {  }
@@ -318,7 +326,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_news_image'
   block_1:
     display_plugin: block
     id: block_1
@@ -336,4 +344,4 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_news_image'
