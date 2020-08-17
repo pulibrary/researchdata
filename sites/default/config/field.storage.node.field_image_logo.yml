@@ -1,14 +1,16 @@
-uuid: 1cb584e2-82c5-4db3-9370-27702520cb83
+uuid: 08f894a9-7d6a-4061-88e9-4c8c91b19431
 langcode: en
 status: true
 dependencies:
   module:
+    - media
     - node
-id: node.field_date_and_time
-field_name: field_date_and_time
+id: node.field_image_logo
+field_name: field_image_logo
 entity_type: node
-type: timestamp
-settings: {  }
+type: entity_reference
+settings:
+  target_type: media
 module: core
 locked: false
 cardinality: 1

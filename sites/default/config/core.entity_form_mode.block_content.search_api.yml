@@ -1,0 +1,10 @@
+uuid: f7ae292b-2f6a-470f-879e-f24b86fcc503
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.search_api
+label: 'Search API'
+targetEntityType: block_content
+cache: true

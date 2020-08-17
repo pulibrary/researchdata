@@ -1,0 +1,84 @@
+.training--item {
+  list-style-type: none;
+  margin-left: 0;
+  // box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  background: #fff;
+  line-height: 1.4;
+  font-family: sans-serif;
+  // border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+}
+
+.training-date {
+  padding: 1rem;
+  color: $primary-color;
+  display: flex;
+  flex-direction: column;
+
+  .training-month {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .training-day {
+    font-size: 32px;
+    font-weight: 800;
+    display: block;
+    line-height: 1;
+  }
+}
+
+.training-meta {
+  flex-grow: 1;
+  padding: 1rem;
+  margin: 0;
+  position: relative;
+  // line-height: 1;
+
+  // .training-time {
+  //   font-size: 12px;
+  // }
+
+  &::after {
+    top: 50%;
+    left: 0;
+    height: 40px;
+    content: " ";
+    position: absolute;
+    transform: translateY(-50%);
+    border-left: 1px solid #E6ECF1;
+  }
+
+  h3 {
+    margin: 0;
+    line-height: 1;
+  }
+
+  a {
+    text-decoration: none;
+    color: #1a1a1a;
+  }
+}
+
+.training-register {
+
+  align-self: center;
+  padding-right: 1rem;
+
+  a,
+  a:visited {
+    padding: 1rem;
+    background: #f6f6f6;
+    color: black;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background: $primary-color;
+      color: white;
+    }
+  }
+}

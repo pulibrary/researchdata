@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full_width
+    - core.entity_view_mode.media.quarter_width
     - core.entity_view_mode.media.staff_photo
     - core.entity_view_mode.media.third_width
   module:
@@ -18,7 +19,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <button id>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_align:
@@ -44,6 +45,7 @@ filters:
         image: image
       allowed_view_modes:
         full_width: full_width
+        quarter_width: quarter_width
         staff_photo: staff_photo
         third_width: third_width
   filter_html_image_secure:

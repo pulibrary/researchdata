@@ -5,12 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.training.body
-    - field.field.node.training.field_date_and_time
-    - field.field.node.training.field_description
     - field.field.node.training.field_libcal_url
     - field.field.node.training.field_location
     - field.field.node.training.field_recording
     - field.field.node.training.field_support_materials
+    - field.field.node.training.field_training_date_and_time
     - node.type.training
   module:
     - text
@@ -34,9 +33,9 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_date_and_time: true
-  field_description: true
   field_libcal_url: true
   field_location: true
   field_recording: true
   field_support_materials: true
+  field_training_date_and_time: true
+  search_api_excerpt: true

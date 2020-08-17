@@ -11,7 +11,7 @@ migration_group: null
 label: 'Import Event CSV feed'
 source:
   plugin: csv
-  path: /app/lc_events_20200805030806.csv
+  path: /app/researchdata_past_events.csv
   delimiter: ','
   enclosure: '"'
   header_offset: 0
@@ -31,7 +31,7 @@ source:
       label: Description
     -
       name: date
-      label: 'Date"'
+      label: Date
     -
       name: start
       label: 'Start Time'
@@ -46,16 +46,16 @@ source:
       label: Teardown
     -
       name: location
-      label: 'Location"'
+      label: Location
     -
       name: Library
       label: Library
     -
       name: event_organizer
-      label: 'Event Organizer"'
+      label: 'Event Organizer'
     -
       name: presenter
-      label: 'Presenter"'
+      label: Presenter
     -
       name: audiences
       label: Audiences
@@ -97,15 +97,13 @@ source:
       label: 'Confirmed Attendance'
 process:
   title: title
-  field_description/value: summary
-  field_description/format:
+  body/value: summary
+  body/format:
     plugin: default_value
     default_value: basic_html
-  field_libcal_url:
-    plugin: default_value
-    default_value: ''
+  field_libcal_url: event_id
   field_location: location
-  field_date_and_time:
+  field_training_date_and_time/value:
     -
       plugin: concat
       source:
@@ -116,7 +114,19 @@ process:
       plugin: format_date
       from_format: 'Y-m-d H:i'
       from_timezone: America/New_York
-      to_format: U
+      to_format: 'Y-m-d\TH:i:s'
+  field_training_date_and_time/end_value:
+    -
+      plugin: concat
+      source:
+        - date
+        - end
+      delimiter: ' '
+    -
+      plugin: format_date
+      from_format: 'Y-m-d H:i'
+      from_timezone: America/New_York
+      to_format: 'Y-m-d\TH:i:s'
   status:
     plugin: default_value
     default_value: 1

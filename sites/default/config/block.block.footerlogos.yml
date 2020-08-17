@@ -1,0 +1,25 @@
+uuid: 5881ee4c-770e-4b50-8348-77a437a17176
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:deeef972-4af3-45d2-a77f-7882e063fab0'
+  module:
+    - block_content
+  theme:
+    - prds
+id: footerlogos
+theme: prds
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:deeef972-4af3-45d2-a77f-7882e063fab0'
+settings:
+  id: 'block_content:deeef972-4af3-45d2-a77f-7882e063fab0'
+  label: 'Footer Logos'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

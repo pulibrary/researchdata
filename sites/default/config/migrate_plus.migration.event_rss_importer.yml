@@ -33,6 +33,10 @@ source:
       label: 'Event start time'
       selector: 'libcal:start'
     -
+      name: end
+      label: 'Event end time'
+      selector: 'libcal:end'
+    -
       name: link
       label: 'Origin link'
       selector: link
@@ -50,12 +54,12 @@ source:
 process:
   title: title
   field_libcal_url: link
-  field_description/value: summary
-  field_description/format:
+  body/value: summary
+  body/format:
     plugin: default_value
     default_value: basic_html
   field_location: location
-  field_date_and_time:
+  field_training_date_and_time/value:
     -
       plugin: concat
       source:
@@ -66,7 +70,19 @@ process:
       plugin: format_date
       from_format: 'Y-m-d H:i:s'
       from_timezone: America/New_York
-      to_format: U
+      to_format: 'Y-m-d\TH:i:s'
+  field_training_date_and_time/end_value:
+    -
+      plugin: concat
+      source:
+        - date
+        - end
+      delimiter: ' '
+    -
+      plugin: format_date
+      from_format: 'Y-m-d H:i:s'
+      from_timezone: America/New_York
+      to_format: 'Y-m-d\TH:i:s'
   status:
     plugin: default_value
     default_value: 1

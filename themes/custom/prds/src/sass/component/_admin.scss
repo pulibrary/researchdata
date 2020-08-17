@@ -1,0 +1,52 @@
+.block-local-tasks-block nav {
+  border-bottom: 3px solid #1a1a1a;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    background-color: #f5f5f2;
+
+    &.is-active a {
+      background-color: #ffffff;
+      border: 0;
+      color: #1a1a1a
+    }
+  }
+
+  a {
+    border: 3px solid #1a1a1a;
+    border-bottom: 0;
+    color: #1a1a1a;
+    font-weight: bold;
+    padding: 1rem;
+
+    &:hover,
+    &:focus {
+      background-color: #ebeae4;
+    }
+  }
+}
+
+.layout-builder-form button {
+  border: 3px solid #1a1a1a;
+  border-bottom: 0;
+  color: #1a1a1a;
+  font-weight: bold;
+  padding: 1rem;
+
+  &:hover,
+  &:focus {
+    background-color: #ebeae4;
+  }
+}
+
+.toolbar-menu a {
+  font-weight: 400;
+  color: initial;
+}

@@ -1,0 +1,41 @@
+.region-header .views-exposed-form {
+  background-color: #fff;
+  height: 60px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+
+  form {
+    height: 100%;
+    align-items: center;
+  }
+
+  .form--inline {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .form-item {
+    height: 100%;
+  }
+  
+  .form-text,
+  .form-type-search,
+  .form-autocomplete.ui-autocomplete-loading {
+    height: 100%;
+    background-image: none;
+  }
+  
+  .form-text {
+    padding-left: 1rem;
+    border: 1px solid #e6ecf1;
+  }
+  .form-submit {
+    padding: 1rem;
+    background: $border-color;
+    border: 0;
+    font-weight: bold;
+    border: 1px solid #e6ecf1;
+  }
+}

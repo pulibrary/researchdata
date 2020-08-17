@@ -5,17 +5,14 @@ dependencies:
   config:
     - block_content.type.basic
     - field.field.node.landing_page.body
-    - field.field.node.landing_page.field_department_image
+    - field.field.node.landing_page.field_billboard_image
     - node.type.landing_page
-    - responsive_image.styles.basic_image
     - views.view.events_home
     - views.view.news
     - views.view.resources_home
   module:
     - layout_builder
     - layout_discovery
-    - responsive_image
-    - search
     - text
     - user
     - views
@@ -39,7 +36,7 @@ third_party_settings:
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
+                label: hidden
                 type: text_default
                 settings: {  }
                 third_party_settings: {  }
@@ -48,20 +45,19 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          caeded6e-34e7-4dcd-aeae-d97b00cb92c8:
-            uuid: caeded6e-34e7-4dcd-aeae-d97b00cb92c8
+          f6cdb536-1088-456f-86a3-dce3c8fc14b0:
+            uuid: f6cdb536-1088-456f-86a3-dce3c8fc14b0
             region: second
             configuration:
-              id: 'field_block:node:landing_page:field_department_image'
-              label: 'Department Image'
+              id: 'field_block:node:landing_page:field_billboard_image'
+              label: 'Billboard Image'
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
-                type: responsive_image
+                label: hidden
+                type: entity_reference_entity_view
                 settings:
-                  responsive_image_style: basic_image
-                  image_link: ''
+                  view_mode: third_width
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -73,19 +69,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: Search
-        components:
-          acd8144b-e731-409a-b350-350d9a2276fc:
-            uuid: acd8144b-e731-409a-b350-350d9a2276fc
-            region: content
-            configuration:
-              id: search_form_block
-              label: 'Search form'
-              provider: search
-              label_display: visible
-              page_id: ''
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_threecol_section
@@ -105,12 +89,12 @@ third_party_settings:
               items_per_page: none
               context_mapping: {  }
             additional: {  }
-            weight: 0
-          74cfeb47-c7a7-424a-bdcc-e26047bba18d:
-            uuid: 74cfeb47-c7a7-424a-bdcc-e26047bba18d
-            region: second
+            weight: 2
+          e4b7148d-e739-4a83-96ca-0472db15a297:
+            uuid: e4b7148d-e739-4a83-96ca-0472db15a297
+            region: third
             configuration:
-              id: 'views_block:events_home-block_1'
+              id: 'views_block:resources_home-block_1'
               label: ''
               provider: views
               label_display: visible
@@ -119,19 +103,39 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 1
-          e4b7148d-e739-4a83-96ca-0472db15a297:
-            uuid: e4b7148d-e739-4a83-96ca-0472db15a297
-            region: third
+          ecc5f35a-68eb-4998-96ad-31ea2448fce5:
+            uuid: ecc5f35a-68eb-4998-96ad-31ea2448fce5
+            region: second
             configuration:
-              id: 'views_block:resources_home-block_1'
-              label: Resources
+              id: 'views_block:events_home-block_3'
+              label: ''
               provider: views
               label_display: visible
-              views_label: Resources
+              views_label: ''
               items_per_page: none
               context_mapping: {  }
             additional: {  }
-            weight: 1
+            weight: 2
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'The Research Lifecycle'
+        components:
+          3f2b63e4-de07-4f60-817e-94bd6155a73f:
+            uuid: 3f2b63e4-de07-4f60-817e-94bd6155a73f
+            region: content
+            configuration:
+              id: 'inline_block:basic'
+              label: 'The Research Lifecycle'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 8
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
       -
         layout_id: layout_fourcol_section
@@ -145,7 +149,7 @@ third_party_settings:
               id: 'inline_block:basic'
               label: Planning
               provider: layout_builder
-              label_display: visible
+              label_display: '0'
               view_mode: full
               block_revision_id: 1
               block_serialized: null
@@ -159,7 +163,7 @@ third_party_settings:
               id: 'inline_block:basic'
               label: 'Data Acquisition'
               provider: layout_builder
-              label_display: visible
+              label_display: '0'
               view_mode: full
               block_revision_id: 2
               block_serialized: null
@@ -168,12 +172,12 @@ third_party_settings:
             weight: 0
           fff9c4f1-97f5-41f4-80e3-51699fe658e7:
             uuid: fff9c4f1-97f5-41f4-80e3-51699fe658e7
-            region: third
+            region: fourth
             configuration:
               id: 'inline_block:basic'
-              label: 'Publish & Preservation'
+              label: 'Publishing & Preservation'
               provider: layout_builder
-              label_display: visible
+              label_display: '0'
               view_mode: full
               block_revision_id: 3
               block_serialized: null
@@ -182,12 +186,12 @@ third_party_settings:
             weight: 0
           287d9e80-8b56-44a4-b961-865efc65a78b:
             uuid: 287d9e80-8b56-44a4-b961-865efc65a78b
-            region: fourth
+            region: third
             configuration:
               id: 'inline_block:basic'
-              label: Analysys
+              label: Analysis
               provider: layout_builder
-              label_display: visible
+              label_display: '0'
               view_mode: full
               block_revision_id: 4
               block_serialized: null
@@ -207,18 +211,19 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_department_image:
-    weight: 102
+  field_billboard_image:
+    type: entity_reference_entity_view
+    weight: 103
     label: above
     settings:
-      responsive_image_style: basic_image
-      image_link: ''
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: responsive_image
-    region: content
+    region: first
   links:
     weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  search_api_excerpt: true

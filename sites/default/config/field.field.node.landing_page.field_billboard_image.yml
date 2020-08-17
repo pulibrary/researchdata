@@ -1,0 +1,28 @@
+uuid: bff3f161-6624-4fa7-9aaf-78127e17de05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_billboard_image
+    - media.type.image
+    - node.type.landing_page
+id: node.landing_page.field_billboard_image
+field_name: field_billboard_image
+entity_type: node
+bundle: landing_page
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
