@@ -22,5 +22,5 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/research-lifecycle\r\n/research-lifecycle/*"
+    pages: "/research-lifecycle-guide\r\n/research-lifecycle-guide/*\r\n/research-lifecycle-guide/*/*"
     negate: true
