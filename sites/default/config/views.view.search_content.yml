@@ -67,6 +67,14 @@ display:
             offset_label: Offset
       style:
         type: default
+        options:
+          grouping:
+            -
+              field: type
+              rendered: true
+              rendered_strip: false
+          row_class: ''
+          default_row_class: true
       row:
         type: fields
         options:

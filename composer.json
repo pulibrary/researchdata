@@ -26,6 +26,7 @@
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
         "drupal/core-vendor-hardening": "^9",
+        "drupal/editor_advanced_link": "^1.8",
         "drupal/health_check": "^1.2",
         "drupal/media_entity_browser": "^2.0",
         "drupal/migrate_plus": "^5.1",
