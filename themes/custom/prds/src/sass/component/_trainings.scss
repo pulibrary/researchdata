@@ -82,3 +82,49 @@
     }
   }
 }
+
+.block-views-blockevents-home-block-4 .view-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .training--item {
+    flex-basis: calc(50% - 32px);
+    margin-bottom: 1.5rem;
+
+    &:nth-child(odd) {
+      margin-right: 0.75rem;
+    }
+
+    &:nth-child(even) {
+      margin-left: 0.75rem;
+    }
+  }
+}
+
+.field--name-body .program-activities {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+
+  div {
+    flex-basis: 33%;
+    text-align: center;
+  }
+
+  h4 {
+    color: #1a1a1a;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
+h3.text-align-center {
+  color: #1a1a1a;
+}

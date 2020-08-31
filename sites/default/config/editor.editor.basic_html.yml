@@ -18,6 +18,7 @@ settings:
             - Format
             - Bold
             - Italic
+            - JustifyCenter
         -
           name: Links
           items:

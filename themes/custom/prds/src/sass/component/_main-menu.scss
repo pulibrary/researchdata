@@ -18,6 +18,11 @@
         font-weight: bold;
         font-size: 1.1rem;
         border-bottom: 3px solid transparent;
+
+        &:hover,
+        &:focus {
+          color: #1a1a1a;
+        }
   
         &.is-active {
           border-color: $link-color;

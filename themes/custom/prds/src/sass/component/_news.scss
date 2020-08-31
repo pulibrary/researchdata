@@ -14,19 +14,19 @@
 
   img {
     width: 100%;
-    min-height: 200px;
-    max-height: 300px;
+    height: 225px;
     object-fit: cover;
   }
 }
 
-.news-copy,
+.news--item,
 .resource--item {
-  padding: 1rem;
+  padding: 0;
   
   h3 {
     line-height: 1;
     margin: 0;
+    padding: 1rem 1.5rem;
   }
 
   a {
@@ -35,7 +35,18 @@
   }
 
   p {
-    font-size: 1rem;
-    margin-top: 1.5rem;
+    font-size: 14px;
+    padding: 0 1.5rem 1rem;
+  }
+
+  .views-more-link {
+    display: block;
+    margin-top: 1rem;
+    font-size: 14px;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }

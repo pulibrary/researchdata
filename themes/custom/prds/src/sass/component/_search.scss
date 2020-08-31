@@ -37,5 +37,12 @@
     border: 0;
     font-weight: bold;
     border: 1px solid #e6ecf1;
+    margin-top: 0;
+    color: #1a1a1a;
+
+    &:hover,
+    &:focus {
+      background: lighten($border-color, 2%);
+    }
   }
 }

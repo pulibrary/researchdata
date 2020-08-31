@@ -380,7 +380,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: 'View all resources'
+          content: '<a href="/resources" class="more-link">View all resources</a>'
           plugin_id: text_custom
       empty: {  }
       relationships: {  }

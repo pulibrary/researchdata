@@ -13,20 +13,18 @@
   min-height: 325px;
 
   align-items: center;
+
+  > .layout__region {
+    flex: 0 1 100%;
+
+    @media (min-width: 772px) {
+      flex: 0 1 calc(50% - 1rem);
+    }
+  }
 }
 
 .path-frontpage .block-field-blocknodelanding-pagebody {
   padding: 3rem 110px;
-
-  button {
-    background-color: $primary-color;
-    border: 0;
-    font-weight: bold;
-    color: white;
-    padding: 1rem;
-    margin-top: 1rem;
-    display: inline-block;
-  }
 }
 
 .path-frontpage .block-field-blocknodelanding-pagefield-billboard-image {
@@ -48,8 +46,12 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  .layout__region {
-    flex: 0 1 calc(33% - 1rem);
+  > .layout__region {
+    flex: 0 1 100%;
+
+    @media (min-width: 772px) {
+      flex: 0 1 calc(33% - 1rem);
+    }
   }
 
   h2 {
@@ -79,7 +81,13 @@
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
-    flex: 0 1 calc(25% - 1rem);
+    @media (min-width: 650px) {
+      flex: 0 1 calc(50% - 1rem);
+    }
+
+    @media (min-width: 1040px) {
+      flex: 0 1 calc(25% - 1rem);
+    }
   }
 
   h2 {
@@ -129,5 +137,15 @@
       text-decoration: underline;
       color: $primary-color;
     }
+  }
+}
+
+.more-link {
+  text-align: left;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 }

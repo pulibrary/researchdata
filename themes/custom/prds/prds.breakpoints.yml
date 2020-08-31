@@ -14,14 +14,14 @@ prds.small:
 
 prds.medium:
   label: medium
-  mediaQuery: '(min-width: 650px)'
+  mediaQuery: '(min-width: 768px)'
   weight: 1
   multipliers:
     - 1x
 
 prds.large:
   label: large
-  mediaQuery: '(min-width: 1300px)'
+  mediaQuery: '(min-width: 1024px)'
   weight: 2
   multipliers:
     - 1x

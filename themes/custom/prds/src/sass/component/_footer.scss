@@ -12,16 +12,17 @@
     flex-wrap: wrap;
     background-color: rgba(255,255,255,0.6);
     padding: 1rem;
-
-    article {
-      flex: 0 1 calc(25% - 3rem);
       
-      img,
-      picture {
-        max-height: 65px;
-        display: block;
-        margin: auto;
-      }
+    img,
+    picture {
+      max-height: 50px;
+      display: block;
+      margin: auto;
     }
+    
+  }
+
+  .clearfix::after {
+    display: none;
   }
 }

@@ -1,17 +1,17 @@
-uuid: 39900afc-6eba-4dab-a8b0-b53f450702df
+uuid: d4c5908b-0ed9-48f8-9d04-1aa78ff756cd
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - field.storage.node.field_news_image
-    - node.type.article
+    - field.storage.node.field_resource_category
+    - node.type.a_z_resource
   module:
     - node
     - text
     - user
-id: news
-label: News
+id: tools_and_resources
+label: 'Tools and Resources'
 module: views
 description: ''
 tag: ''
@@ -52,26 +52,91 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 1
+          items_per_page: 5
           offset: 0
       style:
-        type: default
+        type: html_list
         options:
-          grouping: {  }
-          row_class: news--item
+          grouping:
+            -
+              field: field_resource_category
+              rendered: true
+              rendered_strip: false
+          row_class: ''
           default_row_class: true
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
         type: fields
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: true
       fields:
-        field_news_image:
-          id: field_news_image
-          table: node__field_news_image
-          field: field_news_image
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          settings:
+            link_to_entity: true
+          plugin_id: field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        body:
+          id: body
+          table: node__body
+          field: body
           relationship: none
           group_type: group
           admin_label: ''
@@ -116,11 +181,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_view
-          settings:
-            view_mode: third_width
-          group_column: target_id
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -131,10 +195,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        field_resource_category:
+          id: field_resource_category
+          table: node__field_resource_category
+          field: field_resource_category
           relationship: none
           group_type: group
           admin_label: ''
@@ -167,69 +231,6 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h3
-          element_class: news-copy
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        body:
-          id: body
-          table: node__body
-          field: body
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: '<div class="news-copy"><h3>{{ title }}</h3>{{ body }}</div>'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -237,16 +238,16 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: text_trimmed
+          click_sort_column: target_id
+          type: entity_reference_label
           settings:
-            trim_length: 280
-          group_column: value
+            link: false
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -276,7 +277,7 @@ display:
           table: node_field_data
           field: type
           value:
-            article: article
+            a_z_resource: a_z_resource
           entity_type: node
           entity_field: type
           plugin_id: bundle
@@ -284,37 +285,23 @@ display:
             operator_limit_selection: false
             operator_list: {  }
       sorts:
-        created:
-          id: created
+        title:
+          id: title
           table: node_field_data
-          field: created
-          order: DESC
+          field: title
+          order: ASC
           entity_type: node
-          entity_field: created
-          plugin_id: date
+          entity_field: title
+          plugin_id: standard
           relationship: none
           group_type: group
           admin_label: ''
           exposed: false
           expose:
             label: ''
-          granularity: second
-      title: 'Recent News'
+      title: 'Tools and Resources'
       header: {  }
-      footer:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: '<a href="/news" class="more-link">View all news</a>'
-            format: basic_html
-          plugin_id: text
+      footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
@@ -328,31 +315,14 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_news_image'
+        - 'config:field.storage.node.field_resource_category'
   block_1:
     display_plugin: block
     id: block_1
-    display_title: 'News Block (Home Page)'
+    display_title: Block
     position: 1
     display_options:
       display_extenders: {  }
-      display_description: 'New Block for home page'
-      footer:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: '<a href="/news" class="more-link">View all news</a>'
-            format: basic_html
-          plugin_id: text
-      defaults:
-        footer: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -362,32 +332,4 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_news_image'
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 2
-    display_options:
-      display_extenders: {  }
-      path: news
-      pager:
-        type: none
-        options:
-          offset: 0
-      defaults:
-        pager: false
-        footer: false
-        title: false
-      footer: {  }
-      title: News
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_news_image'
+        - 'config:field.storage.node.field_resource_category'
