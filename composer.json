@@ -50,6 +50,9 @@
                 "web-root": "./"
             }
         },
+        "file-mapping": {
+            "[web-root]/sites/default.services.yml": false
+        },
         "installer-paths": {
             "core": [
                 "type:drupal-core"
