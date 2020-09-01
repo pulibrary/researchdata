@@ -1,0 +1,22 @@
+uuid: 8675b112-2e66-4a3b-9a62-e15d3043b483
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: knowledge_base
+label: 'Knowledge Base'
+type: 'canonical_entities:node'
+pattern: 'research-lifecycle-guide/[node:title]'
+selection_criteria:
+  1d401905-1486-4c8a-b3b0-15a85b418cc0:
+    id: node_type
+    bundles:
+      knowledge_base: knowledge_base
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 1d401905-1486-4c8a-b3b0-15a85b418cc0
+selection_logic: and
+weight: -5
+relationships: {  }
