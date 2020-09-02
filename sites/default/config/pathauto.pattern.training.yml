@@ -7,16 +7,16 @@ dependencies:
 id: training
 label: Training
 type: 'canonical_entities:node'
-pattern: 'training/[node:field_training_date_and_time:start_date:html_date]//[node:title]'
+pattern: 'trainings/[node:field_training_date_and_time:start_date:html_date]/[node:title]'
 selection_criteria:
-  9719e515-aabb-4900-a258-4faab2f10c40:
+  8636a5da-45c0-4505-90bc-b46259293500:
     id: node_type
     bundles:
       training: training
     negate: false
     context_mapping:
       node: node
-    uuid: 9719e515-aabb-4900-a258-4faab2f10c40
+    uuid: 8636a5da-45c0-4505-90bc-b46259293500
 selection_logic: and
 weight: -5
 relationships: {  }

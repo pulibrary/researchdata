@@ -65,7 +65,7 @@ display:
           row_class: ''
           default_row_class: true
           type: ul
-          wrapper_class: item-list
+          wrapper_class: item-list-group
           class: ''
       row:
         type: fields
@@ -206,7 +206,7 @@ display:
           exclude: true
           alter:
             alter_text: false
-            text: ''
+            text: '<h2>{{ field_resource_category }}</h2>'
             make_link: false
             path: ''
             absolute: false

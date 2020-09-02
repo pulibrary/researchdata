@@ -1,33 +1,25 @@
-$primary-color: rgba(39,97,163, 1);
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-html {
-  --dark-blue: rgb(36, 88, 141);
-  --burgundy: rgb(170, 216, 44);
-  --light-blue: rgb(184, 216, 235);
-  --orange: rgb(255, 108, 14);
-  --bright-red: rgb(207, 51, 57);
+:focus {
+  outline-color: $color-accent;
+  outline-offset: 3px;
 }
 
 body {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
   overflow-x: hidden;
 }
 
 h1 {
-  color: var(--dark-blue);
+  color: $color-primary;
 }
 
 a,
 a:visited {
-  color: var(--dark-blue);
+  color: $color-primary;
 }
 
 a:hover,
@@ -38,26 +30,4 @@ a:focus {
 img {
   max-width: 100%;
   height: auto;
-}
-
-:focus {
-  outline-color: #e77500;
-}
-
-button,
-.button {
-  background-color: $primary-color;
-  border: 0;
-  font-weight: bold;
-  color: white;
-  padding: 1rem;
-  margin-top: 1rem;
-  display: inline-block;
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    background-color: lighten($primary-color, 5%);
-    color: white;
-  }
 }

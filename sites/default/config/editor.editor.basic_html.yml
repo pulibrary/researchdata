@@ -19,11 +19,13 @@ settings:
             - Bold
             - Italic
             - JustifyCenter
+            - HorizontalRule
         -
           name: Links
           items:
             - DrupalLink
             - DrupalUnlink
+            - Anchor
         -
           name: Lists
           items:

@@ -1,8 +1,7 @@
 .block-local-tasks-block nav {
-  border-bottom: 3px solid #1a1a1a;
+  border-bottom: 3px solid $color-black;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 1rem;
   padding-right: 2rem;
 
   ul {
@@ -10,39 +9,39 @@
   }
 
   li {
-    background-color: #f5f5f2;
+    background-color: $color-tertiary;
 
     &.is-active a {
-      background-color: #ffffff;
+      background-color: $color-white;
       border: 0;
-      color: #1a1a1a
+      color: $color-black
     }
   }
 
   a {
-    border: 3px solid #1a1a1a;
+    border: 3px solid $color-black;
     border-bottom: 0;
-    color: #1a1a1a;
-    font-weight: bold;
+    color: $color-black;
+    font-weight: 700;
     padding: 1rem;
 
     &:hover,
     &:focus {
-      background-color: #ebeae4;
+      background-color: $color-tertiary;
     }
   }
 }
 
 .layout-builder-form button {
-  border: 3px solid #1a1a1a;
+  border: 3px solid $color-black;
   border-bottom: 0;
-  color: #1a1a1a;
-  font-weight: bold;
+  color: $color-black;
+  font-weight: 700;
   padding: 1rem;
 
   &:hover,
   &:focus {
-    background-color: #ebeae4;
+    background-color: $color-tertiary;
   }
 }
 

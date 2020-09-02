@@ -1,16 +1,21 @@
 .news--item,
 .resource--item {
   list-style-type: none;
-  // box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
   margin-bottom: 1rem;
-  background: #fff;
+  background: $color-white;
   line-height: 1.4;
-  font-family: sans-serif;
-  // border-radius: 5px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  transition: box-shadow .3s;
+
+  position:relative;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
 
   img {
     width: 100%;
@@ -27,26 +32,95 @@
     line-height: 1;
     margin: 0;
     padding: 1rem 1.5rem;
+
+    a {
+      position: static;
+
+      &::before {
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 0;
+        pointer-events: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
+    }
   }
 
   a {
     text-decoration: none;
-    color: #1a1a1a;
+    color: $color-secondary;
+
+    position: relative;
+    z-index: 2;
   }
 
   p {
-    font-size: 14px;
+    font-size: $base-font-size * 0.875;
     padding: 0 1.5rem 1rem;
   }
 
   .views-more-link {
     display: block;
     margin-top: 1rem;
-    font-size: 14px;
+    font-size: $base-font-size * 0.875;
 
     &:hover,
     &:focus {
       text-decoration: underline;
     }
+  }
+}
+
+.page-node-type-article p {
+  max-width: 100ch;
+  margin: $paragraph-margin auto;
+  font-size: 1.1rem;
+}
+
+.page-node-type-article .block-field-blocknodearticlefield-news-image img {
+  width: 100vw;
+  max-height: 40vh;
+  object-fit: cover;
+}
+
+.page-node-type-article .layout-content {
+  padding-top: 0;
+  background: linear-gradient(60deg, rgba(255,255,255,1) 45%, rgba(0,212,255,0) 100%), url("/themes/custom/prds/images/nodes-bg.svg") no-repeat; 
+  background-size: 1440px 1000px;
+  background-position: right -500px top -200px;
+}
+
+.page-node-type-article .region-content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-node-type-article h1 {
+  background: $color-white;
+  color: $color-secondary;
+  padding: 1.5rem 2rem;
+  box-shadow: 0.5rem 0.5rem 0 0 rgba($color-secondary, 0.1);
+  max-width: 1200px;
+  margin: auto;
+  display: block;
+  border: 1px solid rgba($color-secondary, 0.1);
+  margin-top: -6rem; 
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+@media (min-width: $bp-medium) {
+  .path-news .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .path-news .news--item {
+    flex-basis: 33%;
   }
 }

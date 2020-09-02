@@ -1399,7 +1399,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<a href="/training" class="more-link">View all trainings</a>'
+          content: '<a href="/trainings" class="more-link">View all trainings</a>'
           plugin_id: text_custom
     cache_metadata:
       max-age: -1

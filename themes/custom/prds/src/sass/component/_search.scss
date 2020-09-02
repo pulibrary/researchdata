@@ -1,9 +1,21 @@
 .region-header .views-exposed-form {
-  background-color: #fff;
-  height: 60px;
+  background-color: $color-white;
   max-width: 100%;
   display: flex;
   align-items: center;
+  height: 44px;
+
+  @media (min-width: $bp-medium) {
+    height: 60px;
+  }
+
+  .clearfix::after {
+    display: none;
+  }
+
+  .form-item-keys label {
+    @include sr-only();
+  }
 
   form {
     height: 100%;
@@ -23,26 +35,100 @@
   .form-text,
   .form-type-search,
   .form-autocomplete.ui-autocomplete-loading {
+    width: 100%;
     height: 100%;
     background-image: none;
+
+    @media (min-width: $bp-medium) {
+      width: 165px;
+    }
+
+    @media (min-width: $bp-large) {
+      width: 214px;
+    }
+
+    @media (min-width: 1275px) and (max-width: 1365px) {
+      width: 150px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 225px;
+    }
   }
   
   .form-text {
     padding-left: 1rem;
-    border: 1px solid #e6ecf1;
+    border: 1px solid $border-color;
   }
   .form-submit {
-    padding: 1rem;
-    background: $border-color;
+    padding: revert;
+    background: $color-tertiary;
     border: 0;
     font-weight: bold;
-    border: 1px solid #e6ecf1;
-    margin-top: 0;
-    color: #1a1a1a;
+    border: 1px solid $border-color;
+    margin: 0;
+    color: $color-secondary;
+    width: 85px;
+    height: 44px;
+
+    @media (min-width: $bp-medium) {
+      height: 60px;
+    }
 
     &:hover,
     &:focus {
-      background: lighten($border-color, 2%);
+      background: lighten($color-tertiary, 2%);
+    }
+  }
+}
+
+.search-api-autocomplete-search li {
+  list-style-type: none;
+}
+
+.view-search-content .view-header {
+  margin-bottom: 2rem;
+}
+
+.view-search-content .view-content {
+  display: flex;
+  flex-direction: column;
+
+  .item-list-group {
+    flex-basis: 100%;
+  }
+
+  .views-row {
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    position:relative;
+
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: box-shadow .3s;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    a {
+      font-weight: 700;
+      display: block;
+      
+      position: static;
+
+      &::before {
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 0;
+        pointer-events: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
     }
   }
 }

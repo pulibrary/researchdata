@@ -1,33 +1,107 @@
-.menu--main {
+.block-responsive-menu {
   display: block;
   
-  .menu {
+  .horizontal-menu {
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;;
     align-items: center;
     padding: 0 1rem;
     margin: 0;
-    height: 100%;
-  
+
+    @media (min-width: $bp-medium) {
+      justify-content: flex-start;
+      height: 100%;
+    }
+    
     .menu-item {
       list-style-type: none;
+      flex-basis: 100%;
+      padding-top: 0;
+
+      @media (min-width: $bp-medium) {
+        flex-basis: auto;
+      }
+
+      &.menu-item--active-trail a {
+        border-color: $color-primary;
+      }
   
       a {
-        padding: 2.3rem 1.5rem;
+        
         text-decoration: none;
-        font-weight: bold;
-        font-size: 1.1rem;
+        font-weight: 700;
+        font-size: $base-font-size * 1.05;
         border-bottom: 3px solid transparent;
+
+        @media (min-width: 1275px) and (max-width: 1365px) {
+          font-size: $base-font-size;
+        }
+
+        @media (min-width: $bp-large) {
+          padding: 2rem 1rem;
+        }
 
         &:hover,
         &:focus {
-          color: #1a1a1a;
+          color: $color-secondary;
         }
   
         &.is-active {
-          border-color: $link-color;
+          border-color: $color-primary;
         }
       }
     }
+
+    .menu-item--expanded {
+      list-style-image: none;
+    }
+
+    .menu-item--expanded .sub-nav {
+      border: 1px solid $color-tertiary;
+      box-shadow: 0 3px 8px 0 rgba(lighten($color-secondary, 50%), 0.1);
+
+      a {
+        border: 0;
+        padding: 0.5rem 0.75rem;
+        background: $color-white;
+        color: $color-secondary;
+        font-weight: 700;
+
+        &:hover,
+        &:focus {
+          color: $color-primary;
+          background: $color-tertiary;
+        }
+  
+        &.is-active {
+          border-color: $color-primary;
+        }
+      }
+
+      .sub-nav {
+        margin-left: -2px;
+      }
+    }
   }
+}
+
+
+// responsive menu
+.responsive-menu-toggle-icon::before,
+.responsive-menu-toggle-icon span.icon,
+.responsive-menu-toggle-icon::after {
+  background-color: $color-secondary;
+}
+
+.responsive-menu-toggle-icon span.label {
+  color: $color-secondary;
+}
+
+.responsive-menu-toggle {
+  flex: 1;
+}
+
+.mm-menu a {
+  font-size: $base-font-size * 0.875;
 }
