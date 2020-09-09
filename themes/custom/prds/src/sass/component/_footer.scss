@@ -1,27 +1,101 @@
 .region-footer {
-  padding: 3rem 115px;
+  padding: 1rem;
 
-  background: #00578a;
-  background: linear-gradient(0deg, rgba(0,87,138,1) 10%, rgba(0,0,0,0) 100%), url("/themes/custom/prds/images/footer-bg_lg.jpg") no-repeat center center; 
+  @media (min-width: $bp-medium) {
+    padding: 2rem 2rem 0.5rem;
+  }
+
+  @media (min-width: $bp-large) {
+    padding: 2rem 4rem 0.5rem;
+  }
+
+  background: $color-primary;
+  background: linear-gradient(0deg, darken($color-primary, 10%) 10%, rgba($color-secondary, 0) 100%), url("/themes/custom/prds/images/footer-bg_lg.jpg") no-repeat center center; 
   background-size: cover;
 
   .field--name-body {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba($color-tertiary, 0.7);
     padding: 1rem;
 
-    article {
-      flex: 0 1 calc(25% - 3rem);
-      
-      img,
-      picture {
-        max-height: 65px;
-        display: block;
-        margin: auto;
+    @media (min-width: $bp-small) {
+      justify-content: space-around;
+    }
+
+    a {
+      margin-bottom: 1rem;
+
+      @media (min-width: $bp-small) {
+        flex-basis: calc(50% - 1rem);
+      }
+
+      @media (min-width: $bp-medium) {
+        margin: 0;
+        flex-basis: calc(25% - 1rem);
       }
     }
+      
+    img,
+    picture {
+      max-height: 44px;
+      display: block;
+      margin: auto;
+    }
+    
+  }
+
+  .clearfix::after {
+    display: none;
+  }
+}
+
+.region--pu-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  padding: 0 1rem 1rem;
+
+  @media (min-width: $bp-medium) {
+    padding: 0 2rem 1rem;
+  }
+
+  @media (min-width: $bp-large) {
+    padding: 0 4rem 1rem;
+  }
+
+  .pu--accessibility::after {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4IDEzdjZhMiAyIDAgMCAxLTIgMkg1YTIgMiAwIDAgMS0yLTJWOGEyIDIgMCAwIDEgMi0yaDYiLz48cG9seWxpbmUgcG9pbnRzPSIxNSAzIDIxIDMgMjEgOSIvPjxsaW5lIHgxPSIxMCIgeDI9IjIxIiB5MT0iMTQiIHkyPSIzIi8+PC9zdmc+);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    filter: invert(100%);
+    height: 12px;
+    margin-left: 8px;
+    position: relative;
+    width: 12px;
+  }
+
+  @media (min-width: $bp-medium) {
+    .pu--accessibility {
+      margin-right: auto;
+    }
+
+    .pu--copyright {
+      margin-left: auto;
+    }
+  }
+  
+
+  .pu--accessibility a,
+  .pu--accessibility a:visited,
+  .pu--copyright {
+    color: $color-white;
+    font-size: 0.875rem;
   }
 }

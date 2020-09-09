@@ -1,0 +1,44 @@
+uuid: d1a17501-9c6a-4ab2-a106-e33214b516d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.training.body
+    - field.field.node.training.field_libcal_url
+    - field.field.node.training.field_location
+    - field.field.node.training.field_recording
+    - field.field.node.training.field_support_materials
+    - field.field.node.training.field_training_date_and_time
+    - node.type.training
+  module:
+    - datetime_range
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.training.token
+targetEntityType: node
+bundle: training
+mode: token
+content:
+  field_training_date_and_time:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: Y-m-d
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+hidden:
+  body: true
+  field_libcal_url: true
+  field_location: true
+  field_recording: true
+  field_support_materials: true
+  links: true
+  search_api_excerpt: true

@@ -41,6 +41,25 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 3
+          88f1f419-5b30-4941-99f4-d9f3cbaa0bcc:
+            uuid: 88f1f419-5b30-4941-99f4-d9f3cbaa0bcc
+            region: content
+            configuration:
+              id: 'field_block:node:article:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 4
         third_party_settings: {  }
       -
         layout_id: layout_onecol

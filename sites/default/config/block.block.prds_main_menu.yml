@@ -1,10 +1,11 @@
 uuid: ae7fec46-ce10-4ff8-9adc-cacd564debc3
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
   module:
+    - ctools
     - system
   theme:
     - prds
@@ -12,7 +13,7 @@ _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
 id: prds_main_menu
 theme: prds
-region: header
+region: sidebar
 weight: -6
 provider: null
 plugin: 'system_menu_block:main'
@@ -21,7 +22,14 @@ settings:
   label: 'Main navigation'
   provider: system
   label_display: '0'
-  level: 1
-  depth: 1
+  level: 2
+  depth: 0
   expand_all_items: false
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      knowledge_base: knowledge_base
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

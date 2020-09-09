@@ -121,7 +121,9 @@ datasource_settings:
   'entity:node':
     bundles:
       default: true
-      selected: {  }
+      selected:
+        - landing_page
+        - service
     languages:
       default: true
       selected: {  }

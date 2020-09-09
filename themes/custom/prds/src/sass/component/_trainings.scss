@@ -1,20 +1,25 @@
 .training--item {
   list-style-type: none;
   margin-left: 0;
-  // box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
   margin-bottom: 1rem;
-  background: #fff;
+  background: $color-white;
   line-height: 1.4;
-  font-family: sans-serif;
-  // border-radius: 5px;
   display: flex;
   overflow: hidden;
+  transition: box-shadow .3s;
+
+  position:relative;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
 }
 
 .training-date {
   padding: 1rem;
-  color: $primary-color;
+  color: $color-primary;
   display: flex;
   flex-direction: column;
 
@@ -24,8 +29,8 @@
   }
 
   .training-day {
-    font-size: 32px;
-    font-weight: 800;
+    font-size: $base-font-size * 2;
+    font-weight: 700;
     display: block;
     line-height: 1;
   }
@@ -36,11 +41,6 @@
   padding: 1rem;
   margin: 0;
   position: relative;
-  // line-height: 1;
-
-  // .training-time {
-  //   font-size: 12px;
-  // }
 
   &::after {
     top: 50%;
@@ -49,7 +49,7 @@
     content: " ";
     position: absolute;
     transform: translateY(-50%);
-    border-left: 1px solid #E6ECF1;
+    border-left: 1px solid $border-color;
   }
 
   h3 {
@@ -59,7 +59,21 @@
 
   a {
     text-decoration: none;
-    color: #1a1a1a;
+    color: $color-secondary;
+
+    position: static;
+
+    &::before {
+      bottom: 0;
+      content: "";
+      display: block;
+      left: 0;
+      pointer-events: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
   }
 }
 
@@ -71,14 +85,73 @@
   a,
   a:visited {
     padding: 1rem;
-    background: #f6f6f6;
-    color: black;
+    background: $color-tertiary;
+    color: $color-secondary;
     text-decoration: none;
 
     &:hover,
     &:focus {
-      background: $primary-color;
-      color: white;
+      background: $color-primary;
+      color: $color-white;
     }
+  }
+}
+
+.block-views-blockevents-home-block-4 .view-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .training--item {
+    margin-bottom: 1.5rem;
+    width: 100%;
+
+    @media (min-width: $bp-medium) {
+      flex-basis: calc(50% - 32px);
+
+      &:nth-child(odd) {
+        margin-right: 0.75rem;
+      }
+  
+      &:nth-child(even) {
+        margin-left: 0.75rem;
+      }
+    }
+  }
+}
+
+.field--name-body .program-activities {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+
+  div {
+    margin-bottom: 1rem;
+
+    @media (min-width: $bp-medium) {
+      flex-basis: 33%;
+      text-align: center;
+    }
+  }
+
+  h4 {
+    color: $color-secondary;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
+h3.text-align-center {
+  color: $color-secondary;
+  text-align: left;
+
+  @media (min-width: $bp-medium) {
+    text-align: center;
   }
 }

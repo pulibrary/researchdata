@@ -1,0 +1,8 @@
+.layout-container {
+  min-height: 100vh;
+  background: darken($color-primary, 10%);
+  max-width: 1920px;
+  margin: auto;
+  border-left: 1px solid $color-tertiary;
+  border-right: 1px solid $color-tertiary;
+}

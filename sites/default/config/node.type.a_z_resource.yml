@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'A Z Resource'
+name: 'Tools and Resources'
 type: a_z_resource
 description: 'Content for the A to Z resource page'
 help: ''

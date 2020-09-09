@@ -1,0 +1,22 @@
+uuid: 2f86bd8e-764e-4040-99d0-69c05e64b5ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: tools_and_resources
+label: 'Tools and Resources'
+type: 'canonical_entities:node'
+pattern: 'resources/[node:title]'
+selection_criteria:
+  b87bb88f-9631-4de6-89e7-553202d946e6:
+    id: node_type
+    bundles:
+      a_z_resource: a_z_resource
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b87bb88f-9631-4de6-89e7-553202d946e6
+selection_logic: and
+weight: -5
+relationships: {  }

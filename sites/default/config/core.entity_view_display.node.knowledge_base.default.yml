@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.knowledge_base.field_category
     - field.field.node.knowledge_base.layout_builder__layout
     - node.type.knowledge_base
-    - system.menu.knowledge-base-menu
+    - system.menu.main
   module:
     - layout_builder
     - system
@@ -24,20 +24,6 @@ third_party_settings:
           label: ''
           column_widths: 25-75
         components:
-          10a90305-c8eb-478c-86a2-db75a4067d60:
-            uuid: 10a90305-c8eb-478c-86a2-db75a4067d60
-            region: first
-            configuration:
-              id: 'system_menu_block:knowledge-base-menu'
-              label: 'Knowledge Base Menu'
-              provider: system
-              label_display: '0'
-              level: 1
-              depth: 0
-              expand_all_items: false
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
           cfe0193e-697c-490e-918f-54aebe1ed94d:
             uuid: cfe0193e-697c-490e-918f-54aebe1ed94d
             region: second
@@ -88,6 +74,20 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 1
+          e8dde109-2c0d-4ba0-82bc-35eaa3b91430:
+            uuid: e8dde109-2c0d-4ba0-82bc-35eaa3b91430
+            region: first
+            configuration:
+              id: 'system_menu_block:main'
+              label: 'Main navigation'
+              provider: system
+              label_display: '0'
+              level: 2
+              depth: 0
+              expand_all_items: true
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
 id: node.knowledge_base.default
 targetEntityType: node

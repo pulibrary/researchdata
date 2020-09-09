@@ -10,7 +10,13 @@ dependencies:
     - views.view.events_home
     - views.view.news
     - views.view.resources_home
+  content:
+    - 'block_content:basic:1e72df4d-4202-4b4d-abb8-dbdfa4df47df'
+    - 'block_content:basic:37c6613a-9b39-41bd-b58b-014005eacd21'
+    - 'block_content:basic:9229cf0b-8599-4c53-8839-5e837fc5cd0c'
+    - 'block_content:basic:924e45c5-ded0-4be2-b9bc-38697203c6c9'
   module:
+    - block_content
     - layout_builder
     - layout_discovery
     - text
@@ -140,61 +146,61 @@ third_party_settings:
       -
         layout_id: layout_fourcol_section
         layout_settings:
-          label: ''
+          label: 'Stages of the Research Lifecycle'
         components:
-          cd8d2e78-dead-4f61-9b38-cbf7bcbf73b8:
-            uuid: cd8d2e78-dead-4f61-9b38-cbf7bcbf73b8
+          d33a1723-7bd6-4422-b0e6-5e2836b06072:
+            uuid: d33a1723-7bd6-4422-b0e6-5e2836b06072
             region: first
             configuration:
-              id: 'inline_block:basic'
-              label: Planning
-              provider: layout_builder
+              id: 'block_content:924e45c5-ded0-4be2-b9bc-38697203c6c9'
+              label: 'Planning - Home'
+              provider: block_content
               label_display: '0'
+              status: true
+              info: ''
               view_mode: full
-              block_revision_id: 1
-              block_serialized: null
               context_mapping: {  }
             additional: {  }
             weight: 0
-          db52d333-ea5b-48c6-a9a8-2fa24463edc5:
-            uuid: db52d333-ea5b-48c6-a9a8-2fa24463edc5
+          967b9dfd-6cf2-4adb-9349-6193e4095dd4:
+            uuid: 967b9dfd-6cf2-4adb-9349-6193e4095dd4
             region: second
             configuration:
-              id: 'inline_block:basic'
-              label: 'Data Acquisition'
-              provider: layout_builder
+              id: 'block_content:37c6613a-9b39-41bd-b58b-014005eacd21'
+              label: 'Data Acquisition - Home'
+              provider: block_content
               label_display: '0'
+              status: true
+              info: ''
               view_mode: full
-              block_revision_id: 2
-              block_serialized: null
               context_mapping: {  }
             additional: {  }
             weight: 0
-          fff9c4f1-97f5-41f4-80e3-51699fe658e7:
-            uuid: fff9c4f1-97f5-41f4-80e3-51699fe658e7
-            region: fourth
-            configuration:
-              id: 'inline_block:basic'
-              label: 'Publishing & Preservation'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 3
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          287d9e80-8b56-44a4-b961-865efc65a78b:
-            uuid: 287d9e80-8b56-44a4-b961-865efc65a78b
+          e710d209-bb3e-404d-8899-d7a51185a14d:
+            uuid: e710d209-bb3e-404d-8899-d7a51185a14d
             region: third
             configuration:
-              id: 'inline_block:basic'
-              label: Analysis
-              provider: layout_builder
+              id: 'block_content:1e72df4d-4202-4b4d-abb8-dbdfa4df47df'
+              label: 'Analysis - Home'
+              provider: block_content
               label_display: '0'
+              status: true
+              info: ''
               view_mode: full
-              block_revision_id: 4
-              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          760e8a4b-96dd-4eee-9947-ba969b3385e9:
+            uuid: 760e8a4b-96dd-4eee-9947-ba969b3385e9
+            region: fourth
+            configuration:
+              id: 'block_content:9229cf0b-8599-4c53-8839-5e837fc5cd0c'
+              label: 'Publishing and Preservation - Home'
+              provider: block_content
+              label_display: '0'
+              status: true
+              info: ''
+              view_mode: full
               context_mapping: {  }
             additional: {  }
             weight: 0

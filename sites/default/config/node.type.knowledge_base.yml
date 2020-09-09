@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Knowledge Base'
+name: 'Research Lifecycle Guide'
 type: knowledge_base
 description: 'How To, FAQ, or Knowledge Base Item'
 help: ''

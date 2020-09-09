@@ -7,21 +7,21 @@ prds.mobile:
 
 prds.small:
   label: small
-  mediaQuery: '(min-width: 325px)'
+  mediaQuery: '(min-width: 415px)'
   weight: 1
   multipliers:
     - 1x
 
 prds.medium:
   label: medium
-  mediaQuery: '(min-width: 650px)'
+  mediaQuery: '(min-width: 765px)'
   weight: 1
   multipliers:
     - 1x
 
 prds.large:
   label: large
-  mediaQuery: '(min-width: 1300px)'
+  mediaQuery: '(min-width: 1275px)'
   weight: 2
   multipliers:
     - 1x

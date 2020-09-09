@@ -1,0 +1,44 @@
+/* Breakpoints */
+$bp-largest: 1920px;
+$bp-larger: 1440px;
+$bp-large: 1275px;
+$bp-medium: 765px;
+$bp-small: 415px;
+
+/* Colors */
+$color-black: hsl(0, 0%, 10%);
+$color-blue:	hsl(206, 100%, 34%);
+$color-gray: hsl(206, 0%, 96%);
+$color-orange: 	hsl(30, 100%, 45%);
+$color-white: hsl(0, 0%, 100%);
+
+$color-primary: $color-blue;
+$color-secondary: $color-black;
+$color-tertiary: $color-gray;
+$color-accent: $color-orange;
+
+/* Typography */
+$base-font-size: 16px;
+$base-font-family: open-sans, sans-serif;
+
+$paragraph-margin: 1.25rem;
+$paragraph-size: 1rem;
+$paragraph-line-height: 1.5;
+$paragraph-color: $color-secondary;
+
+$header-margin: $paragraph-margin * 1.2;
+$header-color: $color-primary;
+$header-line-height: 1.25;
+$header-size: 2.5rem;
+$header-font-family: $base-font-family;
+
+$blockquote-margin: $paragraph-margin * 1.5;
+$blockquote-size: 1.425rem;
+$blockquote-line-height: 1.5;
+$blockquote-color: $color-primary;
+
+$link-color: $color-primary;
+
+$hr-margin: 1.875rem;
+
+$border-color: darken(saturate($color-tertiary, 25%), 5%);

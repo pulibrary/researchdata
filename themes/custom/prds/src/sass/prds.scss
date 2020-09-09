@@ -1,7 +1,11 @@
+@import "base/tokens";
 @import "base/utils";
-@import "base/base";
+@import "base/layout";
 @import "base/typography";
+@import "base/base";
+
 @import "component/admin";
+@import "component/buttons";
 @import "component/footer";
 @import "component/frontpage";
 @import "component/header";
