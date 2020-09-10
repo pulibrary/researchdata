@@ -25,6 +25,13 @@ settings:
             - '-'
             - RemoveFormat
         -
+          name: Alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+        -
           name: Linking
           items:
             - DrupalLink
@@ -50,14 +57,21 @@ settings:
           items:
             - ShowBlocks
             - Source
+            - bs_grid
+            - Contents
   plugins:
     stylescombo:
       styles: ''
+    language:
+      language_list: un
+    bs_grid:
+      use_cdn: 1
+      cdn_url: 'https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3.4.0/css/grid.min.css'
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null
