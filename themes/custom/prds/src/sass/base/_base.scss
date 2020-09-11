@@ -32,7 +32,7 @@ img {
   height: auto;
 }
 
-main a:not([href*='researchdata.lndo.site']):not([id^='main-content']):not([href^='#']):not([href^='/']):after {  
+main a:not([href*='researchdata']):not([id^='main-content']):not([href^='#']):not([href^='/']):not([href^='?']):not([href^='mailto']):after {  
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4IDEzdjZhMiAyIDAgMCAxLTIgMkg1YTIgMiAwIDAgMS0yLTJWOGEyIDIgMCAwIDEgMi0yaDYiLz48cG9seWxpbmUgcG9pbnRzPSIxNSAzIDIxIDMgMjEgOSIvPjxsaW5lIHgxPSIxMCIgeDI9IjIxIiB5MT0iMTQiIHkyPSIzIi8+PC9zdmc+);
   background-position: center center;
   background-repeat: no-repeat;
@@ -43,4 +43,8 @@ main a:not([href*='researchdata.lndo.site']):not([id^='main-content']):not([href
   margin-left: 5px;
   position: relative;
   width: 13px;
+}
+
+main a.button:not([href*='researchdata']):not([id^='main-content']):not([href^='#']):not([href^='/']):not([href^='?']):not([href^='mailto'])::after {
+  display: none;
 }
