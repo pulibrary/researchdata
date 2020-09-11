@@ -2,6 +2,11 @@ uuid: b69c45e6-0bea-4d16-82da-ad639a608f7b
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.full_width
+    - core.entity_view_mode.media.quarter_width
+    - core.entity_view_mode.media.staff_photo
+    - core.entity_view_mode.media.third_width
   module:
     - editor
     - media
@@ -47,9 +52,14 @@ filters:
   media_embed:
     id: media_embed
     provider: media
-    status: false
+    status: true
     weight: 100
     settings:
-      default_view_mode: default
-      allowed_media_types: {  }
-      allowed_view_modes: {  }
+      default_view_mode: full_width
+      allowed_media_types:
+        image: image
+      allowed_view_modes:
+        full_width: full_width
+        quarter_width: quarter_width
+        staff_photo: staff_photo
+        third_width: third_width

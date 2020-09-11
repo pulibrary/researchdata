@@ -40,6 +40,8 @@ settings:
           name: Tools
           items:
             - Source
+            - bs_grid
+            - Contents
   plugins:
     stylescombo:
       styles: ''

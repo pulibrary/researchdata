@@ -147,6 +147,17 @@
     position: relative;
     margin-top: 0;
 
+    a,
+    a:visited {
+      text-decoration: none;
+      color: $color-white;
+
+      &:hover,
+      &:focus {
+        color: $color-white;
+      }
+    }
+
     span {
       position: absolute;
       top: 50%;
