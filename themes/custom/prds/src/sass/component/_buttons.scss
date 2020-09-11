@@ -1,5 +1,6 @@
 button,
-.button {
+.button,
+.button:visited {
   background-color: $color-primary;
   border: 0;
   font-weight: 700;

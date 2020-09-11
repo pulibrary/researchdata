@@ -132,3 +132,40 @@
     }
   }
 }
+
+.prds-appointment_search {
+  margin-top: 2rem;
+  border-top: 1px solid $color-tertiary;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  align-items: center;
+
+  h2 {
+    margin: 0;
+  }
+
+  button {
+    margin: 1rem 0;
+
+    @media (min-width: $bp-medium) {
+      margin: 0 2rem;
+    }
+  }
+}
+
+.pager__item a {
+  border: 1px solid;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background: $color-tertiary;
+  }
+
+  span {
+    text-transform: capitalize;
+  }
+}
