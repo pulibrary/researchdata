@@ -1,6 +1,9 @@
 .layout-container {
   max-width: 1920px;
   margin: auto;
-  border-left: 1px solid $color-tertiary;
-  border-right: 1px solid $color-tertiary;
+  
+  @media (min-width: $bp-largest) {
+    border-left: 1px solid $color-tertiary;
+    border-right: 1px solid $color-tertiary;
+  }
 }
