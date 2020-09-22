@@ -26,6 +26,11 @@
       border: 1px solid $border-color;
       border-right: 0;
     }
+
+    &:hover,
+    &:focus {
+      background: darken($color-tertiary, 5%);
+    }
   }
 
   .menu-item--collapsed {
@@ -47,6 +52,7 @@
     }
   }
 }
+
 
 .page-node-type-knowledge-base .layout__region--first {
   background: $color-tertiary;

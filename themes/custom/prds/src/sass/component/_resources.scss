@@ -40,10 +40,17 @@
     line-height: 1;
     margin: 0;
     padding: 1rem 1.5rem;
+    font-weight: 700;
 
     a {
       position: static;
       text-decoration: none;
+      color: $color-secondary;
+
+      &:hover,
+      &:focus {
+        color: $color-primary;
+      }
 
       &::before {
         bottom: 0;
@@ -60,14 +67,14 @@
   }
 
   a {
-    color: $color-secondary;
+    color: $color-primary;
 
     position: relative;
     z-index: 2;
 
     &:hover,
     &:focus {
-      color: $color-primary;
+      color: $color-secondary;
     }
   }
 

@@ -67,10 +67,12 @@
     display: block;
     margin-top: 1rem;
     font-size: $base-font-size * 0.875;
+    text-decoration: underline;
 
     &:hover,
     &:focus {
-      text-decoration: underline;
+      text-decoration: none;
+      color: $color-primary;
     }
   }
 }

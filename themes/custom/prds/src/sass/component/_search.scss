@@ -169,3 +169,8 @@
     text-transform: capitalize;
   }
 }
+
+.pager__item.is-active a {
+  border: 0;
+  color: $color-secondary;
+}
