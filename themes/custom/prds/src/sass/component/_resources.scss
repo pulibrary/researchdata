@@ -18,10 +18,15 @@
   }
 
   img {
-    max-width: 150px;
-    height: auto;
-    object-fit: cover;
-    padding: 1rem;
+    display: none;
+
+    @media (min-width: $bp-small) {
+      display: block;
+      max-width: 150px;
+      height: auto;
+      object-fit: contain;
+      padding: 1rem;
+    }
   }
 
   .default-img {

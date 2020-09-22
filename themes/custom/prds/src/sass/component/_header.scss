@@ -17,18 +17,24 @@
     padding: 0 1rem;
   }
 
+  @media (min-width: $bp-large) {
+    padding: 0 3rem;
+  }
+
   .block-system-branding-block {
     position: relative;
     order: 1;
-    
-    &::after {
-      top: 50%;
-      right: 0;
-      height: 40px;
-      content: " ";
-      position: absolute;
-      transform: translateY(-50%);
-      border-left: 1px solid $border-color;
+
+    @media (min-width: 1010px) {
+      &::after {
+        top: 50%;
+        right: 0;
+        height: 40px;
+        content: " ";
+        position: absolute;
+        transform: translateY(-50%);
+        border-left: 1px solid $border-color;
+      }
     }
   }
 
@@ -38,23 +44,32 @@
 
     @media (min-width: $bp-medium) {
       order: 3;
+      flex-basis: 100%;
     }
 
-    @media (min-width: $bp-large) {
+    @media (min-width: 1010px) {
       order: 2;
+      flex-basis: auto;
     }
   }
 
   .views-exposed-form {
     order: 3;
     position: relative;
+    flex-basis: 100%;
     
 
     @media (min-width: $bp-medium) {
       margin-left: auto;
       
-      padding: 0 2rem 0 1rem;
+      padding: 0 1rem 0 1rem;
       order: 2;
+      flex-basis: auto;
+    }
+
+    @media (min-width: 1010px) and (max-width: 1250px) {
+      flex-basis: 100%;
+      margin-bottom: 1rem;
     }
 
     @media (min-width: $bp-large) {
