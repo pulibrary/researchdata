@@ -11,10 +11,10 @@ dependencies:
     - views.view.news
     - views.view.resources_home
   content:
-    - 'block_content:basic:1e72df4d-4202-4b4d-abb8-dbdfa4df47df'
-    - 'block_content:basic:37c6613a-9b39-41bd-b58b-014005eacd21'
-    - 'block_content:basic:9229cf0b-8599-4c53-8839-5e837fc5cd0c'
-    - 'block_content:basic:924e45c5-ded0-4be2-b9bc-38697203c6c9'
+    - 'block_content:basic:0633ddee-22b0-44f4-9459-27bd0835e7a4'
+    - 'block_content:basic:32cf2471-7379-447f-b73e-8ab4a468b846'
+    - 'block_content:basic:39049dd4-4555-4c59-9b42-3058c06c11f6'
+    - 'block_content:basic:77d373cd-8b30-45c1-ae10-e69f113cf817'
   module:
     - block_content
     - layout_builder
@@ -148,11 +148,11 @@ third_party_settings:
         layout_settings:
           label: 'Stages of the Research Lifecycle'
         components:
-          d33a1723-7bd6-4422-b0e6-5e2836b06072:
-            uuid: d33a1723-7bd6-4422-b0e6-5e2836b06072
+          c7a92371-f396-4843-974e-1278640c6a08:
+            uuid: c7a92371-f396-4843-974e-1278640c6a08
             region: first
             configuration:
-              id: 'block_content:924e45c5-ded0-4be2-b9bc-38697203c6c9'
+              id: 'block_content:39049dd4-4555-4c59-9b42-3058c06c11f6'
               label: 'Planning - Home'
               provider: block_content
               label_display: '0'
@@ -162,11 +162,11 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-          967b9dfd-6cf2-4adb-9349-6193e4095dd4:
-            uuid: 967b9dfd-6cf2-4adb-9349-6193e4095dd4
+          ec89c32b-8981-4ec0-9e3b-2a3ae7d65e17:
+            uuid: ec89c32b-8981-4ec0-9e3b-2a3ae7d65e17
             region: second
             configuration:
-              id: 'block_content:37c6613a-9b39-41bd-b58b-014005eacd21'
+              id: 'block_content:77d373cd-8b30-45c1-ae10-e69f113cf817'
               label: 'Data Acquisition - Home'
               provider: block_content
               label_display: '0'
@@ -176,11 +176,11 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-          e710d209-bb3e-404d-8899-d7a51185a14d:
-            uuid: e710d209-bb3e-404d-8899-d7a51185a14d
+          73b2ae81-f4cd-40e2-a756-a3783acacea2:
+            uuid: 73b2ae81-f4cd-40e2-a756-a3783acacea2
             region: third
             configuration:
-              id: 'block_content:1e72df4d-4202-4b4d-abb8-dbdfa4df47df'
+              id: 'block_content:32cf2471-7379-447f-b73e-8ab4a468b846'
               label: 'Analysis - Home'
               provider: block_content
               label_display: '0'
@@ -190,11 +190,11 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-          760e8a4b-96dd-4eee-9947-ba969b3385e9:
-            uuid: 760e8a4b-96dd-4eee-9947-ba969b3385e9
+          4c4a1062-b2e5-46e6-a47b-59bd5ac1b12a:
+            uuid: 4c4a1062-b2e5-46e6-a47b-59bd5ac1b12a
             region: fourth
             configuration:
-              id: 'block_content:9229cf0b-8599-4c53-8839-5e837fc5cd0c'
+              id: 'block_content:0633ddee-22b0-44f4-9459-27bd0835e7a4'
               label: 'Publishing and Preservation - Home'
               provider: block_content
               label_display: '0'

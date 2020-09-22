@@ -11,7 +11,7 @@ id: node.training.field_libcal_url
 field_name: field_libcal_url
 entity_type: node
 bundle: training
-label: 'LibCal URL'
+label: 'Event URL'
 description: 'URL in LibCal that allows the user to save their space at the Workshop, Event, or Program.'
 required: false
 translatable: false

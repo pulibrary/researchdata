@@ -17,16 +17,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
 }
 
-h1, h2 {
-  color: $header-color;
-
-  &:first-child {
-    margin-top: 0;
-  }
+h1 {
+  color: $paragraph-color;
+  margin-top: 0;
 }
 
-h3, h4, h5, h6 {
-  color: $paragraph-color;
+h2, h3, h4 {
+  font-weight: 400;
 }
 
 h1 {

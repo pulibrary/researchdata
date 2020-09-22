@@ -25,6 +25,8 @@ Drupal site for Princeton Research Data Service
 
     $settings['hash_salt'] = '<Hash Salt>'
 
+    $settings['config_sync_directory'] = '<Config Sync Directory>';
+
     ```
 1. `mkdir .ssh` # excluded from version control
 1. `cp $HOME/.ssh/id_rsa .ssh/.`
@@ -32,7 +34,7 @@ Drupal site for Princeton Research Data Service
 1. `cp drush/sites/example.site.yml drush/sites/researchdata.site.yml`
 1. Uncomment the alias blocks and adjust the config values in the `drush/sites/researchdata.site.yml` file to match the current remote and local drupal environments.
 1. `lando start`
-1. `lando drush @researchdata.prod sql-dump --structure-tables-list='watchdog,sessions,cas_data_login,history,captcha_sessions,cache,cache_*' --result-file=/tmp/dump.sql; scp pulsys@prds-staging1:/tmp/dump.sql .`
+1. `lando drush @researchdata.prod sql-dump --structure-tables-list='watchdog,sessions,cas_data_login,history,captcha_sessions,cache,cache_*' --result-file=/tmp/dump.sql; scp pulsys@prds-prod1:/tmp/dump.sql .`
 1. `lando db-import dump.sql`
 1. `lando drush rsync @researchdata.prod:%files @researchdata.local:%files`
 1. Create a `drush/drush.yml`  file with the following:

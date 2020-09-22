@@ -18,6 +18,7 @@
   }
 
   form {
+    width: 100%;
     height: 100%;
     align-items: center;
   }
@@ -30,6 +31,15 @@
 
   .form-item {
     height: 100%;
+    width: 100%;
+
+    @media (min-width: $bp-medium) {
+      width: auto;
+    }
+
+    @media (min-width: 1010px) {
+      width: 100%;
+    }
   }
   
   .form-text,
@@ -43,14 +53,26 @@
       width: 165px;
     }
 
+    @media (min-width: 1010px) {
+      width: 100%;
+    }
+
+    @media (min-width: 1251px) and (max-width: 1365px) {
+      width: 149px;
+    }
+
     @media (min-width: $bp-large) {
-      width: 214px;
+      width: 109px;
     }
 
-    @media (min-width: 1275px) and (max-width: 1365px) {
-      width: 150px;
+    @media (min-width: 1325px) {
+      width: 159px;
     }
 
+    @media (min-width: 1365px) {
+      width: 199px;
+    }
+    
     @media (min-width: 1440px) {
       width: 225px;
     }
@@ -168,4 +190,9 @@
   span {
     text-transform: capitalize;
   }
+}
+
+.pager__item.is-active a {
+  border: 0;
+  color: $color-secondary;
 }

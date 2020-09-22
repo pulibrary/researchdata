@@ -10,7 +10,7 @@
     margin: 0;
 
     @media (min-width: $bp-medium) {
-      justify-content: flex-start;
+      justify-content: center;
       height: 100%;
     }
     
@@ -31,14 +31,14 @@
         
         text-decoration: none;
         font-weight: 700;
-        font-size: $base-font-size * 1.05;
+        font-size: $base-font-size;
         border-bottom: 3px solid transparent;
 
         @media (min-width: 1275px) and (max-width: 1365px) {
           font-size: $base-font-size;
         }
 
-        @media (min-width: $bp-large) {
+        @media (min-width: 1251px) {
           padding: 2rem 1rem;
         }
 
@@ -49,6 +49,7 @@
   
         &.is-active {
           border-color: $color-primary;
+          color: $color-secondary;
         }
       }
     }
@@ -96,6 +97,11 @@
 
 .responsive-menu-toggle-icon span.label {
   color: $color-secondary;
+}
+
+.responsive-menu-toggle-icon {
+  width: 105px;
+  margin-left: auto;
 }
 
 .responsive-menu-toggle {

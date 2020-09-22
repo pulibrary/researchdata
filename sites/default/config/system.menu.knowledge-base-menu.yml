@@ -1,8 +1,0 @@
-uuid: 20e6500c-84aa-4edf-ac23-1da14ac2ed71
-langcode: en
-status: true
-dependencies: {  }
-id: knowledge-base-menu
-label: 'Knowledge Base Menu'
-description: 'Knowledge base links'
-locked: false
