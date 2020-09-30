@@ -21,6 +21,12 @@ settings:
             - JustifyCenter
             - HorizontalRule
         -
+          name: 'Paste options'
+          items:
+            - Paste
+            - PasteFromWord
+            - PasteText
+        -
           name: Links
           items:
             - DrupalLink
