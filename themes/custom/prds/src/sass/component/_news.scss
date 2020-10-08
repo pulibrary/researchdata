@@ -83,6 +83,12 @@
   font-size: 1.1rem;
 }
 
+.page-node-type-article ul {
+  max-width: 100ch;
+  margin: $paragraph-margin auto;
+  font-size: 1.1rem;
+}
+
 .page-node-type-article .block-field-blocknodearticlefield-news-image img {
   width: 100vw;
   max-height: 40vh;
