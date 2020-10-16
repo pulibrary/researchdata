@@ -1,4 +1,4 @@
-set :branch, ENV["BRANCH"] || "master"
+set :branch, ENV["BRANCH"] || "main"
 
 server "prds-prod1", user: fetch(:user), roles: %w{app drupal_primary}
 
