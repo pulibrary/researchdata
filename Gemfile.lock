@@ -10,6 +10,7 @@ GEM
       sshkit (>= 1.9.0)
     capistrano-composer (0.0.6)
       capistrano (>= 3.0.0.pre)
+    chronic (0.10.2)
     concurrent-ruby (1.1.6)
     i18n (1.8.4)
       concurrent-ruby (~> 1.0)
@@ -20,6 +21,8 @@ GEM
     sshkit (1.21.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    whenever (1.0.0)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -27,6 +30,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano (~> 3.11)
   capistrano-composer
+  whenever
 
 BUNDLED WITH
    2.1.4
