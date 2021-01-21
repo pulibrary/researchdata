@@ -1566,16 +1566,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.0.9",
+            "version": "9.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "03d815cf785654d03cf39dd911c8ae53b2fdd6cd"
+                "reference": "41697df079ae8aa64fa45b61976f50e7a2998d7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/03d815cf785654d03cf39dd911c8ae53b2fdd6cd",
-                "reference": "03d815cf785654d03cf39dd911c8ae53b2fdd6cd",
+                "url": "https://api.github.com/repos/drupal/core/zipball/41697df079ae8aa64fa45b61976f50e7a2998d7f",
+                "reference": "41697df079ae8aa64fa45b61976f50e7a2998d7f",
                 "shasum": ""
             },
             "require": {
@@ -1601,8 +1601,8 @@
                 "laminas/laminas-diactoros": "^2.1",
                 "laminas/laminas-feed": "^2.12",
                 "masterminds/html5": "^2.1",
-                "pear/archive_tar": "^1.4.11",
-                "php": ">=7.3",
+                "pear/archive_tar": "^1.4.12",
+                "php": "^7.3",
                 "psr/log": "^1.0",
                 "stack/builder": "^1.0",
                 "symfony-cmf/routing": "^2.1",
@@ -1807,9 +1807,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.0.9"
+                "source": "https://github.com/drupal/core/tree/9.0.11"
             },
-            "time": "2020-11-26T00:53:25+00:00"
+            "time": "2021-01-19T23:10:53+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -1898,16 +1898,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.0.9",
+            "version": "9.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "09a02abdc006bb447e67ea0486e4e81db6f49748"
+                "reference": "9750cd44badc2ba6f3dc4ff419e04421b7b60da6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/09a02abdc006bb447e67ea0486e4e81db6f49748",
-                "reference": "09a02abdc006bb447e67ea0486e4e81db6f49748",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/9750cd44badc2ba6f3dc4ff419e04421b7b60da6",
+                "reference": "9750cd44badc2ba6f3dc4ff419e04421b7b60da6",
                 "shasum": ""
             },
             "require": {
@@ -1916,7 +1916,7 @@
                 "doctrine/annotations": "1.10.3",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.1",
-                "drupal/core": "9.0.9",
+                "drupal/core": "9.0.11",
                 "egulias/email-validator": "2.1.17",
                 "guzzlehttp/guzzle": "6.5.4",
                 "guzzlehttp/promises": "v1.3.1",
@@ -1927,7 +1927,7 @@
                 "laminas/laminas-stdlib": "3.2.1",
                 "laminas/laminas-zendframework-bridge": "1.0.4",
                 "masterminds/html5": "2.7.0",
-                "pear/archive_tar": "1.4.11",
+                "pear/archive_tar": "1.4.12",
                 "pear/console_getopt": "v1.4.3",
                 "pear/pear-core-minimal": "v1.10.10",
                 "pear/pear_exception": "v1.0.1",
@@ -1977,9 +1977,9 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.0.9"
+                "source": "https://github.com/drupal/core-recommended/tree/9.0.11"
             },
-            "time": "2020-11-26T00:53:25+00:00"
+            "time": "2021-01-19T23:10:53+00:00"
         },
         {
             "name": "drupal/core-vendor-hardening",
@@ -4561,16 +4561,16 @@
         },
         {
             "name": "pear/archive_tar",
-            "version": "1.4.11",
+            "version": "1.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pear/Archive_Tar.git",
-                "reference": "17d355cb7d3c4ff08e5729f29cd7660145208d9d"
+                "reference": "19bb8e95490d3e3ad92fcac95500ca80bdcc7495"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pear/Archive_Tar/zipball/17d355cb7d3c4ff08e5729f29cd7660145208d9d",
-                "reference": "17d355cb7d3c4ff08e5729f29cd7660145208d9d",
+                "url": "https://api.github.com/repos/pear/Archive_Tar/zipball/19bb8e95490d3e3ad92fcac95500ca80bdcc7495",
+                "reference": "19bb8e95490d3e3ad92fcac95500ca80bdcc7495",
                 "shasum": ""
             },
             "require": {
@@ -4627,7 +4627,17 @@
                 "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Archive_Tar",
                 "source": "https://github.com/pear/Archive_Tar"
             },
-            "time": "2020-11-19T22:10:24+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/mrook",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/michielrook",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-01-18T19:32:54+00:00"
         },
         {
             "name": "pear/console_getopt",
@@ -7765,12 +7775,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
@@ -7808,8 +7818,8 @@
                 "validate"
             ],
             "support": {
-                "issues": "https://github.com/webmozart/assert/issues",
-                "source": "https://github.com/webmozart/assert/tree/master"
+                "issues": "https://github.com/webmozarts/assert/issues",
+                "source": "https://github.com/webmozarts/assert/tree/1.9.1"
             },
             "time": "2020-07-08T17:02:28+00:00"
         },
