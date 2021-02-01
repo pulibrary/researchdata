@@ -226,11 +226,11 @@ class MenuTreeStorageTest extends KernelTestBase {
    * Tests the loadTreeData method.
    */
   public function testLoadTree() {
-    $this->addMenuLink('test1', '');
-    $this->addMenuLink('test2', 'test1');
-    $this->addMenuLink('test3', 'test2');
-    $this->addMenuLink('test4');
-    $this->addMenuLink('test5', 'test4');
+    $this->addMenuLink('test1', '', 'test1');
+    $this->addMenuLink('test2', 'test1', 'test2');
+    $this->addMenuLink('test3', 'test2', 'test3');
+    $this->addMenuLink('test4', '', 'test4');
+    $this->addMenuLink('test5', 'test4', NULL);
 
     $data = $this->treeStorage->loadTreeData('tools', new MenuTreeParameters());
     $tree = $data['tree'];
@@ -239,6 +239,13 @@ class MenuTreeStorageTest extends KernelTestBase {
     $this->assertCount(0, $tree['test1']['subtree']['test2']['subtree']['test3']['subtree']);
     $this->assertCount(1, $tree['test4']['subtree']);
     $this->assertCount(0, $tree['test4']['subtree']['test5']['subtree']);
+
+    // Ensure that route names element exists.
+    $this->assertNotEmpty($data['route_names']);
+
+    // Ensure that the actual route names are set.
+    $this->assertContains('test1', $data['route_names']);
+    $this->assertNotContains('test5', $data['route_names']);
 
     $parameters = new MenuTreeParameters();
     $parameters->setActiveTrail(['test4', 'test5']);
@@ -425,8 +432,8 @@ class MenuTreeStorageTest extends KernelTestBase {
     $query->condition('id', $parents, 'IN');
     $found_parents = $query->execute()->fetchAllKeyed(0, 1);
 
-    $this->assertEqual(count($parents), count($found_parents), 'Found expected number of parents');
-    $this->assertEqual($raw['depth'], count($found_parents), 'Number of parents is the same as the depth');
+    $this->assertSame(count($parents), count($found_parents), 'Found expected number of parents');
+    $this->assertCount($raw['depth'], $found_parents, 'Number of parents is the same as the depth');
 
     $materialized_path = $this->treeStorage->getRootPathIds($id);
     $this->assertEqual(array_values($materialized_path), array_values($parents), 'Parents match the materialized path');
@@ -442,11 +449,8 @@ class MenuTreeStorageTest extends KernelTestBase {
     if ($parents) {
       $this->assertEqual($raw['parent'], end($parents), 'Ensure that the parent field is set properly');
     }
-    $found_children = array_keys($this->treeStorage->loadAllChildren($id));
-    // We need both these checks since the 2nd will pass if there are extra
-    // IDs loaded in $found_children.
-    $this->assertEqual(count($children), count($found_children), "Found expected number of children for $id");
-    $this->assertEqual(array_intersect($children, $found_children), $children, 'Child IDs match');
+    // Verify that the child IDs match.
+    $this->assertEqualsCanonicalizing($children, array_keys($this->treeStorage->loadAllChildren($id)));
   }
 
 }

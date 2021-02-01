@@ -345,9 +345,6 @@ class Migration extends PluginBase implements MigrationInterface, RequirementsIn
       $this->processPlugins[$index] = [];
       foreach ($this->getProcessNormalized($process) as $property => $configurations) {
         $this->processPlugins[$index][$property] = [];
-        if (!is_array($configurations) && !$this->processPlugins[$index][$property]) {
-          throw new MigrateException(sprintf("Process configuration for '$property' must be an array", $property));
-        }
         foreach ($configurations as $configuration) {
           if (isset($configuration['source'])) {
             $this->processPlugins[$index][$property][] = $this->processPluginManager->createInstance('get', $configuration, $this);
@@ -421,6 +418,13 @@ class Migration extends PluginBase implements MigrationInterface, RequirementsIn
   }
 
   /**
+   * {@inheritDoc}
+   */
+  public function getRequirements(): array {
+    return $this->requirements;
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function checkRequirements() {
@@ -455,8 +459,8 @@ class Migration extends PluginBase implements MigrationInterface, RequirementsIn
   /**
    * Gets the migration plugin manager.
    *
-   * @return \Drupal\migrate\Plugin\MigratePluginManager
-   *   The plugin manager.
+   * @return \Drupal\migrate\Plugin\MigrationPluginManagerInterface
+   *   The migration plugin manager.
    */
   protected function getMigrationPluginManager() {
     return $this->migrationPluginManager;
