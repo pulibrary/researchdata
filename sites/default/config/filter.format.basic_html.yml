@@ -43,6 +43,7 @@ filters:
     settings:
       default_view_mode: full_width
       allowed_media_types:
+        document: document
         image: image
       allowed_view_modes:
         full_width: full_width

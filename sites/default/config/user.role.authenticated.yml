@@ -21,6 +21,7 @@ permissions:
   - 'access site-wide contact form'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer blocks'
   - 'administer menu'
   - 'administer url aliases'
   - 'create a_z_resource content'
