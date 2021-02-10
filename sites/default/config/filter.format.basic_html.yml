@@ -17,10 +17,10 @@ filters:
   filter_html:
     id: filter_html
     provider: filter
-    status: false
+    status: true
     weight: -10
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id class=""> <h3 id class=""> <h4 id class=""> <h5 id class=""> <h6 id class=""> <br> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <button id> <hr> <p class=" toc-title"> <div data id class=" widget-toc"> <h1> <pre> <a href hreflang target id name data-entity-substitution data-entity-type data-entity-uuid title class="">'
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id class=""> <h3 id class=""> <h4 id class=""> <h5 id class=""> <h6 id class=""> <br> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <button id> <hr> <div data id class=" widget-toc"> <pre> <a href hreflang target id name data-entity-substitution data-entity-type data-entity-uuid title class=" btn button"> <p class=" toc-title hang indent">'
       filter_html_help: true
       filter_html_nofollow: false
   filter_align:

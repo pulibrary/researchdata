@@ -40,6 +40,7 @@ settings:
         -
           name: Lists
           items:
+            - Styles
             - BulletedList
             - NumberedList
         -
@@ -61,13 +62,13 @@ settings:
             - bs_grid
             - Contents
   plugins:
-    stylescombo:
-      styles: ''
     drupallink:
       linkit_enabled: true
       linkit_profile: default
     language:
       language_list: un
+    stylescombo:
+      styles: "a.button|Button\r\np.hang|Hanging Indent\r\np.indent|Indent Paragraph"
     bs_grid:
       use_cdn: 1
       cdn_url: 'https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3.4.0/css/grid.min.css'
