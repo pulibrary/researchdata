@@ -10,6 +10,16 @@ dependencies:
       - media
   module:
     - image
+    - image_replace
+third_party_settings:
+  image_replace:
+    image_style_map:
+      image_1275px_:
+        source_field: field_image_1275px_
+      image_415px_764px_:
+        source_field: field_image_415px_764px_
+      image_765px_1274px_:
+        source_field: field_image_765px_1274px_
 _core:
   default_config_hash: pzPA-2JwyxlJ3qMb4L9viAnhNhbEhl2couH8A3FO020
 id: media.image.field_media_image

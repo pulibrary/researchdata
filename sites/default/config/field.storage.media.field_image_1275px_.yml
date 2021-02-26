@@ -1,0 +1,30 @@
+uuid: 4dde8b12-b3ed-4f94-9b92-c72bc2b3b3a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - media
+id: media.field_image_1275px_
+field_name: field_image_1275px_
+entity_type: media
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

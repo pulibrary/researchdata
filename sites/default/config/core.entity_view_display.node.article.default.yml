@@ -34,7 +34,7 @@ third_party_settings:
                 label: hidden
                 type: entity_reference_entity_view
                 settings:
-                  view_mode: full_width
+                  view_mode: default
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity

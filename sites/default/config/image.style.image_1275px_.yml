@@ -1,0 +1,15 @@
+uuid: 698a7609-e1ca-4b81-8849-c0e4af06a832
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_replace
+name: image_1275px_
+label: 'Image (1275px+)'
+effects:
+  8845a3a1-218a-4247-a335-9b1b2084c0d2:
+    uuid: 8845a3a1-218a-4247-a335-9b1b2084c0d2
+    id: image_replace
+    weight: 1
+    data:
+      image_style: image_1275px_
