@@ -93,6 +93,9 @@ p {
 a {
   color: $link-color;
   transition: all 0.2s ease;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
 
   &:hover {
       color: darken($link-color, 20%);
@@ -101,7 +104,7 @@ a {
 
 ul,
 ol {
-    margin: $paragraph-margin 0 0 1.25rem;
+    margin: $paragraph-margin 0 0 2rem;
 
     li {
         margin-top: 0.625rem;
@@ -129,12 +132,9 @@ ul {
     }
 }
 
-ol {
-
-    li {
-        list-style: decimal;
-    }
-}
+ol { list-style-type: decimal;}
+ol ol { list-style-type: lower-alpha;}
+ol ol ol {list-style-type: lower-roman;}
 
 hr {
   height: 1px;
@@ -158,4 +158,24 @@ em {
 
 strong {
   font-weight: 700;
+}
+
+p.hang {
+  text-indent: -1.5rem;
+  padding-left: 1.5rem;
+  margin-left: 1.5rem;
+
+  @media (min-width: $bp-medium) {
+    text-indent: -3rem;
+    padding-left: 3rem;
+    margin-left: 3rem;
+  }
+}
+
+p.indent {
+  margin-left: 1.5rem;
+
+  @media (min-width: $bp-medium) {
+    margin-left: 3rem;
+  }
 }

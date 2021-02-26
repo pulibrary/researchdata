@@ -128,7 +128,7 @@ $settings['extension_discovery_scan_tests'] = TRUE;
  * user pulling in the changes won't have permissions to modify files in the
  * directory.
  */
-$settings['skip_permissions_hardening'] = TRUE;
+$settings['skip_permissions_hardening'] = FALSE;
 
 /**
  * Exclude modules from configuration synchronization.

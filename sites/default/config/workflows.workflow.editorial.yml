@@ -3,9 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.a_z_resource
     - node.type.article
+    - node.type.knowledge_base
     - node.type.page
     - node.type.service
+    - node.type.training
   module:
     - content_moderation
 _core:
@@ -65,7 +68,10 @@ type_settings:
         - published
   entity_types:
     node:
+      - a_z_resource
       - article
+      - knowledge_base
       - page
       - service
+      - training
   default_moderation_state: draft

@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.large
-    - image.style.medium2
+    - image.style.image_1275px_
+    - image.style.image_415px_764px_
+    - image.style.image_765px_1274px_
     - image.style.mobile
-    - image.style.small
   theme:
     - prds
 id: news_image
@@ -16,17 +16,17 @@ image_style_mappings:
     breakpoint_id: prds.large
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: large
+    image_mapping: image_1275px_
   -
     breakpoint_id: prds.medium
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: medium2
+    image_mapping: image_765px_1274px_
   -
     breakpoint_id: prds.small
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: small
+    image_mapping: image_415px_764px_
   -
     breakpoint_id: prds.mobile
     multiplier: 1x

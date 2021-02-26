@@ -1,0 +1,15 @@
+uuid: a4ac0c58-6862-4111-b85e-d6e51f4bcb97
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_replace
+name: image_415px_764px_
+label: 'Image (415px - 764px)'
+effects:
+  afe37be4-d855-4b78-9584-749e1ee01e1a:
+    uuid: afe37be4-d855-4b78-9584-749e1ee01e1a
+    id: image_replace
+    weight: 1
+    data:
+      image_style: image_415px_764px_
