@@ -4,6 +4,7 @@
   "description": "theme for prds",
   "main": "gulpfile.js",
   "scripts": {
+    "test": "npx percy exec -- cypress open",
     "postinstall": "find node_modules/ -name '*.info' -type f -delete"
   },
   "author": "Princeton University Library",
@@ -16,6 +17,7 @@
     "gulp-sass": "^4.0.2"
   },
   "devDependencies": {
+    "@percy/cypress": "^2.3.4",
     "cypress": "^6.5.0",
     "del": "^5.1.0"
   }

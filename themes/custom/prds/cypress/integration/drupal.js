@@ -5,6 +5,7 @@ context('anon', function() {
 
     it('site loads', function() {
         cy.visit('/');
+        cy.percySnapshot('Homepage', { widths: [1280, 1440, 1680, 1920]});
     })
 
     it('site has correct title', function() {
