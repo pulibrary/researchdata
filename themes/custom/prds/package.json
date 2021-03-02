@@ -16,6 +16,10 @@
     "gulp-sass": "^4.0.2"
   },
   "devDependencies": {
+    "@percy/cypress": "^2.3.4",
+    "axe-core": "^4.1.2",
+    "cypress": "^6.6.0",
+    "cypress-axe": "^0.12.2",
     "del": "^5.1.0"
   }
 }

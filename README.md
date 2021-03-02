@@ -158,3 +158,11 @@ To import a database run `cap <server set> drupal:database:import_dump SQL_DIR=<
 To install code on a blank sever you must deploy and upload a database, so you need to pass the database bump variables to the deploy command `cap <server set> deploy SQL_DIR=<path to dump> SQL_FILE=<dump file name>`
 
 To see a list of al available command run `cap -T`
+
+## Testing via Cypress
+Tests are located in `themes/custom/prds/cypress`
+1. `cd themes/custom/prds`
+1. `npm install`
+1. Add the token from Percy located in Project settings.
+1. `npx percy exec -- cypress open`
+1. In the Cypress dashboard, click on the `drupal.js` test to run the tests.
