@@ -11,7 +11,7 @@ context('anon', function() {
             }
         );
 
-        // cy.percySnapshot('Homepage', { widths: [1280, 1440, 1680, 1920]});
+        cy.percySnapshot('Homepage', { widths: [1280, 1440, 1680, 1920]});
     })
 
     it('page has correct title', function() {
