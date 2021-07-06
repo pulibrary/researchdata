@@ -7,11 +7,13 @@ server:
   verify: 0
   cert: /etc/ssl/certs/ssl-cert-snakeoil.pem
 gateway:
-  check_frequency: -2
   paths:
     id: request_path
     pages: ''
     negate: false
+  method: server_side
+  recheck_time: 720
+  enabled: false
 forced_login:
   enabled: true
   paths:
