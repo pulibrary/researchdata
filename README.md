@@ -1,168 +1,75 @@
-# Princeton Research Data Service
-Drupal site for Princeton Research Data Service
+<img alt="Drupal Logo" src="https://www.drupal.org/files/Wordmark_blue_RGB.png" height="60px">
 
-## Local Development
+Drupal is an open source content management platform supporting a variety of
+websites ranging from personal weblogs to large community-driven websites. For
+more information, visit the Drupal website, [Drupal.org][Drupal.org], and join
+the [Drupal community][Drupal community].
 
-   **Note: depends on Lando 3.0.7 or higher https://github.com/lando/lando/releases**
-1. `git clone git@github.com:pulibrary/researchdata.git`
-1. `cp sites/default/default.settings.php sites/default/settings.php`
-1. Add the following to `sites/defaults/settings.php`
-    ```
-    if (file_exists($app_root . '/sites/settings.local.php')) {
-      include $app_root . '/sites/settings.local.php';
-    }
+## Contributing
 
-    $databases['default']['default'] = array (
-      'database' => 'drupal9',
-      'username' => 'postgres',
-      'password' => '',
-      'prefix' => '',
-      'host' => 'database',
-      'port' => '5432',
-      'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
-      'driver' => 'pgsql',
-    );
+Drupal is developed on [Drupal.org][Drupal.org], the home of the international
+Drupal community since 2001!
 
-    $settings['hash_salt'] = '<Hash Salt>'
+[Drupal.org][Drupal.org] hosts Drupal's [GitLab repository][GitLab repository],
+its [issue queue][issue queue], and its [documentation][documentation]. Before
+you start working on code, be sure to search the [issue queue][issue queue] and
+create an issue if your aren't able to find an existing issue.
 
-    $settings['config_sync_directory'] = '<Config Sync Directory>';
+Every issue on Drupal.org automatically creates a new community-accessible fork
+that you can contribute to. Learn more about the code contribution process on
+the [Issue forks & merge requests page][issue forks].
 
-    ```
-1. `mkdir .ssh` # excluded from version control
-1. `cp $HOME/.ssh/id_rsa .ssh/.`
-1. `cp $HOME/.ssh/id_rsa.pub .ssh/.` // key should be registered in princeton_ansible deploy role
-1. `cp drush/sites/example.site.yml drush/sites/researchdata.site.yml`
-1. Uncomment the alias blocks and adjust the config values in the `drush/sites/researchdata.site.yml` file to match the current remote and local drupal environments.
-1. `lando start`
-1. `lando drush @researchdata.prod sql-dump --structure-tables-list='watchdog,sessions,cas_data_login,history,captcha_sessions,cache,cache_*' --result-file=/tmp/dump.sql; scp pulsys@prds-prod1:/tmp/dump.sql .`
-1. `lando db-import dump.sql`
-1. `lando drush rsync @researchdata.prod:%files @researchdata.local:%files`
-1. Create a `drush/drush.yml`  file with the following:
-   ```
-   options:
-     uri: http://researchdata.lndo.site
-   ```
-1. `lando drush uli --name=your-netid`
+## Usage
 
-### Configuration Syncing
+For a brief introduction, see [USAGE.txt](/core/USAGE.txt). You can also find
+guides, API references, and more by visiting Drupal's [documentation
+page][documentation].
 
-Each time you pull from master it is a good idea to check the status of your site.  To check and see if you need to get changes run
-```
-lando drush config:status
-```
-If everything is up to date you will see
-```
-[notice] No differences between DB and sync directory.
-```
+You can quickly extend Drupal's core feature set by installing any of its
+[thousands of free and open source modules][modules]. With Drupal and its
+module ecosystem, you can often build most or all of what your project needs
+before writing a single line of code.
 
-If there are changes you need to import you will see something like **(note: Only in sync dir in the State)**
-```
- ---------------------------------------------------- ------------------ 
-  Name                                                 State             
- ---------------------------------------------------- ------------------ 
-  core.entity_form_display.node.a_z_resource.default   Only in sync dir  
-```
+## Changelog
 
-If there are changes you need to export you will see something like **(note: Only in DB in the State)**
-```
----------------------------------------------------- ------------ 
-  Name                                                 State       
- ---------------------------------------------------- ------------ 
-  core.entity_form_display.node.a_z_resource.default   Only in DB  
-```
+Drupal keeps detailed [change records][changelog]. You can search Drupal's
+changes for a record of every notable breaking change and new feature since
+2011.
 
-#### Importing Configuration
-Most of the time you will want to import the entire configuration.  The only time this would not be the case is if you have some states that are `Only in DB` and some the are `Only in sync dir` (You made changes and another developer have made changes).  To import the entire configuration run `lando drush config:import` or `lando drush config:import -y`.  If you run without the -y you will see a list of the changes being made before they get applied like below:
-```
-+------------+----------------------------------------------------+-----------+
-| Collection | Config                                             | Operation |
-+------------+----------------------------------------------------+-----------+
-|            | field.storage.node.field_resource_link             | Create    |
-|            | node.type.a_z_resource                             | Create    |
-|            | field.field.node.a_z_resource.field_resource_link  | Create    |
-```
+## Security
 
-If you have both exports and imports see the section below.
+For a list of security announcements, see the [Security advisories
+page][Security advisories] (available as [an RSS feed][security RSS]). This
+page also describes how to subscribe to these announcements via email.
 
-#### Exporting Configuration
-Most of the time you will want to export the entire configuration.  The only time this would not be the case is if you have some states that are `Only in DB` and some the are `Only in sync dir` (You made changes and another developer have made changes).  To export the entire configuration run `lando drush config:export` or `lando drush config:export -y`.  If you run without the -y you will see a list of the changes being made before they get applied like below:
-```
- [notice] Differences of the active config to the export directory:
-+------------+----------------------------------------------------+-----------+
-| Collection | Config                                             | Operation |
-+------------+----------------------------------------------------+-----------+
-|            | field.storage.node.field_resource_link             | Create    |
-|            | node.type.a_z_resource                             | Create    |
-|            | field.field.node.a_z_resource.
-+------------+----------------------------------------------------+-----------+
+For information about the Drupal security process, or to find out how to report
+a potential security issue to the Drupal security team, see the [Security team
+page][security team].
 
+## Need a helping hand?
 
- The .yml files in your export directory (sites/default/config) will be deleted and replaced with the active config. (yes/no) [yes]:
- > yes
+Visit the [Support page][support] or browse [over a thousand Drupal
+providers][service providers] offering design, strategy, development, and
+hosting services.
 
- [success] Configuration successfully exported to sites/default/config.
- ```
+## Legal matters
 
-If you have both exports and imports see the section below.
+Know your rights when using Drupal by reading Drupal core's
+[license](/core/LICENSE.txt).
 
-### Both Exporting and Importing Configuration
-You made changes and another developer have made changes, and now the configuration must be merged.
+Learn about the [Drupal trademark and logo policy here][trademark].
 
-We will use git to combine the two configurations.  
-1. Check to make sure everything is committed in git with `git status`.  Commit any untracked changes.
-1. Export you local changes on top of the existing git changes.
-   ```
-   lando drush config:export
-   ```
-1. Double check you do not want keep any of the changes
-   ```
-   git status
-   git diff <modified file>
-   ```
-   for any file you want to keep the changes in
-   ```
-   git add <modified file>
-   ```
-   commit those changes so they do not get loast with either a `git commit` or `git commit --amend`
-1. restore the lost changes tracked by git
-   ```
-   git reset HEAD .
-   git checkout .
-   ```
-1. Import the changes both tracked and untracked
-   ```
-   lando drush config:import
-   ```
-1. Check your config status
-   ```
-   lando drush config:status
-   ```
-1. Commit your changes to git with a branch and a PR.
-
-
-### PRDS theme
-If you are using Chrome, go into the Network tab in devtools and select "Disable cache"
-1. `cd themes/custom/prds`
-1. `lando npm install`
-1. `lando gulp compile` to generate css and js for the theme (or `lando gulp task-name` for specific task defined in `themes/custom/prds/gulpfile.js`)
-
-### Use composer to apply patches
-Refer to [cweagans/composer-patches](https://github.com/cweagans/composer-patches).
-
-## Deploying to the server
-We utilize capistrano to deploy the code out to the server.  To deploy code to an existing server run
-`cap <server set> deploy ` (for example `cap production deploy`).
-
-To import a database run `cap <server set> drupal:database:import_dump SQL_DIR=<path to dump> SQL_FILE=<dump file name>`
-
-To install code on a blank sever you must deploy and upload a database, so you need to pass the database bump variables to the deploy command `cap <server set> deploy SQL_DIR=<path to dump> SQL_FILE=<dump file name>`
-
-To see a list of al available command run `cap -T`
-
-## Testing via Cypress
-Tests are located in `themes/custom/prds/cypress`
-1. `cd themes/custom/prds`
-1. `npm install`
-1. Add the token from Percy located in Project settings.
-1. `npx percy exec -- cypress open`
-1. In the Cypress dashboard, click on the `drupal.js` test to run the tests.
+[Drupal.org]: https://www.drupal.org
+[Drupal community]: https://www.drupal.org/community
+[GitLab repository]: https://git.drupalcode.org/project/drupal
+[issue queue]: https://www.drupal.org/project/issues/drupal
+[issue forks]: https://www.drupal.org/drupalorg/docs/gitlab-integration/issue-forks-merge-requests
+[documentation]: https://www.drupal.org/documentation
+[changelog]: https://www.drupal.org/list-changes/drupal
+[modules]: https://www.drupal.org/project/project_module
+[security advisories]: https://www.drupal.org/security
+[security RSS]: https://www.drupal.org/security/rss.xml
+[security team]: https://www.drupal.org/drupal-security-team
+[service providers]: https://www.drupal.org/drupal-services
+[support]: https://www.drupal.org/support
+[trademark]: https://www.drupal.com/trademark
