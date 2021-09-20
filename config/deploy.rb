@@ -1,8 +1,8 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.14.1"
+lock "~> 3.16.0"
 
 set :application, "researchdata"
-set :repo_url, "git@github.com:pulibrary/researchdata.git"
+set :repo_url, "https://github.com/pulibrary/researchdata.git"
 
 set :keep_releases, 5
 
