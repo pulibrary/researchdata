@@ -112,6 +112,8 @@ display:
               anonymous: '0'
               administrator: '0'
             placeholder: 'I want to...'
+            expose_fields: false
+            searched_fields_id: ''
           is_grouped: false
           group_info:
             label: ''

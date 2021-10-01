@@ -21,6 +21,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: 'News Image Top Over Content'
+          context_mapping: {  }
         components:
           f52eed00-27e4-43fc-b6c3-5bf442adfce2:
             uuid: f52eed00-27e4-43fc-b6c3-5bf442adfce2
@@ -76,4 +77,5 @@ content:
     third_party_settings: {  }
     type: responsive_image
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

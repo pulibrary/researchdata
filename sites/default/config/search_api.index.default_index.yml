@@ -7,6 +7,7 @@ dependencies:
     - user
     - search_api
   config:
+    - field.storage.node.body
     - field.storage.node.field_tags
     - search_api.server.default_server
 _core:
@@ -25,6 +26,14 @@ field_settings:
       module:
         - node
         - user
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
   changed:
     label: Changed
     datasource_id: 'entity:node'
@@ -245,6 +254,7 @@ processor_settings:
     weights:
       preprocess_index: -2
       preprocess_query: -5
+    ignored: ._-
   transliteration:
     all_fields: false
     fields:
