@@ -20,6 +20,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           09411cbf-0721-4f99-b382-731d8745ca2c:
             uuid: 09411cbf-0721-4f99-b382-731d8745ca2c
@@ -73,3 +74,4 @@ content:
     third_party_settings: {  }
 hidden:
   layout_builder__layout: true
+  search_api_excerpt: true

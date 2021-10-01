@@ -21,6 +21,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: Banner
+          context_mapping: {  }
         components:
           d5db6bd2-0258-4f83-8308-8815d2fb89bb:
             uuid: d5db6bd2-0258-4f83-8308-8815d2fb89bb
@@ -65,6 +66,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: Content
+          context_mapping: {  }
         components:
           b89887ad-a6b7-4b2e-b34b-6a29dfd90c2e:
             uuid: b89887ad-a6b7-4b2e-b34b-6a29dfd90c2e
@@ -89,6 +91,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
           14ebc10f-70b3-4d31-891f-efd7747adf95:
             uuid: 14ebc10f-70b3-4d31-891f-efd7747adf95

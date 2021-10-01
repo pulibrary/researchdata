@@ -32,6 +32,7 @@ third_party_settings:
         layout_settings:
           label: Banner
           column_widths: 50-50
+          context_mapping: {  }
         components:
           c2e2201f-580a-453a-8f46-cf001bddeb61:
             uuid: c2e2201f-580a-453a-8f46-cf001bddeb61
@@ -75,6 +76,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: Search
+          context_mapping: {  }
         components: {  }
         third_party_settings: {  }
       -
@@ -82,6 +84,7 @@ third_party_settings:
         layout_settings:
           label: 'News Events and Resources'
           column_widths: 33-34-33
+          context_mapping: {  }
         components:
           55a294ba-b5af-4fc9-8094-fa73f54cf31a:
             uuid: 55a294ba-b5af-4fc9-8094-fa73f54cf31a
@@ -127,6 +130,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: 'The Research Lifecycle'
+          context_mapping: {  }
         components:
           3f2b63e4-de07-4f60-817e-94bd6155a73f:
             uuid: 3f2b63e4-de07-4f60-817e-94bd6155a73f
@@ -147,6 +151,7 @@ third_party_settings:
         layout_id: layout_fourcol_section
         layout_settings:
           label: 'Stages of the Research Lifecycle'
+          context_mapping: {  }
         components:
           c7a92371-f396-4843-974e-1278640c6a08:
             uuid: c7a92371-f396-4843-974e-1278640c6a08

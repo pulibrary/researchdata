@@ -23,6 +23,7 @@ third_party_settings:
         layout_settings:
           label: ''
           column_widths: 25-75
+          context_mapping: {  }
         components:
           cfe0193e-697c-490e-918f-54aebe1ed94d:
             uuid: cfe0193e-697c-490e-918f-54aebe1ed94d
@@ -88,6 +89,16 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+          a4ad9b0d-b556-4f9a-a2b4-adaf4444c94d:
+            uuid: a4ad9b0d-b556-4f9a-a2b4-adaf4444c94d
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:knowledge_base:content_moderation_control'
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
 id: node.knowledge_base.default
 targetEntityType: node
@@ -101,6 +112,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: first
   field_category:
     weight: 3
     label: above
