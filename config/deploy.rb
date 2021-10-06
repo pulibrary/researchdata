@@ -149,7 +149,7 @@ namespace :drupal do
         end
       end
   end
-  
+
   desc "change the owner of the directory to deploy"
   task :update_directory_owner_deploy do
       on release_roles :app do
@@ -188,12 +188,11 @@ namespace :drupal do
   end
 
   desc "Revert the features to the code"
-  task :features_revert do
+  task :config_import do
       on release_roles :drupal_primary do
-          # todo features-revert-all is now something else
-          # execute "sudo -u nginx /usr/local/bin/drush -r #{release_path} -y features-revert-all"
-          # info "reverted the drupal features"
-        end
+          execute "sudo -u nginx #{release_path}/vendor/bin/drush -r #{release_path} -y config:import"
+          info "imported the drupal config"
+      end
   end
 
   desc "Upload the files tar and install it FILES_DIR/FILES_GZ"
@@ -220,9 +219,8 @@ namespace :drupal do
       invoke "drupal:database:update_db_variables"
       invoke "drupal:start_nginx"
       invoke "drupal:site_online"
-      # todo do we have solr?
-      # invoke "drupal:database:clear_search_index"
-      # invoke "drupal:database:update_search_index"
+      invoke "drupal:database:clear_search_index"
+      invoke "drupal:database:update_search_index"
     end
 
     desc "Upload the dump file and import it"
@@ -235,12 +233,12 @@ namespace :drupal do
         end
       end
     end
-    
+
     desc "Update variables on a dump import"
     task :update_db_variables do
       on release_roles :drupal_primary do
         # todo vset is now config-set
-        # should be something like cset cas.settings server.cert 
+        # should be something like cset cas.settings server.cert
         # execute "drush -r #{release_path} vset --exact cas_cert #{fetch(:cas_cert_location)}"
       end
     end
@@ -249,7 +247,7 @@ namespace :drupal do
     task :clear_search_index do
         on release_roles :drupal_primary do
             within release_path do
-               execute "sudo -u nginx #{release_path}/vendor/bin/drush search-api-clear"
+               execute "sudo -u nginx #{release_path}/vendor/bin/drush search-api:clear"
             end
         end
     end
@@ -258,7 +256,7 @@ namespace :drupal do
     task :update_search_index do
         on release_roles :drupal_primary do
             within release_path do
-                execute "sudo -u nginx #{release_path}/vendor/bin/drush search-api-index"
+                execute "sudo -u nginx #{release_path}/vendor/bin/drush search-api:index"
             end
         end
     end
@@ -279,7 +277,7 @@ namespace :deploy do
   task :after_deploy_check do
       invoke "drupal:prepare_shared_paths"
   end
-      
+
   desc "Set file system variables"
   task :after_deploy_updated do
       invoke "drupal:link_settings"
@@ -297,13 +295,13 @@ namespace :deploy do
   task :before_release do
     invoke "drupal:stop_nginx"
   end
-     
+
   desc "Reset directory permissions and Restart nginx"
   task :after_release do
       invoke! "drupal:update_directory_owner"
       invoke "drupal:start_nginx"
       invoke "drupal:cache_clear"
-      invoke "drupal:features_revert"
+      invoke "drupal:config_import"
       invoke! "drupal:cache_clear"
   end
 
@@ -312,7 +310,7 @@ namespace :deploy do
   after :check, "deploy:after_deploy_check"
 
   #after :started, "drupal:site_offline"
-  
+
   after :updated, "deploy:after_deploy_updated"
 
   before :finishing, "drupal:update_directory_owner_deploy"
