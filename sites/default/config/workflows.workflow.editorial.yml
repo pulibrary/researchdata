@@ -8,7 +8,6 @@ dependencies:
     - node.type.knowledge_base
     - node.type.page
     - node.type.service
-    - node.type.training
   module:
     - content_moderation
 _core:
@@ -73,5 +72,4 @@ type_settings:
       - knowledge_base
       - page
       - service
-      - training
   default_moderation_state: draft
