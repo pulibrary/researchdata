@@ -14,8 +14,8 @@ dependencies:
     - text
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: layout_onecol
@@ -27,34 +27,34 @@ third_party_settings:
             uuid: f52eed00-27e4-43fc-b6c3-5bf442adfce2
             region: content
             configuration:
+              id: 'field_block:paragraph:news_image:field_new_content'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:paragraph:news_image:field_new_content'
               formatter:
                 type: text_default
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            additional: {  }
             weight: 1
+            additional: {  }
           b1c6e797-15ea-483c-bbd9-548e1c671dc1:
             uuid: b1c6e797-15ea-483c-bbd9-548e1c671dc1
             region: content
             configuration:
+              id: 'field_block:paragraph:news_image:field_news_image'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:paragraph:news_image:field_news_image'
               formatter:
+                type: responsive_image
                 label: hidden
                 settings:
                   responsive_image_style: news_image
                   image_link: ''
                 third_party_settings: {  }
-                type: responsive_image
-            additional: {  }
             weight: 2
+            additional: {  }
         third_party_settings: {  }
 id: paragraph.news_image.default
 targetEntityType: paragraph
@@ -63,19 +63,19 @@ mode: default
 content:
   field_new_content:
     type: text_default
-    weight: 2
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_news_image:
-    weight: 1
+    type: responsive_image
     label: hidden
     settings:
       responsive_image_style: news_image
       image_link: ''
     third_party_settings: {  }
-    type: responsive_image
+    weight: 1
     region: content
 hidden:
   search_api_excerpt: true
