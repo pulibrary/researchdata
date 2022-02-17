@@ -13,8 +13,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: true
     enabled: true
+    allow_custom: true
     sections:
       -
         layout_id: layout_onecol
@@ -26,27 +26,27 @@ third_party_settings:
             uuid: 09411cbf-0721-4f99-b382-731d8745ca2c
             region: content
             configuration:
+              id: 'field_block:node:page:body'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:page:body'
               formatter:
-                label: hidden
                 type: text_default
+                label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            additional: {  }
             weight: 2
+            additional: {  }
           b690d603-4553-4499-97c1-d5f66759423c:
             uuid: b690d603-4553-4499-97c1-d5f66759423c
             region: content
             configuration:
+              id: 'extra_field_block:node:page:content_moderation_control'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'extra_field_block:node:page:content_moderation_control'
-            additional: {  }
             weight: 1
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
@@ -56,22 +56,22 @@ bundle: page
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 1
     region: content
+  content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-  content_moderation_control:
     weight: 0
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
-  links:
     weight: 2
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   layout_builder__layout: true
   search_api_excerpt: true

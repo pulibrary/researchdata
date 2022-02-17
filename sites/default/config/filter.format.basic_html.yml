@@ -42,14 +42,14 @@ filters:
     weight: 100
     settings:
       default_view_mode: full_width
-      allowed_media_types:
-        document: document
-        image: image
       allowed_view_modes:
         full_width: full_width
         quarter_width: quarter_width
         staff_photo: staff_photo
         third_width: third_width
+      allowed_media_types:
+        document: document
+        image: image
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter

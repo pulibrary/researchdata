@@ -12,19 +12,19 @@ id: quarter_width
 label: 'Quarter Width'
 image_style_mappings:
   -
-    breakpoint_id: prds.large
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: small
-  -
-    breakpoint_id: prds.medium
+    breakpoint_id: prds.large
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: small_third
-  -
-    breakpoint_id: prds.small
+    breakpoint_id: prds.medium
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: mobile
+    breakpoint_id: prds.small
+    multiplier: 1x
 breakpoint_group: prds
 fallback_image_style: small

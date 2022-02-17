@@ -11,12 +11,12 @@ pattern: 'trainings/[node:field_training_date_and_time:start_date:html_date]/[no
 selection_criteria:
   8636a5da-45c0-4505-90bc-b46259293500:
     id: node_type
-    bundles:
-      training: training
     negate: false
+    uuid: 8636a5da-45c0-4505-90bc-b46259293500
     context_mapping:
       node: node
-    uuid: 8636a5da-45c0-4505-90bc-b46259293500
+    bundles:
+      training: training
 selection_logic: and
 weight: -5
 relationships: {  }

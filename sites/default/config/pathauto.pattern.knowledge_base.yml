@@ -11,12 +11,12 @@ pattern: 'research-lifecycle-guide/[node:title]'
 selection_criteria:
   1d401905-1486-4c8a-b3b0-15a85b418cc0:
     id: node_type
-    bundles:
-      knowledge_base: knowledge_base
     negate: false
+    uuid: 1d401905-1486-4c8a-b3b0-15a85b418cc0
     context_mapping:
       node: node
-    uuid: 1d401905-1486-4c8a-b3b0-15a85b418cc0
+    bundles:
+      knowledge_base: knowledge_base
 selection_logic: and
 weight: -5
 relationships: {  }

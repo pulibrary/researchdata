@@ -10,24 +10,24 @@ id: staff_photo
 label: 'Staff Photo'
 image_style_mappings:
   -
+    image_mapping_type: image_style
+    image_mapping: staff_photo
     breakpoint_id: prds.large
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: staff_photo
-  -
     breakpoint_id: prds.medium
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: staff_photo
-  -
     breakpoint_id: prds.small
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: staff_photo
-  -
     breakpoint_id: prds.mobile
     multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: staff_photo
 breakpoint_group: prds
 fallback_image_style: staff_photo
