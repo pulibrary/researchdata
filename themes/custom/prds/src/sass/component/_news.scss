@@ -27,7 +27,7 @@
 .news--item,
 .resource--item {
   padding: 0;
-  
+
   h3 {
     line-height: 1;
     margin: 0;
@@ -92,7 +92,7 @@
 
 .page-node-type-article .layout-content {
   padding-top: 0;
-  background: linear-gradient(60deg, rgba(255,255,255,1) 45%, rgba(0,212,255,0) 100%), url("/themes/custom/prds/images/nodes-bg.svg") no-repeat; 
+  background: linear-gradient(60deg, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 100%), url("/themes/custom/prds/images/nodes-bg.svg") no-repeat; 
   background-size: 1440px 1000px;
   background-position: right -500px top -200px;
 }
@@ -111,7 +111,7 @@
   margin: auto;
   display: block;
   border: 1px solid rgba($color-secondary, 0.1);
-  margin-top: -6rem; 
+  margin-top: -6rem;
   margin-bottom: 2rem;
   position: relative;
 }

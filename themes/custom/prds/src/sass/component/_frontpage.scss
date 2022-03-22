@@ -13,7 +13,7 @@
 
 .path-frontpage .layout--twocol-section {
   background: white;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 15%, rgba(0,212,255,0) 100%), url("/themes/custom/prds/images/nodes-bg.svg") no-repeat center right; 
+  background: linear-gradient(90deg, rgba(255,255,255,1) 15%, rgba(255,255,255,0) 100%), url("/themes/custom/prds/images/nodes-bg.svg") no-repeat center right; 
   background-size: cover;
   min-height: 325px;
 
@@ -42,7 +42,7 @@
     @media (min-width: $bp-medium) {
       padding: 2rem;
     }
-  
+
     @media (min-width: $bp-large) {
       padding: 6.5rem 4rem;
     }

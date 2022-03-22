@@ -17,7 +17,7 @@ main {
 
 .page-node-type-page .layout-content {
   background: white;
-  background: linear-gradient(60deg, rgba(255,255,255,1) 45%, rgba(0,212,255,0) 100%), url("/themes/custom/prds/images/nodes-bg.svg") no-repeat; 
+  background: linear-gradient(60deg, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 100%), url("/themes/custom/prds/images/nodes-bg.svg") no-repeat; 
   background-size: 1440px 1000px;
   background-position: right -500px top -200px;
 }
@@ -62,7 +62,7 @@ main {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  
+
   border-bottom: 1px solid $border-color;
   margin-bottom: 2rem;
 
@@ -86,7 +86,7 @@ main {
   .prds-media_text {
     flex: 1;
   }
-}  
+}
 
   .prds-staff-title {
     font-weight: 700;
