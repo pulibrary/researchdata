@@ -1209,7 +1209,7 @@ display:
           click_sort_column: value
           type: daterange_custom
           settings:
-            timezone_override: America/New_York
+            timezone_override: UTC
             date_format: 'g:i A'
             separator: '-'
           group_column: value
