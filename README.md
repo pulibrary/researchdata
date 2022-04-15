@@ -6,7 +6,7 @@ Drupal site for Princeton Research Data Service
    **Note: depends on Lando 3.0.7 or higher https://github.com/lando/lando/releases**
 1. `git clone git@github.com:pulibrary/researchdata.git`
 1. `cp sites/default/default.settings.php sites/default/settings.php`
-1. Add the following to `sites/defaults/settings.php`
+1. Add the following to `sites/defaults/settings.php`.  You will get the values for `hash_salt` and `config_sync_directory` later, after the `lando drush rsync` step.  The `config_sync_directory` will be the newly created directory `sites/default/files/config_longhash`, where longhash is a long hash.  You can use that longhash as the `hash_salt` value.
     ```
     if (file_exists($app_root . '/sites/settings.local.php')) {
       include $app_root . '/sites/settings.local.php';
