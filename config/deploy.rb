@@ -303,6 +303,7 @@ namespace :deploy do
       invoke "drupal:start_nginx"
       invoke "drupal:cache_clear"
       invoke "drupal:config_import"
+      invoke "drupal:database:update"
       invoke! "drupal:cache_clear"
   end
 
