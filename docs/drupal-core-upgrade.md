@@ -31,12 +31,12 @@ Check https://researchdata.princeton.edu/admin/reports/updates to see if there a
    lando composer update drupal --with-all-dependencies
    ```
 
-1. Check if updates to .htaccess or robots.txt conflict.  Usually these changes should also be discarded, but you should look at them to determine if they need to be kept.
+1. Check if updates to .gitignore, .htaccess, or robots.txt conflict.  Usually these changes should also be discarded, but you should look at them to determine if they need to be kept.
    ```
-   git diff .htaccess 
-   git diff robots.txt 
-   git checkout .htaccess 
-   git checkout robots.txt 
+   git diff .gitignore .htaccess robots.txt
+   git checkout .gitignore
+   git checkout .htaccess
+   git checkout robots.txt
    ```
 
 1. You may need to run an updatedb and a cache rebuild. These do no harm if they are no needed, but if an updatedb is needed locally it will likely also be needed on the servers after a deploy (and is included in the capistrano deploy):
