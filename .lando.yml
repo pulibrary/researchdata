@@ -1,7 +1,7 @@
 name: researchdata
 recipe: drupal9
 config:
-  php: '7.4'
+  php: '8.1'
   via: nginx
   webroot: .
   database: postgres

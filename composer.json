@@ -31,7 +31,7 @@
         "drupal/core-recommended": "^9",
         "drupal/core-vendor-hardening": "^9",
         "drupal/editor_advanced_link": "^1.8",
-        "drupal/google_analytics": "^3.1",
+        "drupal/google_analytics": "^4.0",
         "drupal/health_check": "^1.2",
         "drupal/image_replace": "^1.0",
         "drupal/linkit": "^6.0@beta",
