@@ -23,7 +23,7 @@ Drupal site for Princeton Research Data Service
       'driver' => 'pgsql',
     );
 
-    $settings['hash_salt'] = '<Hash Salt>'
+    $settings['hash_salt'] = '<Hash Salt>';
 
     $settings['config_sync_directory'] = '<Config Sync Directory>';
 
