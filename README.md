@@ -6,7 +6,7 @@ Drupal site for Princeton Research Data Service
    **Note: depends on Lando 3.0.7 or higher https://github.com/lando/lando/releases**
 1. `git clone git@github.com:pulibrary/researchdata.git`
 1. `cp sites/default/default.settings.php sites/default/settings.php`
-1. Add the following to `sites/defaults/settings.php`.  You will get the values for `hash_salt` and `config_sync_directory` later, after the `lando drush rsync` step.  The `config_sync_directory` will be the newly created directory `sites/default/files/config_longhash`, where longhash is a long hash.  You can use that longhash as the `hash_salt` value.
+1. Add the following to `sites/defaults/settings.php`.  You will get the values for `hash_salt` later, after the `lando drush rsync` step.
     ```
     if (file_exists($app_root . '/sites/settings.local.php')) {
       include $app_root . '/sites/settings.local.php';
@@ -25,7 +25,7 @@ Drupal site for Princeton Research Data Service
 
     $settings['hash_salt'] = '<Hash Salt>';
 
-    $settings['config_sync_directory'] = '<Config Sync Directory>';
+    $settings['config_sync_directory'] = 'sites/default/config';
 
     ```
 1. `mkdir .ssh` # excluded from version control
@@ -37,6 +37,7 @@ Drupal site for Princeton Research Data Service
 1. `lando drush @researchdata.prod sql-dump --structure-tables-list='watchdog,sessions,cas_data_login,history,captcha_sessions,cache,cache_*' --result-file=/tmp/dump.sql; scp pulsys@prds-prod1:/tmp/dump.sql .`
 1. `lando db-import dump.sql`
 1. `lando drush rsync @researchdata.prod:%files @researchdata.local:%files`
+1. In order to get the value for `$settings['hash_salt']`, run `ls sites/default/files | grep "config" | sed "s/config_\(\S*\)/\1/"` on the command line, and put the result in your `sites/defaults/settings.php`
 1. Create a `drush/drush.yml`  file with the following:
    ```
    options:
@@ -123,7 +124,7 @@ We will use git to combine the two configurations.
    ```
    git add <modified file>
    ```
-   commit those changes so they do not get loast with either a `git commit` or `git commit --amend`
+   commit those changes so they do not get lost with either a `git commit` or `git commit --amend`
 1. restore the lost changes tracked by git
    ```
    git reset HEAD .
