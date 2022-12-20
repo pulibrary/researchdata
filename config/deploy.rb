@@ -91,9 +91,10 @@ namespace :drupal do
   desc "Install Assets"
   task :install_assets do
     on roles(:app) do |host|
-      # execute "cd #{release_path}/themes/custom/prds && npm install"
-      # execute "cd #{release_path}/themes/custom/prds && gulp deploy"
-      # info "Installed Assets"
+      execute "cd #{release_path}/themes/custom/prds && npm install"
+      execute "cd #{release_path}/themes/custom/prds && npm rebuild node-sass"
+      execute "cd #{release_path}/themes/custom/prds && gulp compile"
+      info "Installed Assets"
     end
   end
 
