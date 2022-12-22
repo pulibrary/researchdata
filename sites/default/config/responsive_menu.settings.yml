@@ -10,7 +10,7 @@ include_css: true
 off_canvas_position: left
 off_canvas_theme: theme-light
 pagedim: pagedim
-horizontal_superfish: true
+horizontal_superfish: false
 horizontal_superfish_delay: 300
 horizontal_superfish_speed: 100
 horizontal_superfish_speed_out: 100
