@@ -6,7 +6,7 @@
 #   uri: 'http://researchdata.lndo.site'
 
 # prod:
-#   host: # add value
+#   host: prds-prod1.princeton.edu
 #   options:
 #     command-specific:
 #       sql-sync:
@@ -27,8 +27,8 @@
 #         structure-tables-key: common
 #   paths:
 #     dump-dir: /tmp
-#   root: # add value
+#   root: /var/www/researchdata/current
 #   uri: 'https://researchdata-staging.princeton.edu'
-#   user: # add value
+#   user: deploy
 #   ssh:
 #     options: '-o PasswordAuthentication=no -i .ssh/id_rsa'
