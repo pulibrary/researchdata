@@ -32,7 +32,7 @@ Drupal site for Princeton Research Data Service
 1. `cp $HOME/.ssh/id_rsa .ssh/.`
 1. `cp $HOME/.ssh/id_rsa.pub .ssh/.` // key should be registered in princeton_ansible deploy role
 1. `cp drush/sites/example.site.yml drush/sites/researchdata.site.yml`
-1. Uncomment the alias blocks and adjust the config values in the `drush/sites/researchdata.site.yml` file to match the current remote and local drupal environments.
+1. Uncomment the alias blocks in the `drush/sites/researchdata.site.yml`.
 1. `lando start`
 1. `lando drush @researchdata.prod sql-dump --structure-tables-list='watchdog,sessions,cas_data_login,history,captcha_sessions,cache,cache_*' --result-file=/tmp/dump.sql; scp pulsys@prds-prod1:/tmp/dump.sql .`
 1. `lando db-import dump.sql`
