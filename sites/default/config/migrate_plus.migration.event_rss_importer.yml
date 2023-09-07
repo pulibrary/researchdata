@@ -12,7 +12,7 @@ label: 'Import Event RSS feed'
 source:
   plugin: url
   data_fetcher_plugin: http
-  urls: 'https://libcal.princeton.edu/rss.php?m=cat&iid=771&cid=12260&cat=49413'
+  urls: 'https://libcal.princeton.edu/rss.php?cid=12260&m=tag&tag=3372'
   data_parser_plugin: simple_xml
   item_selector: /rss/channel/item
   fields:
