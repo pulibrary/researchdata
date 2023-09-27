@@ -1,7 +1,12 @@
 uuid: ce9622a2-8bad-42fb-b8da-f391832d1f8f
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - contact
+    - media
+    - search_api_autocomplete
+    - system
 _core:
   default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
 id: anonymous

@@ -1,16 +1,13 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
-  anchor_link: 0
   automated_cron: 0
   big_pipe: 0
   block: 0
   block_content: 0
   breakpoint: 0
   cas: 0
-  ckeditor: 0
-  ckeditor_bs_grid: 0
-  ckeditor_contents: 0
+  ckeditor5: 0
   comment: 0
   config: 0
   contact: 0
@@ -26,7 +23,6 @@ module:
   entity_browser: 0
   entity_browser_entity_form: 0
   entity_reference_revisions: 0
-  fakeobjects: 0
   field: 0
   field_ui: 0
   file: 0
