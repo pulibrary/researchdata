@@ -11,7 +11,6 @@ module:
   ckeditor: 0
   ckeditor_bs_grid: 0
   ckeditor_contents: 0
-  color: 0
   comment: 0
   config: 0
   contact: 0
@@ -60,8 +59,6 @@ module:
   path: 0
   path_alias: 0
   pgsql: 0
-  quickedit: 0
-  rdf: 0
   responsive_image: 0
   responsive_menu: 0
   search_api: 0
@@ -84,9 +81,9 @@ module:
   paragraphs: 11
   standard: 1000
 theme:
-  bartik: 0
   seven: 0
   stable: 0
   classy: 0
   prds: 0
+  claro: 0
 profile: standard
