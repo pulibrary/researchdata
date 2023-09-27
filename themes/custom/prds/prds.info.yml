@@ -13,6 +13,8 @@ regions:
   breadcrumb: Breadcrumb
   content: Content
   footer: Footer
+dependencies:
+  - classy:classy
 
 ckeditor_stylesheets:
   - css/prds.css
