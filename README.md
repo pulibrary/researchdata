@@ -47,7 +47,7 @@ Drupal site for Princeton Research Data Service
 
 ### Configuration Syncing
 
-Each time you pull from master it is a good idea to check the status of your site.  To check and see if you need to get changes run
+Each time you pull from main it is a good idea to check the status of your site.  To check and see if you need to get changes run
 ```
 lando drush config:status
 ```
