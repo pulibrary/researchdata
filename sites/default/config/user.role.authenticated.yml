@@ -1,43 +1,7 @@
 uuid: 5bc0f717-70bb-4517-8547-cac599ba8003
 langcode: en
 status: true
-dependencies:
-  config:
-    - filter.format.basic_html
-    - filter.format.full_html
-    - media.type.audio
-    - media.type.document
-    - media.type.image
-    - media.type.remote_video
-    - media.type.video
-    - node.type.a_z_resource
-    - node.type.article
-    - node.type.knowledge_base
-    - node.type.landing_page
-    - node.type.page
-    - node.type.service
-    - node.type.training
-    - taxonomy.vocabulary.knowledge_category
-    - taxonomy.vocabulary.resource_category
-    - taxonomy.vocabulary.tags
-    - workflows.workflow.editorial
-  module:
-    - block
-    - contact
-    - content_moderation
-    - entity_browser
-    - file
-    - filter
-    - google_analytics
-    - layout_builder
-    - media
-    - node
-    - path
-    - search_api_autocomplete
-    - shortcut
-    - system
-    - taxonomy
-    - toolbar
+dependencies: {  }
 _core:
   default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated

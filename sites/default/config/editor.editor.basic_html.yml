@@ -1,86 +1,83 @@
-uuid: 3c2cb94d-c152-44c1-ab11-bb7a47bf896d
+uuid: d7b24804-ae74-4ed7-831b-5ad1892b30cf
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.basic_html
   module:
-    - ckeditor5
+    - ckeditor
 format: basic_html
-editor: ckeditor5
+editor: ckeditor
 settings:
   toolbar:
-    items:
-      - heading
-      - bold
-      - italic
-      - alignment
-      - horizontalLine
-      - style
-      - '|'
-      - bulletedList
-      - numberedList
-      - '|'
-      - link
-      - '|'
-      - blockQuote
-      - drupalMedia
-      - '|'
-      - sourceEditing
-      - '|'
-      - code
-      - codeBlock
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Format
+            - Bold
+            - Italic
+            - JustifyCenter
+            - HorizontalRule
+            - Styles
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: 'Paste options'
+          items:
+            - Paste
+            - PasteFromWord
+            - PasteText
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+            - Anchor
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalMediaLibrary
+        -
+          name: Tools
+          items:
+            - Source
+            - bs_grid
+            - Contents
   plugins:
-    ckeditor5_heading:
-      enabled_headings:
-        - heading2
-        - heading3
-        - heading4
-        - heading5
-        - heading6
-    ckeditor5_style:
-      styles:
-        -
-          label: Button
-          element: '<a class="button">'
-        -
-          label: 'Hanging Indent'
-          element: '<p class="hang">'
-        -
-          label: 'Indent Paragraph'
-          element: '<p class="indent">'
-    ckeditor5_sourceEditing:
-      allowed_tags:
-        - '<cite>'
-        - '<dl>'
-        - '<dt>'
-        - '<dd>'
-        - '<span>'
-        - '<img src alt height width data-entity-type data-entity-uuid data-align data-caption>'
-        - '<button id>'
-        - '<div data id class="widget-toc">'
-        - '<blockquote cite>'
-        - '<ul type>'
-        - '<ol type>'
-        - '<h2 id class>'
-        - '<h3 id class>'
-        - '<h4 id class>'
-        - '<h5 id class>'
-        - '<h6 id class>'
-        - '<drupal-media title>'
-        - '<a hreflang target id name data-entity-substitution data-entity-type data-entity-uuid title class="btn">'
-        - '<p class="toc-title">'
-    ckeditor5_list:
-      reversed: false
-      startIndex: true
-    ckeditor5_alignment:
-      enabled_alignments:
-        - left
-        - center
-        - right
-        - justify
-    media_media:
-      allow_view_mode_override: true
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: default
+    stylescombo:
+      styles: "a.button|Button\r\np.hang|Hanging Indent\r\np.indent|Indent Paragraph"
+    bs_grid:
+      use_cdn: true
+      cdn_url: 'https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3.4.0/css/grid.min.css'
+      available_columns:
+        1: 1
+        2: 2
+        3: 3
+        4: 4
+        5: 5
+        6: 6
+        7: 7
+        8: 8
+        9: 9
+        10: 10
+        11: 11
+        12: 12
+      available_breakpoints:
+        xs: xs
+        sm: sm
+        md: md
+        lg: lg
+        xl: xl
+        xxl: 0
 image_upload:
   status: false
   scheme: public
