@@ -63,3 +63,9 @@ filters:
         third_width: third_width
       allowed_media_types:
         image: image
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: 12
+    settings: {  }

@@ -55,6 +55,25 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 2
             additional: {  }
+          80def7df-45af-4457-a833-545a47f8634f:
+            uuid: 80def7df-45af-4457-a833-545a47f8634f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:news_image:field_news_image'
+              formatter:
+                type: responsive_image
+                label: hidden
+                settings:
+                  responsive_image_style: news_image
+                  image_link: ''
+                  image_loading:
+                    attribute: eager
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
         third_party_settings: {  }
 id: paragraph.news_image.default
 targetEntityType: paragraph
@@ -74,6 +93,8 @@ content:
     settings:
       responsive_image_style: news_image
       image_link: ''
+      image_loading:
+        attribute: eager
     third_party_settings: {  }
     weight: 1
     region: content

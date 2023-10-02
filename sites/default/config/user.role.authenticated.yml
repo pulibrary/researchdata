@@ -23,6 +23,7 @@ dependencies:
     - workflows.workflow.editorial
   module:
     - block
+    - block_content
     - contact
     - content_moderation
     - entity_browser
@@ -45,10 +46,10 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access block library'
   - 'access content'
   - 'access content overview'
   - 'access files overview'
-  - 'access in-place editing'
   - 'access media overview'
   - 'access media_entity_browser entity browser pages'
   - 'access media_entity_browser_media_library entity browser pages'
@@ -57,6 +58,8 @@ permissions:
   - 'access site-wide contact form'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer block content'
+  - 'administer block types'
   - 'administer blocks'
   - 'administer menu'
   - 'administer url aliases'
@@ -96,6 +99,7 @@ permissions:
   - 'delete own article content'
   - 'delete own audio media'
   - 'delete own document media'
+  - 'delete own files'
   - 'delete own image media'
   - 'delete own knowledge_base content'
   - 'delete own landing_page content'
@@ -142,7 +146,6 @@ permissions:
   - 'revert page revisions'
   - 'revert service revisions'
   - 'revert training revisions'
-  - 'search content'
   - 'update any media'
   - 'update media'
   - 'use editorial transition archive'
