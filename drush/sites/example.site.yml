@@ -27,6 +27,7 @@
 #         structure-tables-key: common
 #   paths:
 #     dump-dir: /tmp
+#     drush-script: /var/www/researchdata/current/vendor/bin/drush
 #     files: /var/www/researchdata/shared/files
 #   root: /var/www/researchdata/current
 #   uri: 'https://researchdata-staging.princeton.edu'
