@@ -1,7 +1,7 @@
 name: prds
 type: theme
 description: 'Theme for Princeton Research Data Service'
-core_version_requirement: ^9
+core_version_requirement: ^10
 base theme: classy
 libraries:
   - prds/global-styling

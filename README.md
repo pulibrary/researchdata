@@ -13,7 +13,7 @@ Drupal site for Princeton Research Data Service
     }
 
     $databases['default']['default'] = array (
-      'database' => 'drupal9',
+      'database' => 'drupal10',
       'username' => 'postgres',
       'password' => '',
       'prefix' => '',
