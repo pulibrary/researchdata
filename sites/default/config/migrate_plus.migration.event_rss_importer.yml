@@ -71,6 +71,7 @@ process:
       from_format: 'Y-m-d H:i:s'
       from_timezone: America/New_York
       to_format: 'Y-m-d\TH:i:s'
+      to_timezone: America/New_York
   field_training_date_and_time/end_value:
     -
       plugin: concat
@@ -83,6 +84,7 @@ process:
       from_format: 'Y-m-d H:i:s'
       from_timezone: America/New_York
       to_format: 'Y-m-d\TH:i:s'
+      to_timezone: America/New_York
   status:
     plugin: default_value
     default_value: 1
