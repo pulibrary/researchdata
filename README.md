@@ -6,7 +6,7 @@ Drupal site for Princeton Research Data Service
    **Note: depends on Lando 3.0.7 or higher https://github.com/lando/lando/releases**
 1. `git clone git@github.com:pulibrary/researchdata.git`
 1. `cp sites/default/default.settings.php sites/default/settings.php`
-1. Add the following to `sites/defaults/settings.php`.  You will get the values for `hash_salt` later, after the `lando drush rsync` step.
+1. Add the following to the end of `sites/defaults/settings.php`.  You will get the values for `hash_salt` later, after the `lando drush rsync` step.
     ```
     if (file_exists($app_root . '/sites/settings.local.php')) {
       include $app_root . '/sites/settings.local.php';
@@ -29,8 +29,8 @@ Drupal site for Princeton Research Data Service
 
     ```
 1. `mkdir .ssh` # excluded from version control
-1. `cp $HOME/.ssh/id_rsa .ssh/.`
-1. `cp $HOME/.ssh/id_rsa.pub .ssh/.` // key should be registered in princeton_ansible deploy role
+1. `cp $HOME/.ssh/id_ed25519 .ssh/.`
+1. `cp $HOME/.ssh/id_ed25519.pub .ssh/.` // key should be registered in princeton_ansible deploy role
 1. `cp drush/sites/example.site.yml drush/sites/researchdata.site.yml`
 1. Uncomment the alias blocks in the `drush/sites/researchdata.site.yml`.
 1. `lando start`
