@@ -344,8 +344,8 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<p>No results. Please enter different keywords to search.</p>\r\n\r\n<div class=\"prds-appointment_search\">\r\n<h2>Not finding what you're looking for? </h2>\r\n<button id=\"mysched_0\">Make an Appointment</button>\r\n</div>"
-            format: basic_html
+            value: "<p>No results. Please enter different keywords to search.</p>\r\n\r\n<div class=\"prds-appointment_search\">\r\n<h2>Not finding what you're looking for? </h2>\r\n<button onclick=\"window.location.href = 'https://libcal.princeton.edu/appointments/data'\">Make an Appointment</button>\r\n</div>"
+            format: full_html
           tokenize: false
       sorts:
         search_api_relevance:
@@ -467,6 +467,7 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:search_api.index.default_index'
+        - 'search_api_list:default_index'
       cacheable: false
   page_1:
     id: page_1
@@ -488,4 +489,5 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:search_api.index.default_index'
+        - 'search_api_list:default_index'
       cacheable: false

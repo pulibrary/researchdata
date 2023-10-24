@@ -59,10 +59,10 @@ third_party_settings:
             uuid: 80def7df-45af-4457-a833-545a47f8634f
             region: content
             configuration:
+              id: 'field_block:paragraph:news_image:field_news_image'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:paragraph:news_image:field_news_image'
               formatter:
                 type: responsive_image
                 label: hidden
