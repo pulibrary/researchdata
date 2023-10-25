@@ -159,7 +159,7 @@ namespace :drupal do
         release_paths = capture "ls #{ deploy_to }/releases/"
         release_paths.split(release_paths[14]).each do |release|
           next if release == current_release
-          execute :sudo, "/bin/chown -R deploy#{deploy_to}/releases/#{release}"
+          execute :sudo, "/bin/chown -R deploy #{deploy_to}/releases/#{release}"
           execute :chmod, "-R u+w #{deploy_to}/releases/#{release}"
         end
       end
