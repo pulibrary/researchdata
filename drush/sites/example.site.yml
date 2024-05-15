@@ -6,7 +6,7 @@
 #   uri: 'http://researchdata.lndo.site'
 
 # prod:
-#   host: prds-prod1.princeton.edu
+#   host: prds-prod2.princeton.edu
 #   options:
 #     command-specific:
 #       sql-sync:
