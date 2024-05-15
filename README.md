@@ -34,7 +34,7 @@ Drupal site for Princeton Research Data Service
 1. `cp drush/sites/example.site.yml drush/sites/researchdata.site.yml`
 1. Uncomment the alias blocks in the `drush/sites/researchdata.site.yml`.
 1. `lando start`
-1. `lando drush @researchdata.prod sql-dump --structure-tables-list='watchdog,sessions,cas_data_login,history,captcha_sessions,cache,cache_*' --result-file=/tmp/dump.sql; scp pulsys@prds-prod1:/tmp/dump.sql .`
+1. `lando drush @researchdata.prod sql-dump --structure-tables-list='watchdog,sessions,cas_data_login,history,captcha_sessions,cache,cache_*' --result-file=/tmp/dump.sql; scp pulsys@prds-prod2:/tmp/dump.sql .`
 1. `lando db-import dump.sql`
 1. `lando drush rsync @researchdata.prod:%files @researchdata.local:%files`
 1. In order to get the value for `$settings['hash_salt']`, run `ls sites/default/files | grep "config" | sed "s/config_\(\S*\)/\1/"` on the command line, and put the result in your `sites/defaults/settings.php`
