@@ -12,7 +12,7 @@ Check https://researchdata.princeton.edu/admin/reports/updates to see if there a
 1. Pull the production database (This assumes you have followed the configuration steps in the README.md
    ```
    lando drush @researchdata.prod sql-dump --structure-tables-list='watchdog,sessions,cas_data_login,history,captcha_sessions,cache,cache_*' --result-file=/tmp/dump.sql
-   scp pulsys@prds-prod1:/tmp/dump.sql .
+   scp pulsys@prds-prod2:/tmp/dump.sql .
    lando db-import dump.sql
    lando drush cache:rebuild
    ```
