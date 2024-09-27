@@ -11,7 +11,7 @@ third_party_settings:
 name: 'Tools and Resources'
 type: a_z_resource
 description: 'Content for the A to Z resource page'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

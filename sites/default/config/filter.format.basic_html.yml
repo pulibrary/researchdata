@@ -14,15 +14,6 @@ name: 'Basic HTML'
 format: basic_html
 weight: 0
 filters:
-  filter_html:
-    id: filter_html
-    provider: filter
-    status: true
-    weight: -10
-    settings:
-      allowed_html: '<br> <p class="hang indent toc-title text-align-left text-align-center text-align-right text-align-justify"> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <a class="button btn" hreflang target id name data-entity-substitution data-entity-type data-entity-uuid title href> <cite> <dl> <dt> <dd> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <button id> <div data id class="widget-toc text-align-left text-align-center text-align-right text-align-justify"> <blockquote cite> <ul type> <ol type start> <drupal-media title data-entity-type data-entity-uuid alt data-view-mode data-caption data-align> <strong> <em> <code class="language-*"> <pre class="text-align-left text-align-center text-align-right text-align-justify"> <li> <hr>'
-      filter_html_help: true
-      filter_html_nofollow: false
   filter_align:
     id: filter_align
     provider: filter
@@ -35,21 +26,15 @@ filters:
     status: true
     weight: 0
     settings: {  }
-  media_embed:
-    id: media_embed
-    provider: media
+  filter_html:
+    id: filter_html
+    provider: filter
     status: true
-    weight: 100
+    weight: -10
     settings:
-      default_view_mode: full_width
-      allowed_view_modes:
-        full_width: full_width
-        quarter_width: quarter_width
-        staff_photo: staff_photo
-        third_width: third_width
-      allowed_media_types:
-        document: document
-        image: image
+      allowed_html: '<br> <p class="hang indent toc-title text-align-left text-align-center text-align-right text-align-justify"> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <a class="button btn" hreflang target id name data-entity-substitution data-entity-type data-entity-uuid title href> <cite> <dl> <dt> <dd> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <button id> <div data id class="widget-toc text-align-left text-align-center text-align-right text-align-justify"> <blockquote cite> <ul type> <ol type start> <drupal-media title data-entity-type data-entity-uuid alt data-view-mode data-caption data-align> <strong> <em> <code class="language-*"> <pre class="text-align-left text-align-center text-align-right text-align-justify"> <li> <hr>'
+      filter_html_help: true
+      filter_html_nofollow: false
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
@@ -69,3 +54,18 @@ filters:
     weight: 0
     settings:
       title: true
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: full_width
+      allowed_view_modes:
+        full_width: full_width
+        quarter_width: quarter_width
+        staff_photo: staff_photo
+        third_width: third_width
+      allowed_media_types:
+        document: document
+        image: image

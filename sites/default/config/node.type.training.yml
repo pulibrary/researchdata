@@ -11,7 +11,7 @@ third_party_settings:
 name: Training
 type: training
 description: 'Any Workshop, Event, or Program '
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false
