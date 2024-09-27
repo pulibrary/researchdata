@@ -31,6 +31,7 @@ content:
       timezone_override: ''
       date_format: Y-m-d
       separator: '-'
+      from_to: both
     third_party_settings: {  }
     weight: 0
     region: content

@@ -11,7 +11,7 @@ third_party_settings:
 name: 'Research Lifecycle Guide'
 type: knowledge_base
 description: 'How To, FAQ, or Knowledge Base Item'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false
